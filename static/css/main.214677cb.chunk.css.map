@@ -1,0 +1,1 @@
+{"version":3,"sources":["header.css"],"names":[],"mappings":"AAAA,SACI,eACJ,CAEA,aAEI,gBAAiB,CACjB,iBACJ","file":"main.214677cb.chunk.css","sourcesContent":["#profile {\r\n    background: none;\r\n}\r\n\r\n#icon-button {\r\n\r\n    margin-left: 10px;\r\n    margin-right: 10px;\r\n}"]}
