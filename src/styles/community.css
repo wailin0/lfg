@@ -1,0 +1,22 @@
+body {
+    margin: 0 auto;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(148,14,75,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.h7 {
+    font-size: 0.8rem;
+}
+
+.gedf-wrapper {
+    margin-top: 0.97rem;
+}
+
+.gedf-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.gedf-card {
+    margin-bottom: 1rem;
+}
+

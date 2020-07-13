@@ -1,55 +1,64 @@
 import React from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import FormControl from 'react-bootstrap/FormControl'
-import Image from "react-bootstrap/Image";
-import Col from "react-bootstrap/Col";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faCog, faQuestionCircle, faUsers, faGamepad, faUserFriends, faPlusCircle, faComments,
-faSignOutAlt, faUserAlt} from '@fortawesome/free-solid-svg-icons';
 import '../styles/header.css'
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/cjs/Dropdown";
+import {Link} from "react-router-dom";
 
 
 const Header = () => (
     <div>
-        <Navbar bg="dark"  variant="dark">
-            <Navbar.Brand href="#home">FLG</Navbar.Brand>
 
-            <Navbar className="m-auto">
-                <Nav>
-                    <Nav.Link href="#group"><FontAwesomeIcon icon={faUsers} size='2x' id="icon-button" /></Nav.Link>
-                    <Nav.Link href="#party"><FontAwesomeIcon icon={faGamepad} size='2x' id="icon-button" /></Nav.Link>
-                    <Nav.Link href="#friend"><FontAwesomeIcon icon={faUserFriends} size='2x' id="icon-button" /></Nav.Link>
-                </Nav>
-            </Navbar>
-            <Navbar >
-                <Nav>
-                    <Nav.Link href="#group"><FontAwesomeIcon icon={faPlusCircle} size='2x' id="icon-button" /></Nav.Link>
-                    <Nav.Link href="#group"><FontAwesomeIcon icon={faComments} size='2x' id="icon-button" /></Nav.Link>
-                </Nav>
-            </Navbar>
-                    <Dropdown id="profile">
-                <Dropdown.Toggle id="profile">
-                    <Image src="images/favicon.png" width="40" roundedCircle />
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1"><FontAwesomeIcon icon={faUserAlt} /> Wai Lin</Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/action-1"><FontAwesomeIcon icon={faCog} /> Setting</Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/action-2"><FontAwesomeIcon icon={faQuestionCircle} /> Help & Support</Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/action-2"> Dark Mode</Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/action-3"><FontAwesomeIcon icon={faSignOutAlt} /> Log Out</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-        </Navbar>
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+                <a className="navbar-brand mx-auto" href="#">LFG</a>
+
+            <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul className="navbar-nav mx-auto">
+                    <li className="nav-item">
+                        <form className="form-inline " >
+                            <input className="form-control mr-sm-2" type="text" placeholder="Search" />
+
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div className="mx-auto order-0 ">
+                <Link className="navbar-brand ml-auto" to="/">Community</Link>
+                <Link className="navbar-brand ml-auto" to="/lfg">LFG</Link>
+                <Link className="navbar-brand ml-auto" to="/friends">Friends</Link>
+                <Link className="navbar-brand ml-auto" to="/chat">Chat</Link>
+            </div>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul className="navbar-nav ml-auto right-nav">
+
+                    <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"  className="rounded-circle img-fluid" width="40" />
+                        </a>
+                        <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                            <a className="dropdown-item" href="#">Wai Lin</a>
+                            <div className="dropdown-divider"></div>
+                            <a className="dropdown-item" href="#">Setting & Privacy</a>
+                            <div className="dropdown-divider"></div>
+                            <a className="dropdown-item" href="#">Help & Support</a>
+                            <div className="dropdown-divider"></div>
+                            <div className="form-check form-switch ">
+                               Dark Mode
+                                <input className="form-check-input " type="checkbox" id="flexSwitchCheckDefault" />
+                            </div>
+                            <div className="dropdown-divider"></div>
+                            <a className="dropdown-item" href="#">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    <br/><br/><br/><br/>
     </div>
 )
 

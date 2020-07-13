@@ -1,9 +1,9 @@
-#profile {
-    background: none;
+.dropdown-menu {
+    margin-right: 20px;
 }
-
-#icon-button {
-
-    margin-left: 10px;
-    margin-right: 10px;
+.right-nav {
+    margin-right: 40px;
+}
+.search {
+    margin-right: 34px;
 }

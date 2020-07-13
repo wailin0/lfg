@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from "./components/Header";
+import Router from "./components/Router";
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import '@fortawesome/react-fontawesome/index'
 
 const Index = () => (
     <div>
-        <Header />
+        <Router />
+
     </div>
 )
 
