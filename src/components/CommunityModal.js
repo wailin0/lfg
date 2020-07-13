@@ -80,7 +80,7 @@ const CommunityModal = (props) => {
                             </Modal.Body>
                             <Modal.Footer>
                                 <Button variant="primary">Post</Button>
-                                <Button onClick={props.onHide} variant="secondary">Close</Button>
+                                <Button onClick={props.onHide} variant="secondary">Cancel</Button>
                             </Modal.Footer>
 
 

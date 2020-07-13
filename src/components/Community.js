@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/community.css'
 import CommunityModal from "./CommunityModal";
-import LeftSideBar from "./LeftSideBar";
 import PlusButton from "./PlusButton";
 import {
     FaClock,
@@ -12,10 +11,8 @@ import {
     FaThumbsUp,
     FaThumbsDown,
     FaCommentDots,
-    FaShare,
-    FaBell
+    FaShare
 } from 'react-icons/fa'
-import Dropdown from "react-bootstrap/Dropdown";
 import Popover from "react-bootstrap/Popover";
 import ListGroup from "react-bootstrap/ListGroup";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
@@ -25,8 +22,6 @@ const Community = () => {
 
     return (
     <div>
-        <LeftSideBar/>
-
         <div className="container">
 
             <div className="row">

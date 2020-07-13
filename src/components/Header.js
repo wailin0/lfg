@@ -1,24 +1,32 @@
 import React, {useState} from "react";
 import '../styles/header.css'
 import {Link, NavLink} from "react-router-dom";
-import Search from "./Search";
-import {Navbar, Nav} from "react-bootstrap";
+import {Navbar} from "react-bootstrap";
 import NotiPanel from "./NotiPanel";
 import UserPanel from "./UserPanel";
-import {FaUserFriends} from 'react-icons/fa'
+import {FaChevronRight, FaUserFriends, FaChevronLeft} from 'react-icons/fa'
 import {IoLogoGameControllerB} from 'react-icons/io'
 import {IoIosChatboxes, IoIosPeople} from 'react-icons/io'
+import LeftSideBar from "./LeftSideBar";
+import Search from "./Search";
 
 
 
 const Header = () => {
+    const [slideState, setSlideState] = useState("sidebar");
+    const toggleSlide = () => {
+        setSlideState(!slideState)
+    }
     return (
-        <div>
+        <>
             <Navbar bg="dark" expand="md" fixed="top">
 
-                <Navbar.Brand as={Link} to="/" id="logo">LFG</Navbar.Brand>
 
-                <Search/>
+                <div className="mx-auto mobile-header">
+                    { slideState && <span className="text-warning"><FaChevronRight onClick={toggleSlide} /></span>  }
+                    { !slideState && <span className="text-warning"><FaChevronLeft onClick={toggleSlide} /></span>  }
+                <Search />
+                </div>
 
                 <div className="mx-auto  header-icon">
                     <NavLink className="mx-3 header-icon-link" to="/" exact={true} activeClassName="header-active">
@@ -40,7 +48,8 @@ const Header = () => {
                 <UserPanel />
                 </div>
             </Navbar>
-        </div>
+            <LeftSideBar slideState={slideState} />
+        </>
     )
 }
 export default Header

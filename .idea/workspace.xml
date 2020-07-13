@@ -11,33 +11,21 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="up">
-      <change afterPath="$PROJECT_DIR$/src/components/NotiPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PlusButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Setting.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/notipanel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/plusbutton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/search.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/setting.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/userpanel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Community.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommunityModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LeftSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftSideBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/community.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/community.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/notfoundpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/notfoundpage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/leftsidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/leftsidebar.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -76,14 +64,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.rmicompiler" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="D:\IntelliJ IDEA 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -110,6 +100,9 @@
       <envs />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -139,6 +132,15 @@
       <workItem from="1594994357227" duration="3793000" />
       <workItem from="1595004375480" duration="1878000" />
       <workItem from="1595007041822" duration="19591000" />
+      <workItem from="1595028578939" duration="62000" />
+      <workItem from="1595028882555" duration="46000" />
+      <workItem from="1595029004026" duration="46000" />
+      <workItem from="1595029416072" duration="191000" />
+      <workItem from="1595029624839" duration="293000" />
+      <workItem from="1595029934090" duration="249000" />
+      <workItem from="1595030590951" duration="11886000" />
+      <workItem from="1595093930131" duration="9530000" />
+      <workItem from="1595103519983" duration="11735000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -186,7 +188,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -206,6 +220,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="83" y="122" width="1016" height="918" key="#Intentions/0.0.1920.1040@0.0.1920.1040" timestamp="1594674120364" />
+    <state x="876" y="491" key="#Notifications" timestamp="1595030609419">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="876" y="491" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1595030609419" />
+    <state x="821" y="329" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595037244003">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="821" y="329" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595037244003" />
     <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595008749026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -226,6 +248,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="987" height="236" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594489169497" />
+    <state x="652" y="94" key="SettingsEditor" timestamp="1595030664085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="652" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595030664085" />
     <state x="143" y="207" key="Vcs.Push.Dialog.v2" timestamp="1594690123656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -234,14 +260,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594842823686" />
-    <state x="1027" y="402" width="787" height="721" key="dock-window-1" timestamp="1595021502595">
+    <state x="704" y="287" width="864" height="773" key="dock-window-1" timestamp="1595097010974">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1027" y="402" width="787" height="721" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1595021502595" />
-    <state x="957" y="102" width="887" height="928" key="dock-window-2" timestamp="1594857545291">
+    <state x="704" y="287" width="864" height="773" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1595097010974" />
+    <state x="411" y="360" width="864" height="773" key="dock-window-2" timestamp="1595103345236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="957" y="102" width="887" height="928" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1594857545291" />
+    <state x="411" y="360" width="864" height="773" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1595103345236" />
     <state x="858" y="66" width="888" height="928" key="dock-window-3" timestamp="1594857798747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -250,10 +276,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="405" y="425" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594514809477" />
-    <state x="127" y="222" key="run.anything.popup" timestamp="1595026713595">
+    <state x="127" y="222" key="run.anything.popup" timestamp="1595114181901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="127" y="222" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595026713595" />
+    <state x="127" y="222" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595114181901" />
     <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1594935483188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -266,6 +292,11 @@
           <url>file://$USER_HOME$/Documents/react-course/expensify/src/routers/AppRouter.js</url>
           <line>1</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Search.js</url>
+          <line>2</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
