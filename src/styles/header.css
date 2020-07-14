@@ -4,6 +4,51 @@
 .right-nav {
     margin-right: 40px;
 }
-.search {
-    margin-right: 34px;
+#search-input {
+    border-radius: 20px;
+}
+
+.mobile-header{
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+}
+.header-icon {
+    display: flex;
+    font-size: 30px;
+}
+
+.header-active {
+    color: steelblue;
+    font-size: 35px;
+}
+
+
+.logo{
+    margin-left: 30px;
+}
+@media only screen and (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .header-icon-link {
+        padding-left: 40px;
+    }
+    .mobile-btn {
+        display: none;
+    }
+}
+
+.mobile-btn {
+    font-size: 25px;
+}
+
+body { padding-top: 100px; }
+
+@media screen and (min-width: 768px) {
+    body { padding-top: 70px; }
 }

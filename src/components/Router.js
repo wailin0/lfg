@@ -6,6 +6,7 @@ import notFoundPage from '../components/NotFoundPage'
 import Header from './Header'
 import Community from "./Community";
 import LFG from "./LFG";
+import LeftSideBar from "./LeftSideBar";
 
 
 const AppRouter = () => (
@@ -13,7 +14,7 @@ const AppRouter = () => (
         <div>
             <Header />
             <Switch>
-                <Route path="/" component={Community} exact={true} />
+                <Route path="/" component={Community} exact={true}  />
                 <Route path="/lfg" component={LFG} />
                 <Route path="/friends"/>
                 <Route path="/chat"  />

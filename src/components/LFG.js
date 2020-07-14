@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/community.css'
+import LFGModal from "./LFGModal";
 
 const LFG = () => (
     <div>
@@ -10,12 +11,7 @@ const LFG = () => (
                 <div className="row">
                     <div className="col-md-6 mx-auto">
 
-                    <div className="card gedf-card">
-                        <div className="card-body">
-                            <textarea className="form-control" rows="1" placeholder="Search for party"></textarea>
-                        </div>
-                    </div>
-
+                        <LFGModal />
 
                     <div className="card gedf-card">
                         <div className="card-header">

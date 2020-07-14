@@ -1,8 +1,59 @@
 body {
-    margin: 0 auto;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(148,14,75,1) 35%, rgba(0,212,255,1) 100%);
 }
+.post-tag{
+    margin-left: 15px;
+}
+
+
+.avatar{
+    width: 40px;
+    border: 3px solid red;
+}
+
+/* + sign button  mobile view  */
+.btn-mobile {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    border-radius: 50%;
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .btn-mobile {
+        display: block;
+    }
+    .desktop-input{
+        display: none;
+    }
+}
+
+/* like comment,etc button */
+.btn-circle {
+    text-align: center;
+    color: gray;
+    border-radius: 20px;
+    border: none;
+}
+.icon-text{
+    color: black;
+}
+.fa-icon{
+    font-size: large;
+    color: cornflowerblue;
+}
+
+
+/* comment box */
+.comment{
+    display: flex;
+}
+.comment-box{
+    border-radius: 20px;
+    margin-left: 15px;
+}
+
 
 .h7 {
     font-size: 0.8rem;
