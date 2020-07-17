@@ -1,12 +1,11 @@
 
 import React from 'react'
-import ReactDOM from 'react-dom'
 import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom'
 import notFoundPage from '../components/NotFoundPage'
 import Header from './Header'
 import Community from "./Community";
 import LFG from "./LFG";
-import LeftSideBar from "./LeftSideBar";
+import Setting from "./Setting";
 
 
 const AppRouter = () => (
@@ -17,7 +16,8 @@ const AppRouter = () => (
                 <Route path="/" component={Community} exact={true}  />
                 <Route path="/lfg" component={LFG} />
                 <Route path="/friends"/>
-                <Route path="/chat"  />
+                <Route path="/test"  />
+                <Route path="/setting" component={Setting} />
                 <Route component={notFoundPage} />
             </Switch>
         </div>

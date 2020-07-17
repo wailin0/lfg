@@ -1,26 +1,19 @@
-.dropdown-menu {
-    margin-right: 20px;
-}
-.right-nav {
-    margin-right: 40px;
-}
-#search-input {
-    border-radius: 20px;
-}
 
-.mobile-header{
-    align-items: center;
-    display: flex;
-    flex-flow: row;
-}
+
 .header-icon {
     display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.header-active:focus {
+    color: steelblue;
     font-size: 30px;
 }
 
 .header-active {
     color: steelblue;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 
@@ -28,27 +21,33 @@
     margin-left: 30px;
 }
 @media only screen and (max-width: 768px) {
-    .logo {
+    #logo {
         display: none;
     }
+    #pc-userpanel{
+        display: none;
+    }
+
+
 }
 
-
+/* space between icon for deskop view*/
 @media only screen and (min-width: 768px) {
     .header-icon-link {
         padding-left: 40px;
     }
-    .mobile-btn {
-        display: none;
-    }
 }
 
-.mobile-btn {
-    font-size: 25px;
-}
+
 
 body { padding-top: 100px; }
 
 @media screen and (min-width: 768px) {
-    body { padding-top: 70px; }
+    body { padding-top: 60px; }
+}
+
+
+#avatar {
+    width:40px;
+    height: 37px;
 }

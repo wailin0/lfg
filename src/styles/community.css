@@ -1,10 +1,25 @@
-body {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(148,14,75,1) 35%, rgba(0,212,255,1) 100%);
+
+
+/* like unlike button */
+#react-button {
+    margin-right: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 20px;
 }
-.post-tag{
-    margin-left: 15px;
+
+#react-button:active {
+    animation: shake 0.5s;
 }
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+}
+
 
 
 .avatar{
@@ -12,38 +27,11 @@ body {
     border: 3px solid red;
 }
 
-/* + sign button  mobile view  */
-.btn-mobile {
-    position: fixed;
-    right: 5%;
-    bottom: 5%;
-    border-radius: 50%;
-    display: none;
-}
 @media only screen and (max-width: 768px) {
-    .btn-mobile {
-        display: block;
-    }
-    .desktop-input{
+    #post-input{
         display: none;
     }
 }
-
-/* like comment,etc button */
-.btn-circle {
-    text-align: center;
-    color: gray;
-    border-radius: 20px;
-    border: none;
-}
-.icon-text{
-    color: black;
-}
-.fa-icon{
-    font-size: large;
-    color: cornflowerblue;
-}
-
 
 /* comment box */
 .comment{
@@ -52,22 +40,5 @@ body {
 .comment-box{
     border-radius: 20px;
     margin-left: 15px;
-}
-
-
-.h7 {
-    font-size: 0.8rem;
-}
-
-.gedf-wrapper {
-    margin-top: 0.97rem;
-}
-
-.gedf-main {
-    padding-left: 4rem;
-    padding-right: 4rem;
-}
-.gedf-card {
-    margin-bottom: 1rem;
 }
 

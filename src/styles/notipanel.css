@@ -1,0 +1,26 @@
+
+.panel {
+    display: none;
+
+}
+.panel.visible {
+    display: block;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #noti-panel {
+        top: 16%;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #noti-panel {
+        right: 30%;
+        position: fixed;
+        z-index: 4;
+
+    }
+}

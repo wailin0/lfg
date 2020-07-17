@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="up">
+      <change afterPath="$PROJECT_DIR$/src/components/NotiPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PlusButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Setting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/notipanel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/plusbutton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/setting.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/userpanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Community.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommunityModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftSideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/community.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/community.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/notfoundpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/notfoundpage.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/wailin0/lfg.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eYABZo9dwWGPze3fCA1svAM1bj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.rmicompiler" />
+    <property name="ts.external.directory.path" value="D:\IntelliJ IDEA 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\public\images" />
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg" />
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\images" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="" />
+      <created>1594488017751</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594488017751</updated>
+      <workItem from="1594488020958" duration="1145000" />
+      <workItem from="1594490006543" duration="1266000" />
+      <workItem from="1594492927846" duration="1868000" />
+      <workItem from="1594501248350" duration="15317000" />
+      <workItem from="1594565868967" duration="19755000" />
+      <workItem from="1594588530754" duration="10760000" />
+      <workItem from="1594649763142" duration="7239000" />
+      <workItem from="1594658827184" duration="30956000" />
+      <workItem from="1594735927536" duration="6496000" />
+      <workItem from="1594757200329" duration="979000" />
+      <workItem from="1594769015443" duration="5629000" />
+      <workItem from="1594774935526" duration="64000" />
+      <workItem from="1594775020220" duration="8188000" />
+      <workItem from="1594823974222" duration="25170000" />
+      <workItem from="1594853192511" duration="8715000" />
+      <workItem from="1594908343450" duration="294000" />
+      <workItem from="1594929614235" duration="11850000" />
+      <workItem from="1594949849300" duration="3324000" />
+      <workItem from="1594994357227" duration="3793000" />
+      <workItem from="1595004375480" duration="1878000" />
+      <workItem from="1595007041822" duration="19591000" />
+    </task>
+    <task id="LOCAL-00001" summary="sample header">
+      <created>1594514594174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594514594174</updated>
+    </task>
+    <task id="LOCAL-00002" summary="efefef">
+      <created>1594515145491</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594515145491</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updated smaple ui">
+      <created>1594599364032</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594599364032</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated readme">
+      <created>1594600008748</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594600008748</updated>
+    </task>
+    <task id="LOCAL-00005" summary="up">
+      <created>1594690115108</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1594690115108</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sample header" />
+    <MESSAGE value="efefef" />
+    <MESSAGE value="updated smaple ui" />
+    <MESSAGE value="updated readme" />
+    <MESSAGE value="up" />
+    <option name="LAST_COMMIT_MESSAGE" value="up" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="83" y="122" width="1016" height="918" key="#Intentions" timestamp="1594674120364">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="83" y="122" width="1016" height="918" key="#Intentions/0.0.1920.1040@0.0.1920.1040" timestamp="1594674120364" />
+    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595008749026">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595008749026" />
+    <state width="987" height="236" key="GridCell.Tab.0.bottom" timestamp="1594489169497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="987" height="236" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594489169497" />
+    <state width="987" height="236" key="GridCell.Tab.0.center" timestamp="1594489169497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="987" height="236" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594489169497" />
+    <state width="987" height="236" key="GridCell.Tab.0.left" timestamp="1594489169497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="987" height="236" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594489169497" />
+    <state width="987" height="236" key="GridCell.Tab.0.right" timestamp="1594489169497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="987" height="236" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594489169497" />
+    <state x="143" y="207" key="Vcs.Push.Dialog.v2" timestamp="1594690123656">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="143" y="207" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594690123656" />
+    <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594842823686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594842823686" />
+    <state x="1027" y="402" width="787" height="721" key="dock-window-1" timestamp="1595021502595">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1027" y="402" width="787" height="721" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1595021502595" />
+    <state x="957" y="102" width="887" height="928" key="dock-window-2" timestamp="1594857545291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="957" y="102" width="887" height="928" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1594857545291" />
+    <state x="858" y="66" width="888" height="928" key="dock-window-3" timestamp="1594857798747">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="858" y="66" width="888" height="928" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1594857798747" />
+    <state x="405" y="425" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1594514809477">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="405" y="425" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594514809477" />
+    <state x="127" y="222" key="run.anything.popup" timestamp="1595026713595">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="127" y="222" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595026713595" />
+    <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1594935483188">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594935483188" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$USER_HOME$/Documents/react-course/expensify/src/routers/AppRouter.js</url>
+          <line>1</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

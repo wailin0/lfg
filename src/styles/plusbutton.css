@@ -1,0 +1,19 @@
+/* + sign button  mobile view  */
+#mobile-btn {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    font-size: 20px;
+    border-radius: 50%;
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #mobile-btn {
+        display: block;
+    }
+    #post-input{
+        display: none;
+    }
+}
