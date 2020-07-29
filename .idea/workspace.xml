@@ -16,16 +16,31 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="up">
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="ex">
+      <change afterPath="$PROJECT_DIR$/src/components/Context.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MediaForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PollForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostComment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostTag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/postform.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Community.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommunityModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LeftSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftSideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlusButton.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/community.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/community.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/leftsidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/leftsidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/plusbutton.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,20 +75,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lfg-spring" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="D:\IntelliJ IDEA 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -81,6 +97,8 @@
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\components" />
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\build\images" />
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\public\images" />
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg" />
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\images" />
@@ -141,6 +159,28 @@
       <workItem from="1595030590951" duration="11886000" />
       <workItem from="1595093930131" duration="9530000" />
       <workItem from="1595103519983" duration="11735000" />
+      <workItem from="1595170148469" duration="388000" />
+      <workItem from="1595194344710" duration="37000" />
+      <workItem from="1595197969345" duration="5431000" />
+      <workItem from="1595266855255" duration="13949000" />
+      <workItem from="1595347077701" duration="20636000" />
+      <workItem from="1595427679583" duration="239000" />
+      <workItem from="1595445519569" duration="1023000" />
+      <workItem from="1595532030874" duration="363000" />
+      <workItem from="1595532412199" duration="12140000" />
+      <workItem from="1595546445276" duration="8376000" />
+      <workItem from="1595633460648" duration="3684000" />
+      <workItem from="1595706305104" duration="86000" />
+      <workItem from="1595717381728" duration="8839000" />
+      <workItem from="1595803224275" duration="34000" />
+      <workItem from="1595803293062" duration="293000" />
+      <workItem from="1595804857251" duration="1246000" />
+      <workItem from="1595821902505" duration="26000" />
+      <workItem from="1595821949552" duration="3928000" />
+      <workItem from="1595863978840" duration="8865000" />
+      <workItem from="1595879024523" duration="14346000" />
+      <workItem from="1595976913970" duration="30554000" />
+      <workItem from="1596036702631" duration="293000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -177,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594690115108</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed mobile view">
+      <created>1595170200032</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595170200032</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,12 +255,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="sample header" />
     <MESSAGE value="efefef" />
     <MESSAGE value="updated smaple ui" />
     <MESSAGE value="updated readme" />
     <MESSAGE value="up" />
-    <option name="LAST_COMMIT_MESSAGE" value="up" />
+    <MESSAGE value="fixed mobile view" />
+    <MESSAGE value="ex" />
+    <option name="LAST_COMMIT_MESSAGE" value="ex" />
   </component>
   <component name="WindowStateProjectService">
     <state x="83" y="122" width="1016" height="918" key="#Intentions" timestamp="1594674120364">
@@ -228,10 +278,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="821" y="329" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595037244003" />
-    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595008749026">
+    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595983459273">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595008749026" />
+    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595983459273" />
+    <state x="349" y="249" key="FileChooserDialogImpl" timestamp="1595866192291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595866192291" />
     <state width="987" height="236" key="GridCell.Tab.0.bottom" timestamp="1594489169497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -248,42 +302,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="987" height="236" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594489169497" />
-    <state x="652" y="94" key="SettingsEditor" timestamp="1595030664085">
+    <state x="131" y="102" key="SettingsEditor" timestamp="1595725500801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="652" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595030664085" />
-    <state x="143" y="207" key="Vcs.Push.Dialog.v2" timestamp="1594690123656">
+    <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595725500801" />
+    <state x="143" y="207" key="Vcs.Push.Dialog.v2" timestamp="1595170277455">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="143" y="207" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594690123656" />
+    <state x="143" y="207" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595170277455" />
+    <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595363959657" />
     <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594842823686">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594842823686" />
-    <state x="704" y="287" width="864" height="773" key="dock-window-1" timestamp="1595097010974">
+    <state x="439" y="183" width="782" height="813" key="dock-window-1" timestamp="1595978214323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="704" y="287" width="864" height="773" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1595097010974" />
-    <state x="411" y="360" width="864" height="773" key="dock-window-2" timestamp="1595103345236">
+    <state x="439" y="183" width="782" height="813" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1595978214323" />
+    <state x="656" y="462" width="782" height="817" key="dock-window-2" timestamp="1595981830991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="411" y="360" width="864" height="773" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1595103345236" />
-    <state x="858" y="66" width="888" height="928" key="dock-window-3" timestamp="1594857798747">
+    <state x="656" y="462" width="782" height="817" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1595981830991" />
+    <state x="818" y="454" width="708" height="575" key="dock-window-3" timestamp="1595978214323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="858" y="66" width="888" height="928" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1594857798747" />
+    <state x="818" y="454" width="708" height="575" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1595978214323" />
+    <state x="836" y="484" width="782" height="813" key="dock-window-4" timestamp="1595979151635">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="836" y="484" width="782" height="813" key="dock-window-4/0.0.1920.1040@0.0.1920.1040" timestamp="1595979151635" />
+    <state x="682" y="580" width="848" height="580" key="dock-window-5" timestamp="1596000203471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="682" y="580" width="848" height="580" key="dock-window-5/0.0.1920.1040@0.0.1920.1040" timestamp="1596000203471" />
+    <state x="993" y="66" width="844" height="819" key="dock-window-6" timestamp="1595999860979">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="993" y="66" width="844" height="819" key="dock-window-6/0.0.1920.1040@0.0.1920.1040" timestamp="1595999860979" />
+    <state x="928" y="72" width="844" height="819" key="dock-window-7" timestamp="1596000203471">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="928" y="72" width="844" height="819" key="dock-window-7/0.0.1920.1040@0.0.1920.1040" timestamp="1596000203471" />
     <state x="405" y="425" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1594514809477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="405" y="425" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594514809477" />
-    <state x="127" y="222" key="run.anything.popup" timestamp="1595114181901">
+    <state x="127" y="222" key="run.anything.popup" timestamp="1595997350424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="127" y="222" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595114181901" />
-    <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1594935483188">
+    <state x="127" y="222" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595997350424" />
+    <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1595352422378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594935483188" />
+    <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595352422378" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -297,6 +371,15 @@
           <url>file://$PROJECT_DIR$/src/components/Search.js</url>
           <line>2</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/CommunityModal.js</url>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/componenets/Search.js</url>
+          <line>10</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

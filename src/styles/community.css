@@ -1,4 +1,9 @@
+body {
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
 
 /* like unlike button */
 #react-button {
@@ -42,3 +47,22 @@
     margin-left: 15px;
 }
 
+
+#mobile-btn {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    font-size: 20px;
+    border-radius: 50%;
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #mobile-btn {
+        display: block;
+    }
+    #post-input{
+        display: none;
+    }
+}
