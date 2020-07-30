@@ -24,7 +24,7 @@ const Search = () => {
             if(searchValue === inputRef.current.value){
                 const searchQuery = searchValue.length === 0 ? ''
                     : `?orderBy="title"&equalTo="${searchValue}"`
-                fetch('https://lfg-firebase.firebaseio.com/post.json'+ searchQuery)
+                fetch(''+ searchQuery)
                     .then(response => response.json())
                     .then(response => {
                         const searchData = []

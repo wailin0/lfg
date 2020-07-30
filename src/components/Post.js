@@ -3,6 +3,7 @@ import {FaClock} from "react-icons/fa";
 import PostReact from "./PostReact";
 import PostComment from "./PostComment";
 import PostTag from "./PostTag";
+import '../styles/post.css'
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -14,8 +15,7 @@ const Post = (props) => {
 
     return(
         <>
-
-            {
+            { props.loading ? <span id="loading">Loading feeds... <br/><Spinner animation="grow" variant="danger" /></span> :
                 props.posts.map((eachPost) => (
                     <div key={eachPost.id}>
                     <div className="card">
@@ -33,7 +33,7 @@ const Post = (props) => {
                                     </div>
                                 </div>
                                 <div>
-                                        <DropdownButton drop='right'>
+                                        <DropdownButton drop='left'>
                                             <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
                                             <Dropdown.Divider />
                                             <Dropdown.Item onClick={() => props.setShowDeleteModal(true)}>Delete</Dropdown.Item>
@@ -55,15 +55,12 @@ const Post = (props) => {
                     </div>
 
                         <PostReact
-                            method={props.method}
-                            eachPost={eachPost}
                             postId={eachPost.id}
-                            likes={eachPost.likes}
-                            dislikes={eachPost.dislikes}
-                            comments={eachPost.comments}
+                            posts={props.posts}
+                            currentPost={eachPost}
+                            postId={eachPost.id}
                             setPosts={props.setPosts}
                         />
-                        <PostComment />
 
                 </div>
                     <br/>

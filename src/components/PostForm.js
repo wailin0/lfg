@@ -11,7 +11,10 @@ const PostForm = React.memo(props => {
     const [body, setBody] = useState('')
     const submitPost = event => {
         event.preventDefault()
-        props.addPost({title: title, body: body, likes:0, dislikes:0, comments:0, shares:0})
+        props.addPost({
+            title: title,
+            body: body
+        })
         props.onHide()
     }
 

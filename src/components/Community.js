@@ -10,78 +10,33 @@ import {
 import Post from "./Post";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
+import Rest from "./Rest";
 
 const Community = () => {
     const [posts,setPosts] = useState([])
-    const [test, setTest] = useState([
-        {id: 1, name: 'a'},
-            {id:2, name: 'b'}
-        ]
-        )
-
-    const testT = (id) => {
-        let newArr = [...test]
-        newArr[0] = {id:1, name: 'c'}
-        setTest(newArr)
-        console.log(test)
-    }
-
     const [loading, setLoading] = useState(false)
     const [modalShow, setModalShow] = React.useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
 
-    // spring get
-    // useEffect(() => {
-    //     axios.get('http://localhost:8080/posts')
-    //         .then(response => {
-    //             setPost(response.data)
-    //             console.log(response.data)
-    //         })
-    //         .catch(e => {
-    //             console.log(e)
-    //         })
-    // },[])
-
-    //spring post
-    // const addPost = posts => {
-    //         axios.post('http://localhost:8080/posts',posts )
-    //             .then(response => {
-    //                 setPosts(prevPosts =>
-    //                     [...prevPosts, {id:response.data.name, ...posts}])
-    //             }).catch(error => {
-    //             console.log(error)
-    //         })
-    //     }
 
     useEffect(() => {
         setLoading(true)
-        fetch('https://lfg-firebase.firebaseio.com/posts.json')
-            .then(response => response.json())
+        axios.get(`${Rest}/post`)
             .then(response => {
                 setLoading(false)
-                const loadedData = []
-                for (const key in response) {
-                    loadedData.push({
-                        id: key,
-                        title: response[key].title,
-                        body: response[key].body,
-                        likes: response[key].likes,
-                        dislikes: response[key].dislikes,
-                        comments: response[key].comments,
-                        shares: response[key].shares
-                    })
-                }
-                setPosts(loadedData)
+                setPosts(response.data)
+                console.log(response.data)
             })
-            .catch(error => {
-                setLoading(false)
-                console.log(error)
+            .catch(e => {
+                console.log(e)
             })
-    }, [])
+    },[])
+
+
 
     const addPost = posts => {
         setLoading(true)
-        axios.post('https://lfg-firebase.firebaseio.com/posts.json',posts )
+        axios.post(`${Rest}/post`,posts )
             .then(response => {
                 setLoading(false)
                 setPosts(prevPosts =>
@@ -94,19 +49,15 @@ const Community = () => {
 
     const deletePost = postId => {
         setLoading(true)
-        fetch(`https://lfg-firebase.firebaseio.com/posts/${postId}.json`, {
-            method: 'DELETE'
+        axios.delete(`${Rest}/post/${postId}`, {
         }).then(response => {
             setLoading(false)
             setShowDeleteModal(false)
             setPosts(prevPosts =>
                 prevPosts.filter(post => post.id !== postId))
-        })
+        }).catch(error => console.log(error))
     }
 
-    const method = (p) => {
-        setPosts( {...posts[1], p}   )
-    }
 
     return (
     <>
@@ -155,9 +106,6 @@ const Community = () => {
                 </div>
             </div>
         </div>
-        <button onClick={testT}>
-            { test.map((t) => (  <span> {t.id} - {t.name} </span>  )) }
-        </button>
         <Button variant="primary" onClick={() => setModalShow(true)} id="mobile-btn">
             <FaPlus />
         </Button>
