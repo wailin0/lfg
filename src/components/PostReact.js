@@ -34,7 +34,7 @@ const PostReact = (props) => {
     useEffect(() => {
         axios.get(`${Rest}/like/post/${props.postId}/user/1`)
             .then(response => {
-                if((response.data !== null)) {
+                if((response.data.liked !== undefined)) {
                     setLike({...like, liked: response.data.liked})
                 }
 
@@ -46,8 +46,8 @@ const PostReact = (props) => {
     useEffect(() => {
         axios.get(`${Rest}/dislike/post/${props.postId}/user/1`)
             .then(response => {
-                if((response.data !== null)) {
-                    setDislike({...dislike, liked: !response.data.liked})
+                if((response.data.liked !== undefined)) {
+                    setDislike({...dislike, liked: true})
                     console.log(response.data.liked)
                 }
 
@@ -73,9 +73,9 @@ const PostReact = (props) => {
 
 
     const clickLike = () => {
-        if (like.liked) {
+        if (!like.liked) {
             setLikeCount(likeCount + 1)
-            setLike({...like, liked: false})
+            setLike({...like, liked: true})
             axios.post(`${Rest}/like/`, {liked: true, userId: 1, postId: props.postId})
                 .then(response => {
                 })
@@ -83,7 +83,7 @@ const PostReact = (props) => {
         }
         else {
             setLikeCount(likeCount - 1)
-            setLike({...like, liked: true})
+            setLike({...like, liked: false})
             axios.delete(`${Rest}/like/post/${props.postId}/user/1`)
                 .catch(error => console.log(error))
         }
@@ -92,7 +92,7 @@ const PostReact = (props) => {
     const clickDislike = () => {
         if (!dislike.liked) {
             setDislikeCount(dislikeCount + 1)
-            setDislike({...dislike, liked: false})
+            setDislike({...dislike, liked: true})
             axios.post(`${Rest}/like/`, {liked: false, userId: 1, postId: props.postId})
                 .then(response => {
                 })
@@ -100,7 +100,7 @@ const PostReact = (props) => {
         }
         else {
             setDislikeCount(dislikeCount - 1)
-            setDislike({...dislike, liked: true})
+            setDislike({...dislike, liked: false})
             axios.delete(`${Rest}/dislike/post/${props.postId}/user/1`)
                 .catch(error => console.log(error))
         }
@@ -113,7 +113,7 @@ const PostReact = (props) => {
             {likeCount} <button id={ like.liked ? 'react-button-clicked' : 'react-button'} onClick={() => clickLike()} >
             <FaThumbsUp/>
         </button>
-            {dislikeCount} <button id={ dislike.liked ? 'react-button-clicked' : 'react-button'  } onClick={() => clickDislike()} >
+            {dislikeCount} <button id={ dislike.liked ? 'react-button-clicked' : 'react-button' } onClick={() => clickDislike()} >
             <FaThumbsDown />
         </button>
             0 <button id="react-button" onClick={() => toggleCommentBox()}>
