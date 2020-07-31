@@ -72,37 +72,65 @@ const PostReact = (props) => {
     },[])
 
 
+    //rest request for like dislike logic
+    const postLike = () => {
+        setLikeCount(likeCount + 1)
+        setLike({...like, liked: true})
+        axios.post(`${Rest}/like/`, {liked: true, userId: 1, postId: props.postId})
+            .catch(err => console.log(err))
+    }
+    const deleteLike = () => {
+        setLikeCount(likeCount - 1)
+        setLike({...like, liked: false})
+        axios.delete(`${Rest}/like/post/${props.postId}/user/1`)
+            .catch(error => console.log(error))
+    }
+    const postDislike = () => {
+        setDislikeCount(dislikeCount + 1)
+        setDislike({...dislike, liked: true})
+        axios.post(`${Rest}/dislike/`, {liked: false, userId: 1, postId: props.postId})
+            .catch(err => console.log(err))
+    }
+    const deleteDislike = () => {
+        setDislikeCount(dislikeCount - 1)
+        setDislike({...dislike, liked: false})
+        axios.delete(`${Rest}/dislike/post/${props.postId}/user/1`)
+            .catch(error => console.log(error))
+    }
+
+
+
     const clickLike = () => {
-        if (!like.liked) {
-            setLikeCount(likeCount + 1)
-            setLike({...like, liked: true})
-            axios.post(`${Rest}/like/`, {liked: true, userId: 1, postId: props.postId})
-                .then(response => {
-                })
-                .catch(err => console.log(err))
+        if(dislike.liked){
+            if (!like.liked) {
+                deleteDislike()
+                postLike()
+            }
         }
         else {
-            setLikeCount(likeCount - 1)
-            setLike({...like, liked: false})
-            axios.delete(`${Rest}/like/post/${props.postId}/user/1`)
-                .catch(error => console.log(error))
+            if (!like.liked) {
+               postLike()
+            }
+            else {
+                deleteLike()
+            }
         }
     }
 
     const clickDislike = () => {
-        if (!dislike.liked) {
-            setDislikeCount(dislikeCount + 1)
-            setDislike({...dislike, liked: true})
-            axios.post(`${Rest}/like/`, {liked: false, userId: 1, postId: props.postId})
-                .then(response => {
-                })
-                .catch(err => console.log(err))
+        if (like.liked){
+            if(!dislike.liked){
+                deleteLike()
+                postDislike()
+            }
         }
         else {
-            setDislikeCount(dislikeCount - 1)
-            setDislike({...dislike, liked: false})
-            axios.delete(`${Rest}/dislike/post/${props.postId}/user/1`)
-                .catch(error => console.log(error))
+            if (!dislike.liked){
+                postDislike()
+            }
+            else {
+                deleteDislike()
+            }
         }
     }
 

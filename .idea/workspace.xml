@@ -16,7 +16,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="updated like">
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="fixed dislike logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PostReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
     </list>
@@ -165,7 +165,7 @@
       <workItem from="1596131451354" duration="1177000" />
       <workItem from="1596133316038" duration="20274000" />
       <workItem from="1596209528962" duration="20000" />
-      <workItem from="1596209750273" duration="4397000" />
+      <workItem from="1596209750273" duration="7649000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -230,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596209817202</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixed dislike logic">
+      <created>1596214321848</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1596214321848</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +278,8 @@
     <MESSAGE value="ex" />
     <MESSAGE value="changed to spring" />
     <MESSAGE value="updated like" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated like" />
+    <MESSAGE value="fixed dislike logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed dislike logic" />
   </component>
   <component name="WindowStateProjectService">
     <state x="83" y="122" width="1016" height="918" key="#Intentions" timestamp="1594674120364">
@@ -314,10 +322,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595725500801" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1596209827750">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1596214328180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596209827750" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596214328180" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
