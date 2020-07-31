@@ -16,17 +16,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="ex">
-      <change afterPath="$PROJECT_DIR$/src/components/Rest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/post.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/postreact.css" afterDir="false" />
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="changed to spring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Community.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PostReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/community.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/community.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +163,8 @@
       <workItem from="1596067850160" duration="8739000" />
       <workItem from="1596118026309" duration="4348000" />
       <workItem from="1596131451354" duration="1177000" />
-      <workItem from="1596133316038" duration="12514000" />
+      <workItem from="1596133316038" duration="20274000" />
+      <workItem from="1596209528962" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -222,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596037108152</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changed to spring">
+      <created>1596147220499</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596147220499</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +261,8 @@
     <MESSAGE value="up" />
     <MESSAGE value="fixed mobile view" />
     <MESSAGE value="ex" />
-    <option name="LAST_COMMIT_MESSAGE" value="ex" />
+    <MESSAGE value="changed to spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to spring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="83" y="122" width="1016" height="918" key="#Intentions" timestamp="1594674120364">
@@ -304,18 +305,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595725500801" />
-    <state x="143" y="207" key="Vcs.Push.Dialog.v2" timestamp="1596037121216">
+    <state x="143" y="207" key="Vcs.Push.Dialog.v2" timestamp="1596147234489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="143" y="207" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596037121216" />
+    <state x="143" y="207" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596147234489" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595363959657" />
-    <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594842823686">
+    <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596147227407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594842823686" />
+    <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596147227407" />
     <state x="737" y="2" width="940" height="1010" key="dock-window-1" timestamp="1596074320572">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

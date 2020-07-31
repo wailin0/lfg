@@ -13,73 +13,94 @@ const PostReact = (props) => {
     }
 
     const [likeCount, setLikeCount] = useState(0)
+
     const [dislikeCount, setDislikeCount] = useState(0)
 
     const [like, setLike] = useState({
         id: null,
-        voted: false,
+        liked: false,
         userId: 1,
         postId: props.postId
     })
 
     const [dislike, setDislike] = useState({
         id: null,
-        voted: false,
+        liked: false,
         userId: 1,
         postId: props.postId
     })
-
 
     //getting like for specifci user
     useEffect(() => {
         axios.get(`${Rest}/like/post/${props.postId}/user/1`)
             .then(response => {
                 if((response.data !== null)) {
-                    setLike({...like, voted: response.data.voted})
+                    setLike({...like, liked: response.data.liked})
                 }
 
             })
     },[])
+
+
+    //getting like for specifci user
+    useEffect(() => {
+        axios.get(`${Rest}/dislike/post/${props.postId}/user/1`)
+            .then(response => {
+                if((response.data !== null)) {
+                    setDislike({...dislike, liked: !response.data.liked})
+                    console.log(response.data.liked)
+                }
+
+            })
+    },[])
+
 
     //getting likes by postId
     useEffect(() => {
         axios.get(`${Rest}/post/${props.postId}/like`)
             .then(response => {
                 setLikeCount(response.data.length)
-                console.log(response.data.length)
+            })
+    },[])
+
+    //getting dislikes by postId
+    useEffect(() => {
+        axios.get(`${Rest}/post/${props.postId}/dislike`)
+            .then(response => {
+                setDislikeCount(response.data.length)
             })
     },[])
 
 
     const clickLike = () => {
-        if (!like.voted) {
+        if (like.liked) {
             setLikeCount(likeCount + 1)
-            setLike({...like, voted: true})
-            axios.post(`${Rest}/like/`, {voted: true, userId: 1, postId: props.postId})
+            setLike({...like, liked: false})
+            axios.post(`${Rest}/like/`, {liked: true, userId: 1, postId: props.postId})
                 .then(response => {
                 })
                 .catch(err => console.log(err))
         }
         else {
             setLikeCount(likeCount - 1)
-            setLike({...like, voted: false})
+            setLike({...like, liked: true})
             axios.delete(`${Rest}/like/post/${props.postId}/user/1`)
                 .catch(error => console.log(error))
         }
     }
 
     const clickDislike = () => {
-        if (!dislike.voted) {
+        if (!dislike.liked) {
             setDislikeCount(dislikeCount + 1)
-            setDislike({...dislike, voted: true})
-            axios.post(`${Rest}/dislike/`, {voted: true, userId: 1, postId: props.postId})
+            setDislike({...dislike, liked: false})
+            axios.post(`${Rest}/like/`, {liked: false, userId: 1, postId: props.postId})
                 .then(response => {
                 })
                 .catch(err => console.log(err))
         }
         else {
             setDislikeCount(dislikeCount - 1)
-            setDislike({...dislike, voted: false})
+            setDislike({...dislike, liked: true})
             axios.delete(`${Rest}/dislike/post/${props.postId}/user/1`)
                 .catch(error => console.log(error))
         }
@@ -89,10 +110,10 @@ const PostReact = (props) => {
     return (
         <>
         <div className=" mx-auto justify-content-between">
-            {likeCount} <button id={ like.voted ? 'react-button-clicked' : 'react-button'} onClick={() => clickLike()} >
+            {likeCount} <button id={ like.liked ? 'react-button-clicked' : 'react-button'} onClick={() => clickLike()} >
             <FaThumbsUp/>
         </button>
-            {dislikeCount} <button id={ dislike.voted ? 'react-button-clicked' : 'react-button'} onClick={() => clickDislike()}>
+            {dislikeCount} <button id={ dislike.liked ? 'react-button-clicked' : 'react-button'  } onClick={() => clickDislike()} >
             <FaThumbsDown />
         </button>
             0 <button id="react-button" onClick={() => toggleCommentBox()}>
