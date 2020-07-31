@@ -19,14 +19,6 @@ body {
     }
 }
 
-/* comment box */
-.comment{
-    display: flex;
-}
-.comment-box{
-    border-radius: 20px;
-    margin-left: 15px;
-}
 
 
 #mobile-btn {

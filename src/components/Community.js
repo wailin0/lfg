@@ -25,7 +25,6 @@ const Community = () => {
             .then(response => {
                 setLoading(false)
                 setPosts(response.data)
-                console.log(response.data)
             })
             .catch(e => {
                 console.log(e)
@@ -40,7 +39,7 @@ const Community = () => {
             .then(response => {
                 setLoading(false)
                 setPosts(prevPosts =>
-                    [...prevPosts, {id:response.data.name, ...posts}])
+                    [...prevPosts, {id:response.data.id, ...posts}])
             }).catch(error => {
                 setLoading(false)
             console.log(error)

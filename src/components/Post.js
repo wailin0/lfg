@@ -9,13 +9,14 @@ import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Spinner from "react-bootstrap/Spinner";
+import PostContext from "./PostContext";
 
 const Post = (props) => {
 
 
     return(
         <>
-            { props.loading ? <span id="loading">Loading feeds... <br/><Spinner animation="grow" variant="danger" /></span> :
+            { props.loading ? <span id="loading"><Spinner animation="grow" variant="danger" /> Loading feeds... <br/>please wait for backend server to start</span> :
                 props.posts.map((eachPost) => (
                     <div key={eachPost.id}>
                     <div className="card">
@@ -54,13 +55,14 @@ const Post = (props) => {
                         <PostTag />
                     </div>
 
+                        <PostContext.Provider value={eachPost.id} >
                         <PostReact
-                            postId={eachPost.id}
                             posts={props.posts}
                             currentPost={eachPost}
                             postId={eachPost.id}
                             setPosts={props.setPosts}
                         />
+                        </PostContext.Provider>
 
                 </div>
                     <br/>

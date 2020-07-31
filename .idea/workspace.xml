@@ -16,9 +16,17 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="fixed dislike logic">
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="like dislike logic working now">
+      <change afterPath="$PROJECT_DIR$/src/styles/postcomment.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Community.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Context.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostComment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PostReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/community.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/community.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/post.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +37,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -165,7 +173,7 @@
       <workItem from="1596131451354" duration="1177000" />
       <workItem from="1596133316038" duration="20274000" />
       <workItem from="1596209528962" duration="20000" />
-      <workItem from="1596209750273" duration="7649000" />
+      <workItem from="1596209750273" duration="24984000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -237,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596214321848</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="like dislike logic working now">
+      <created>1596217503387</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1596217503387</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +294,8 @@
     <MESSAGE value="changed to spring" />
     <MESSAGE value="updated like" />
     <MESSAGE value="fixed dislike logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed dislike logic" />
+    <MESSAGE value="like dislike logic working now" />
+    <option name="LAST_COMMIT_MESSAGE" value="like dislike logic working now" />
   </component>
   <component name="WindowStateProjectService">
     <state x="83" y="122" width="1016" height="918" key="#Intentions" timestamp="1594674120364">
@@ -322,10 +338,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595725500801" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1596214328180">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1596217561002">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596214328180" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596217561002" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -366,10 +382,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="405" y="425" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594514809477" />
-    <state x="127" y="222" key="run.anything.popup" timestamp="1596145414384">
+    <state x="127" y="222" key="run.anything.popup" timestamp="1596229535171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="127" y="222" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596145414384" />
+    <state x="127" y="222" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596229535171" />
     <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1595352422378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -405,6 +421,12 @@
           <url>file://$PROJECT_DIR$/src/components/Post.js</url>
           <line>10</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Post.js</url>
+          <line>33</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

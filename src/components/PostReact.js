@@ -1,50 +1,52 @@
-import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {FaCommentDots, FaShare, FaThumbsDown, FaThumbsUp} from "react-icons/fa";
 import PostComment from "./PostComment";
 import '../styles/postreact.css'
 import rest from './Rest.js'
 import Rest from "./Rest";
 import axios from "axios"
+import PostContext from "./PostContext";
 
-const PostReact = (props) => {
+const PostReact = () => {
     const [showComments, setShowComments] = useState(true)
     const toggleCommentBox = () => {
         setShowComments(!showComments)
     }
 
     const [likeCount, setLikeCount] = useState(0)
-
     const [dislikeCount, setDislikeCount] = useState(0)
+
+    const postId = useContext(PostContext)
+
 
     const [like, setLike] = useState({
         id: null,
         liked: false,
         userId: 1,
-        postId: props.postId
+        postId: postId
     })
 
     const [dislike, setDislike] = useState({
         id: null,
         liked: false,
         userId: 1,
-        postId: props.postId
+        postId: postId
     })
 
     //getting like for specifci user
     useEffect(() => {
-        axios.get(`${Rest}/like/post/${props.postId}/user/1`)
+        axios.get(`${Rest}/like/post/${postId}/user/1`)
             .then(response => {
                 if((response.data.liked !== undefined)) {
                     setLike({...like, liked: response.data.liked})
                 }
-
             })
     },[])
 
 
     //getting like for specifci user
     useEffect(() => {
-        axios.get(`${Rest}/dislike/post/${props.postId}/user/1`)
+        axios.get(`${Rest}/dislike/post/${postId}/user/1`)
             .then(response => {
                 if((response.data.liked !== undefined)) {
                     setDislike({...dislike, liked: true})
@@ -52,20 +54,20 @@ const PostReact = (props) => {
                 }
 
             })
-    },[])
+    },[postId])
 
 
     //getting likes by postId
     useEffect(() => {
-        axios.get(`${Rest}/post/${props.postId}/like`)
+        axios.get(`${Rest}/post/${postId}/like`)
             .then(response => {
                 setLikeCount(response.data.length)
             })
-    },[])
+    },[postId])
 
     //getting dislikes by postId
     useEffect(() => {
-        axios.get(`${Rest}/post/${props.postId}/dislike`)
+        axios.get(`${Rest}/post/${postId}/dislike`)
             .then(response => {
                 setDislikeCount(response.data.length)
             })
@@ -76,35 +78,53 @@ const PostReact = (props) => {
     const postLike = () => {
         setLikeCount(likeCount + 1)
         setLike({...like, liked: true})
-        axios.post(`${Rest}/like/`, {liked: true, userId: 1, postId: props.postId})
+        axios.post(`${Rest}/like/`, {liked: true, userId: 1, postId: postId})
             .catch(err => console.log(err))
     }
     const deleteLike = () => {
         setLikeCount(likeCount - 1)
         setLike({...like, liked: false})
-        axios.delete(`${Rest}/like/post/${props.postId}/user/1`)
+        axios.delete(`${Rest}/like/post/${postId}/user/1`)
             .catch(error => console.log(error))
     }
     const postDislike = () => {
         setDislikeCount(dislikeCount + 1)
         setDislike({...dislike, liked: true})
-        axios.post(`${Rest}/dislike/`, {liked: false, userId: 1, postId: props.postId})
+        axios.post(`${Rest}/dislike/`, {liked: false, userId: 1, postId: postId})
             .catch(err => console.log(err))
     }
     const deleteDislike = () => {
         setDislikeCount(dislikeCount - 1)
         setDislike({...dislike, liked: false})
-        axios.delete(`${Rest}/dislike/post/${props.postId}/user/1`)
+        axios.delete(`${Rest}/dislike/post/${postId}/user/1`)
             .catch(error => console.log(error))
     }
 
+
+    const changeVote = () => {
+        if(!like.liked) {
+            setDislikeCount(dislikeCount - 1)
+            setDislike({...dislike, liked: false})
+            axios.put(`${Rest}/like/post/${postId}/user/1`, {liked: true, userId: 1, postId: postId})
+                .catch(error => console.log(error))
+            setLikeCount(likeCount + 1)
+            setLike({...like, liked: true})
+        }
+        else{
+            setLikeCount(likeCount - 1)
+            setLike({...like, liked: false})
+            axios.put(`${Rest}/like/post/${postId}/user/1`, {liked: false, userId: 1, postId: postId})
+                .catch(error => console.log(error))
+            setDislikeCount(dislikeCount + 1)
+            setDislike({...dislike, liked: true})
+        }
+    }
 
 
     const clickLike = () => {
         if(dislike.liked){
             if (!like.liked) {
-                deleteDislike()
-                postLike()
+                changeVote()
             }
         }
         else {
@@ -120,8 +140,7 @@ const PostReact = (props) => {
     const clickDislike = () => {
         if (like.liked){
             if(!dislike.liked){
-                deleteLike()
-                postDislike()
+                changeVote()
             }
         }
         else {

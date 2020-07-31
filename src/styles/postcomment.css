@@ -1,0 +1,18 @@
+/* comment box */
+.comment{
+    display: flex;
+}
+.comment-box{
+    border-radius: 20px;
+    margin-left: 5px;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 30px;
+}
+
+#send-icon {
+    position: absolute;
+    right: 30px;
+    color: green;
+    font-size:18px;
+}
