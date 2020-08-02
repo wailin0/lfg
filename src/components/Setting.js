@@ -1,73 +1,169 @@
-import React from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import '../styles/setting.css'
+import {FaUser,FaLongArrowAltRight,FaBolt, FaLongArrowAltLeft} from "react-icons/fa";
+import CSSTransition from "react-transition-group/CSSTransition";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
-const Setting = () => (
-    <div className="container setting">
 
-        <div className="row setting-nav">
-            <div className="col-2">
-                <h5>User Settings</h5>
-                <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a className="nav-link active"  data-toggle="pill" href="#account" role="tab"  aria-selected="true">
-                        Account</a>
-                    <a className="nav-link"  data-toggle="pill" href="#premium" role="tab" >
-                        Premium</a>
-                    <a className="nav-link"  data-toggle="pill" href="#security" role="tab" >
-                        Security</a>
-                    <a className="nav-link"  data-toggle="pill" href="#privacy" role="tab" >
-                        Privacy</a>
-                    <a className="nav-link"  data-toggle="pill" href="#blocking" role="tab" >
-                        Blocking</a>
+const Setting = () => {
+    const [activeMenu, setActiveMenu] = useState('main');
+    const [menuHeight, setMenuHeight] = useState(null);
+    const dropdownRef = useRef(null);
 
-                    <br/>
-                    <h5>App Settings</h5>
-                    <a className="nav-link"  data-toggle="pill" href="#notifications" role="tab"  >
-                        Notifications</a>
-                    <a className="nav-link"  data-toggle="pill" href="#language" role="tab"  >
-                        Language</a>
-                    <a className="nav-link"  data-toggle="pill" href="#appearance" role="tab"  >
-                        Appearance</a>
-                </div>
-                <br/>
 
-            </div>
+    function calcHeight(el) {
+        const height = el.offsetHeight;
+        setMenuHeight(height);
+    }
 
-            <div className="col-9">
-                <div className="tab-content" id="v-pills-tabContent">
-                    <div className="tab-pane fade show active" id="account" role="tabpanel">
-                        account
-                    </div>
-                    <div className="tab-pane fade" id="premium" role="tabpanel">
+    function DropdownItem(props) {
+        return (
+            <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+                <span className="icon-button">{props.leftIcon}</span>
+                {props.children}
+                <span className="icon-right">{props.rightIcon}</span>
+            </a>
+        );
+    }
+
+    return (
+        <div className="dropdown container" style={{ height: menuHeight }} ref={dropdownRef}>
+
+            <CSSTransition
+                in={activeMenu === 'main'}
+                timeout={100}
+                classNames="menu-primary"
+                unmountOnExit
+               >
+                <div className="menu">
+                    User Setting
+                    <DropdownItem
+                        leftIcon={<FaUser />}
+                        goToMenu="settings">
+                        Account
+                    </DropdownItem>
+                    <DropdownItem
+                        leftIcon="🦧"
+                        goToMenu="animals">
                         Premium
-                    </div>
-                    <div className="tab-pane fade" id="security" role="tabpanel">
-                        security
-                    </div>
-                    <div className="tab-pane fade" id="privacy" role="tabpanel">
-                        privacy
-                    </div>
-                    <div className="tab-pane fade" id="blocking" role="tabpanel">
-                        blocking
-                    </div>
-                    <div className="tab-pane fade" id="notifications" role="tabpanel">
-                        notificaiton
-                    </div>
-                    <div className="tab-pane fade" id="language" role="tabpanel">
-                        language
-                    </div>
-                    <div className="tab-pane fade" id="appearance" role="tabpanel">
-                        appareance
-                    </div>
-
-
+                    </DropdownItem>
+                    <DropdownItem
+                        leftIcon="🦧"
+                        goToMenu="animals">
+                        Privacy
+                    </DropdownItem>
+                    <DropdownItem
+                        leftIcon="🦧"
+                        goToMenu="animals">
+                        Blocking
+                    </DropdownItem>
                 </div>
-            </div>
+            </CSSTransition>
 
+            <CSSTransition
+                in={activeMenu === 'main'}
+                timeout={100}
+                classNames="menu-primary"
+                unmountOnExit
+                >
+                <div className="menu">
+                    App Setting
+                    <DropdownItem
+                        leftIcon={<FaUser />}
+                        goToMenu="settings">
+                        Notifications
+                    </DropdownItem>
+                    <DropdownItem
+                        leftIcon="🦧"
+                        goToMenu="animals">
+                        Language
+                    </DropdownItem>
+                    <DropdownItem
+                        leftIcon="🦧"
+                        goToMenu="animals">
+                        Appearance
+                    </DropdownItem>
+                    <DropdownItem
+                        leftIcon="🦧"
+                        goToMenu="animals">
+                        Data Usage
+                    </DropdownItem>
+                    <DropdownItem
+                        leftIcon="🦧"
+                        goToMenu="animals">
+                        Video & Audio
+                    </DropdownItem>
+                </div>
+            </CSSTransition>
+
+
+            <CSSTransition
+                in={activeMenu === 'main'}
+                timeout={100}
+                classNames="menu-primary"
+                unmountOnExit
+               >
+                <div className="menu">
+                    Information
+                    <DropdownItem
+                        leftIcon={<FaUser />}
+                        goToMenu="settings">
+                        Terms of Service
+                    </DropdownItem>
+                    <DropdownItem
+                        leftIcon="🦧"
+                        goToMenu="animals">
+                        Support
+                    </DropdownItem>
+                    <DropdownItem
+                        leftIcon="🦧"
+                        goToMenu="animals">
+                        Policies
+                    </DropdownItem>
+                </div>
+            </CSSTransition>
+
+
+
+            <CSSTransition
+                in={activeMenu === 'settings'}
+                timeout={500}
+                classNames="menu-secondary"
+                unmountOnExit
+                >
+                <div className="menu">
+                    <DropdownItem goToMenu="main" leftIcon={<FaLongArrowAltLeft />}>
+                        <h5>Account</h5>
+                    </DropdownItem>
+                    <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"
+                         id="profile-pic"/>
+                         Wai Lin
+                    <DropdownItem>Email <br/>e@e.e</DropdownItem>
+                    <DropdownItem>Password <br/>******</DropdownItem>
+                    Management
+                    <DropdownItem>Disable</DropdownItem>
+                    <DropdownItem>Delete</DropdownItem>
+                </div>
+            </CSSTransition>
+
+            <CSSTransition
+                in={activeMenu === 'animals'}
+                timeout={500}
+                classNames="menu-secondary"
+                unmountOnExit
+               >
+                <div className="menu">
+                    <DropdownItem goToMenu="main" leftIcon={<FaLongArrowAltLeft />}>
+                        <h2>Animals</h2>
+                    </DropdownItem>
+                    <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
+                    <DropdownItem leftIcon="🐸">Frog</DropdownItem>
+                    <DropdownItem leftIcon="🦋">Horse?</DropdownItem>
+                    <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
+                </div>
+            </CSSTransition>
         </div>
-
-
-
-    </div>
-)
+    );
+}
 
 export default Setting
