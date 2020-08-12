@@ -1,2 +1,2 @@
 let Rest;
-export default Rest = 'http://localhost:8080/'
+export default Rest = 'http://localhost:8080'

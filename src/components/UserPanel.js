@@ -4,8 +4,9 @@ import Popover from "react-bootstrap/Popover";
 import ListGroup from "react-bootstrap/ListGroup";
 import '../styles/userpanel.css'
 import {FiLogOut} from 'react-icons/fi'
-import {FaCloudMoon, FaUserCog, FaCogs} from 'react-icons/fa'
-import {MdHelp, } from 'react-icons/md'
+import {FaCloudMoon, FaCog} from 'react-icons/fa'
+import {MdHelp } from 'react-icons/md'
+import {Link} from "react-router-dom";
 
 
 const UserPanel = () => {
@@ -30,8 +31,7 @@ const UserPanel = () => {
                             Lin <br/>view your profile</Popover.Title>
 
                         <ListGroup>
-                            <ListGroup.Item><FaUserCog/> User Setting</ListGroup.Item>
-                            <ListGroup.Item><FaCogs/> App Setting</ListGroup.Item>
+                            <ListGroup.Item><Link to="/setting" ><FaCog/> Settings</Link></ListGroup.Item>
                             <ListGroup.Item><MdHelp/> Help & Support</ListGroup.Item>
                             <ListGroup.Item><FaCloudMoon/> Dark Mode <button onClick={toggleDarkMode}>switch</button></ListGroup.Item>
                             <ListGroup.Item><FiLogOut/> Log Out</ListGroup.Item>

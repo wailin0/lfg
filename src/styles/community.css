@@ -24,7 +24,7 @@ body {
 #mobile-btn {
     position: fixed;
     right: 5%;
-    bottom: 5%;
+    bottom: 2%;
     font-size: 20px;
     border-radius: 50%;
     display: none;

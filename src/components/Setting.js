@@ -11,11 +11,6 @@ const Setting = () => {
     const dropdownRef = useRef(null);
 
 
-    function calcHeight(el) {
-        const height = el.offsetHeight;
-        setMenuHeight(height);
-    }
-
     function DropdownItem(props) {
         return (
             <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
@@ -31,8 +26,6 @@ const Setting = () => {
 
             <CSSTransition
                 in={activeMenu === 'main'}
-                timeout={100}
-                classNames="menu-primary"
                 unmountOnExit
                >
                 <div className="menu">
@@ -62,8 +55,6 @@ const Setting = () => {
 
             <CSSTransition
                 in={activeMenu === 'main'}
-                timeout={100}
-                classNames="menu-primary"
                 unmountOnExit
                 >
                 <div className="menu">
@@ -99,8 +90,6 @@ const Setting = () => {
 
             <CSSTransition
                 in={activeMenu === 'main'}
-                timeout={100}
-                classNames="menu-primary"
                 unmountOnExit
                >
                 <div className="menu">
@@ -127,20 +116,18 @@ const Setting = () => {
 
             <CSSTransition
                 in={activeMenu === 'settings'}
-                timeout={500}
-                classNames="menu-secondary"
                 unmountOnExit
                 >
                 <div className="menu">
                     <DropdownItem goToMenu="main" leftIcon={<FaLongArrowAltLeft />}>
                         <h5>Account</h5>
                     </DropdownItem>
-                    <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"
-                         id="profile-pic"/>
-                         Wai Lin
+                    <DropdownItem> <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"
+                                        id="profile-pic"/>
+                        Wai Lin</DropdownItem>
                     <DropdownItem>Email <br/>e@e.e</DropdownItem>
                     <DropdownItem>Password <br/>******</DropdownItem>
-                    Management
+
                     <DropdownItem>Disable</DropdownItem>
                     <DropdownItem>Delete</DropdownItem>
                 </div>
@@ -148,13 +135,11 @@ const Setting = () => {
 
             <CSSTransition
                 in={activeMenu === 'animals'}
-                timeout={500}
-                classNames="menu-secondary"
                 unmountOnExit
                >
                 <div className="menu">
                     <DropdownItem goToMenu="main" leftIcon={<FaLongArrowAltLeft />}>
-                        <h2>Animals</h2>
+                        <h5>Animals</h5>
                     </DropdownItem>
                     <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
                     <DropdownItem leftIcon="🐸">Frog</DropdownItem>

@@ -7,6 +7,7 @@ import Community from "./Community";
 import LFG from "./LFG";
 import Setting from "./Setting";
 import Register from "./Register";
+import CreateGroup from "./CreateGroup";
 
 
 const AppRouter = () => (
@@ -18,6 +19,7 @@ const AppRouter = () => (
                 <Route path="/lfg" component={LFG} />
                 <Route path="/friends"/>
                 <Route path="/test"  />
+                <Route path="/community/create" component={CreateGroup} />
                 <Route path="/register" component={Register} />
                 <Route path="/setting" component={Setting} />
                 <Route component={notFoundPage} />

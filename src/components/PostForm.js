@@ -13,7 +13,9 @@ const PostForm = React.memo(props => {
         event.preventDefault()
         props.addPost({
             title: title,
-            body: body
+            body: body,
+            userId: 1,
+            groupId: 1
         })
         props.onHide()
     }
