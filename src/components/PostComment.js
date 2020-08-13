@@ -8,6 +8,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import {MdHelp} from "react-icons/md";
 import {FiLogOut} from "react-icons/fi";
 import Popover from "react-bootstrap/Popover";
+import JWTHeader from "./JWTHeader";
 
 const PostComment = () => {
     const postId = useContext(PostContext)
@@ -24,7 +25,7 @@ const PostComment = () => {
         setUserComment({
             ...userComment, body: userComment.body
         })
-        axios.post(`${Rest}/comment/`, userComment)
+        axios.post(`${Rest}/comment/`, userComment, { headers: JWTHeader() })
             .then(response => {
                 setComments(prevComments =>
                     [...prevComments, {id:response.data.id, ...userComment}])
@@ -33,7 +34,7 @@ const PostComment = () => {
     }
 
     useEffect(() => {
-        axios.get(`${Rest}/comment/post/${postId}`)
+        axios.get(`${Rest}/comment/post/${postId}`, { headers: JWTHeader() })
             .then(response => {
                 setComments(response.data)
             })

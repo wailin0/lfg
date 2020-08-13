@@ -52,11 +52,9 @@ const Register = () => {
             .then(response => {
                 if(response.data) {
                     setValidation({...validation, username: response.data})
-                    console.log("eeeeeeeeee")
                 }
                 else {
                     setValidation({...validation, username: response.data})
-                    console.log("eeeffffffffffff")
                 }
             })
     },[user.username])

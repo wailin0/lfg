@@ -11,6 +11,7 @@ import Post from "./Post";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Rest from "./Rest";
+import JWTHeader from "./JWTHeader";
 
 const Community = () => {
     const [posts,setPosts] = useState([])
@@ -21,7 +22,7 @@ const Community = () => {
 
     useEffect(() => {
         setLoading(true)
-        axios.get(`${Rest}/post`)
+        axios.get(`${Rest}/post`, { headers: JWTHeader() })
             .then(response => {
                 setLoading(false)
                 setPosts(response.data)
@@ -32,10 +33,9 @@ const Community = () => {
     },[])
 
 
-
     const addPost = posts => {
         setLoading(true)
-        axios.post(`${Rest}/post`,posts )
+        axios.post(`${Rest}/post`,posts, { headers: JWTHeader() } )
             .then(response => {
                 setLoading(false)
                 setPosts(prevPosts =>
@@ -49,6 +49,7 @@ const Community = () => {
     const deletePost = postId => {
         setLoading(true)
         axios.delete(`${Rest}/post/${postId}`, {
+        headers: JWTHeader()
         }).then(response => {
             setLoading(false)
             setShowDeleteModal(false)

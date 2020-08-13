@@ -7,6 +7,7 @@ import {FiLogOut} from 'react-icons/fi'
 import {FaCloudMoon, FaCog} from 'react-icons/fa'
 import {MdHelp } from 'react-icons/md'
 import {Link} from "react-router-dom";
+import Logout from "./Logout";
 
 
 const UserPanel = () => {
@@ -34,7 +35,7 @@ const UserPanel = () => {
                             <ListGroup.Item><Link to="/setting" ><FaCog/> Settings</Link></ListGroup.Item>
                             <ListGroup.Item><MdHelp/> Help & Support</ListGroup.Item>
                             <ListGroup.Item><FaCloudMoon/> Dark Mode <button onClick={toggleDarkMode}>switch</button></ListGroup.Item>
-                            <ListGroup.Item><FiLogOut/> Log Out</ListGroup.Item>
+                            <ListGroup.Item onClick={Logout}><FiLogOut/> Log Out</ListGroup.Item>
                         </ListGroup>
                     </Popover>
                 }
