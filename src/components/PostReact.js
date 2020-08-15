@@ -5,7 +5,7 @@ import '../styles/postreact.css'
 import rest from './Rest.js'
 import Rest from "./Rest";
 import axios from "axios"
-import PostContext from "./PostContext";
+import Context from "./Context";
 import JWTHeader from "./JWTHeader";
 
 const PostReact = () => {
@@ -17,7 +17,7 @@ const PostReact = () => {
     const [likeCount, setLikeCount] = useState(0)
     const [dislikeCount, setDislikeCount] = useState(0)
 
-    const postId = useContext(PostContext)
+    const postId = useContext(Context)
 
 
     const [like, setLike] = useState({

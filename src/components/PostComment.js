@@ -3,7 +3,7 @@ import '../styles/postcomment.css'
 import {FaPaperPlane} from "react-icons/fa";
 import axios from "axios";
 import Rest from "./Rest";
-import PostContext from "./PostContext";
+import Context from "./Context";
 import ListGroup from "react-bootstrap/ListGroup";
 import {MdHelp} from "react-icons/md";
 import {FiLogOut} from "react-icons/fi";
@@ -11,7 +11,7 @@ import Popover from "react-bootstrap/Popover";
 import JWTHeader from "./JWTHeader";
 
 const PostComment = () => {
-    const postId = useContext(PostContext)
+    const postId = useContext(Context)
     const [comments, setComments] = useState([])
 
     const [userComment, setUserComment] = useState({

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import '../styles/community.css'
 import CommunityModal from "./CommunityModal";
 import {
@@ -12,6 +12,8 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Rest from "./Rest";
 import JWTHeader from "./JWTHeader";
+import CommunitySideBar from "./CommunitySideBar";
+import Context from "./Context";
 
 const Community = () => {
     const [posts,setPosts] = useState([])
@@ -58,9 +60,10 @@ const Community = () => {
         }).catch(error => console.log(error))
     }
 
-
+    const slideState = useContext(Context)
     return (
     <>
+        <CommunitySideBar slideState={slideState}/>
         <div className="container">
 
             <div className="row">

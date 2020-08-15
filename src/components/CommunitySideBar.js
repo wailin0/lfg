@@ -1,12 +1,14 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {FaChevronRight} from "react-icons/fa";
 import '../styles/leftsidebar.css'
+import Context from "./Context";
 
-const LeftSideBar = (props) => {
+const CommunitySideBar = () => {
+    const {slideState} = useContext(Context)
     return (
         <>
 
-            <div className=" vertical-nav " id={props.slideState ? 'sidebar':'active'}>
+            <div className=" vertical-nav " id={slideState ? 'sidebar':'active'}>
                 <div className="py-4 px-3 mb-2 ">
                     <h4 className="font-weight-white text-muted ">Community</h4>
                     <input type="text" id="left-side-search" placeholder="search community" />
@@ -32,4 +34,4 @@ const LeftSideBar = (props) => {
     )
 }
 
-export default LeftSideBar
+export default CommunitySideBar

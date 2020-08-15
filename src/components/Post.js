@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Spinner from "react-bootstrap/Spinner";
-import PostContext from "./PostContext";
+import Context from "./Context";
 
 const Post = (props) => {
 
@@ -55,14 +55,14 @@ const Post = (props) => {
                         <PostTag />
                     </div>
 
-                        <PostContext.Provider value={eachPost.id} >
+                        <Context.Provider value={eachPost.id} >
                         <PostReact
                             posts={props.posts}
                             currentPost={eachPost}
                             postId={eachPost.id}
                             setPosts={props.setPosts}
                         />
-                        </PostContext.Provider>
+                        </Context.Provider>
 
                 </div>
                     <br/>

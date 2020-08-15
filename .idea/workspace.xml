@@ -16,18 +16,28 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="register form validation with ajax request">
-      <change afterPath="$PROJECT_DIR$/src/components/JWTHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Logout.js" afterDir="false" />
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="integrated jwt with spring">
+      <change afterPath="$PROJECT_DIR$/src/components/Chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChatSideBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/footer/Footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/footer/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/footer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/login/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/chat.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Community.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LFG.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LFG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommunitySideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PostComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Context.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PostReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/leftsidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/leftsidebar.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -81,14 +91,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src" />
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\styles" />
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src" />
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\components" />
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\build\images" />
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\public\images" />
-      <recent name="C:\Users\OMEGA\IdeaProjects\lfg" />
-      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\images" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -184,7 +195,11 @@
       <workItem from="1596488530413" duration="760000" />
       <workItem from="1596727124541" duration="24000" />
       <workItem from="1597176071446" duration="22634000" />
-      <workItem from="1597259738071" duration="17661000" />
+      <workItem from="1597259738071" duration="17758000" />
+      <workItem from="1597332047835" duration="17043000" />
+      <workItem from="1597355909933" duration="6758000" />
+      <workItem from="1597415702064" duration="3209000" />
+      <workItem from="1597436814061" duration="18012000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -284,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597199783360</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="integrated jwt with spring">
+      <created>1597281792017</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597281792017</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +352,8 @@
     <MESSAGE value="comment and user ui update" />
     <MESSAGE value="setting ui updated with transition groups" />
     <MESSAGE value="register form validation with ajax request" />
-    <option name="LAST_COMMIT_MESSAGE" value="register form validation with ajax request" />
+    <MESSAGE value="integrated jwt with spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrated jwt with spring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="83" y="122" width="1016" height="918" key="#Intentions" timestamp="1594674120364">
@@ -345,38 +368,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="821" y="329" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595037244003" />
-    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595983459273">
+    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597363430369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595983459273" />
+    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597363430369" />
     <state x="349" y="249" key="FileChooserDialogImpl" timestamp="1596069688651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596069688651" />
-    <state width="1057" height="76" key="GridCell.Tab.0.bottom" timestamp="1597200880922">
+    <state width="1058" height="313" key="GridCell.Tab.0.bottom" timestamp="1597363833215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1057" height="76" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597200880922" />
-    <state width="1057" height="76" key="GridCell.Tab.0.center" timestamp="1597200880922">
+    <state width="1058" height="313" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597363833215" />
+    <state width="1058" height="313" key="GridCell.Tab.0.center" timestamp="1597363833215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1057" height="76" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597200880922" />
-    <state width="1057" height="76" key="GridCell.Tab.0.left" timestamp="1597200880922">
+    <state width="1058" height="313" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597363833215" />
+    <state width="1058" height="313" key="GridCell.Tab.0.left" timestamp="1597363833215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1057" height="76" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597200880922" />
-    <state width="1057" height="76" key="GridCell.Tab.0.right" timestamp="1597200880922">
+    <state width="1058" height="313" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597363833215" />
+    <state width="1058" height="313" key="GridCell.Tab.0.right" timestamp="1597363833215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1057" height="76" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597200880922" />
+    <state width="1058" height="313" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597363833215" />
     <state x="131" y="102" key="SettingsEditor" timestamp="1595725500801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595725500801" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1597200863154">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1597281798584">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597200863154" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597281798584" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -385,22 +408,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596147227407" />
-    <state x="924" y="122" width="786" height="1000" key="dock-window-1" timestamp="1596489239036">
+    <state x="960" y="56" width="790" height="874" key="dock-window-1" timestamp="1597437728846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="924" y="122" width="786" height="1000" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1596489239036" />
-    <state x="729" y="32" width="940" height="1012" key="dock-window-2" timestamp="1596118325378">
+    <state x="960" y="56" width="790" height="874" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1597437728846" />
+    <state x="1126" y="128" width="790" height="874" key="dock-window-2" timestamp="1597438790315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="729" y="32" width="940" height="1012" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1596118325378" />
-    <state x="818" y="454" width="708" height="575" key="dock-window-3" timestamp="1595978214323">
+    <state x="1126" y="128" width="790" height="874" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1597438790315" />
+    <state x="1106" y="43" width="790" height="874" key="dock-window-3" timestamp="1597440496882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="818" y="454" width="708" height="575" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1595978214323" />
-    <state x="836" y="484" width="782" height="813" key="dock-window-4" timestamp="1595979151635">
+    <state x="1106" y="43" width="790" height="874" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1597440496882" />
+    <state x="1089" y="55" width="790" height="874" key="dock-window-4" timestamp="1597440759172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="836" y="484" width="782" height="813" key="dock-window-4/0.0.1920.1040@0.0.1920.1040" timestamp="1595979151635" />
+    <state x="1089" y="55" width="790" height="874" key="dock-window-4/0.0.1920.1040@0.0.1920.1040" timestamp="1597440759172" />
     <state x="682" y="580" width="848" height="580" key="dock-window-5" timestamp="1596000203471">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -417,14 +440,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="405" y="425" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594514809477" />
-    <state x="127" y="222" key="run.anything.popup" timestamp="1597279476138">
+    <state x="127" y="222" width="840" height="1034" key="run.anything.popup" timestamp="1597451450297">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="127" y="222" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597279476138" />
-    <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1597191046264">
+    <state x="127" y="222" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597451450297" />
+    <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1597356695378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597191046264" />
+    <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597356695378" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -461,6 +484,11 @@
           <url>file://$PROJECT_DIR$/src/components/Post.js</url>
           <line>33</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../lfg-spring/src/main/resources/templates/index.js</url>
+          <line>64</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

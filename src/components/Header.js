@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import '../styles/header.css'
 import {Link, NavLink} from "react-router-dom";
 import {Navbar} from "react-bootstrap";
@@ -7,16 +7,14 @@ import UserPanel from "./UserPanel";
 import {FaChevronRight, FaUserFriends, FaChevronLeft} from 'react-icons/fa'
 import {IoLogoGameControllerB} from 'react-icons/io'
 import {IoIosChatboxes, IoIosPeople} from 'react-icons/io'
-import LeftSideBar from "./LeftSideBar";
+import CommunitySideBar from "./CommunitySideBar";
 import Search from "./Search";
+import Context from "./Context";
 
 
 
 const Header = () => {
-    const [slideState, setSlideState] = useState("sidebar");
-    const toggleSlide = () => {
-        setSlideState(!slideState)
-    }
+    const {slideState, toggleSlide} = useContext(Context)
     return (
         <>
             <Navbar bg="dark" expand="md" fixed="top">
@@ -48,7 +46,6 @@ const Header = () => {
                 <UserPanel />
                 </div>
             </Navbar>
-            <LeftSideBar slideState={slideState} />
         </>
     )
 }
