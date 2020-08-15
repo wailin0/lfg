@@ -16,10 +16,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="added websocket chat function">
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="changed to heroku backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Rest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rest.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +183,7 @@
       <workItem from="1597501703181" duration="47000" />
       <workItem from="1597503071726" duration="1068000" />
       <workItem from="1597516750412" duration="18000" />
-      <workItem from="1597517522925" duration="102000" />
+      <workItem from="1597517522925" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -299,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597455350787</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="changed to heroku backend">
+      <created>1597517826975</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1597517826975</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +352,8 @@
     <MESSAGE value="register form validation with ajax request" />
     <MESSAGE value="integrated jwt with spring" />
     <MESSAGE value="added websocket chat function" />
-    <option name="LAST_COMMIT_MESSAGE" value="added websocket chat function" />
+    <MESSAGE value="changed to heroku backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to heroku backend" />
   </component>
   <component name="WindowStateProjectService">
     <state x="83" y="122" width="1016" height="918" key="#Intentions" timestamp="1594674120364">
@@ -370,30 +376,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596069688651" />
-    <state width="668" height="109" key="GridCell.Tab.0.bottom" timestamp="1597507694347">
+    <state width="956" height="109" key="GridCell.Tab.0.bottom" timestamp="1597518043003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="668" height="109" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597507694347" />
-    <state width="668" height="109" key="GridCell.Tab.0.center" timestamp="1597507694347">
+    <state width="956" height="109" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597518043003" />
+    <state width="956" height="109" key="GridCell.Tab.0.center" timestamp="1597518043003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="668" height="109" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597507694347" />
-    <state width="668" height="109" key="GridCell.Tab.0.left" timestamp="1597507694347">
+    <state width="956" height="109" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597518043003" />
+    <state width="956" height="109" key="GridCell.Tab.0.left" timestamp="1597518043003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="668" height="109" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597507694347" />
-    <state width="668" height="109" key="GridCell.Tab.0.right" timestamp="1597507694347">
+    <state width="956" height="109" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597518043003" />
+    <state width="956" height="109" key="GridCell.Tab.0.right" timestamp="1597518043003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="668" height="109" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597507694347" />
+    <state width="956" height="109" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597518043003" />
     <state x="131" y="102" key="SettingsEditor" timestamp="1595725500801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595725500801" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1597455358991">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1597517931923">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597455358991" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597517931923" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

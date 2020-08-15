@@ -32,6 +32,7 @@ const UserPanel = () => {
                             Lin <br/>view your profile</Popover.Title>
 
                         <ListGroup>
+                            <ListGroup.Item><Link to="/register" ><FaCog/> Register</Link></ListGroup.Item>
                             <ListGroup.Item><Link to="/setting" ><FaCog/> Settings</Link></ListGroup.Item>
                             <ListGroup.Item><MdHelp/> Help & Support</ListGroup.Item>
                             <ListGroup.Item><FaCloudMoon/> Dark Mode <button onClick={toggleDarkMode}>switch</button></ListGroup.Item>
