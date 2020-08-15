@@ -5,6 +5,7 @@ import ChatSideBar from "./ChatSideBar";
 import "../styles/chat.css"
 import SockJS from 'sockjs-client'
 import Stomp from 'stompjs'
+import Rest from "./Rest";
 
 let stompClient = null
 
@@ -30,7 +31,7 @@ const Chat = () => {
     const connect = (event) => {
         event.preventDefault()
         if(messages.username) {
-            const socket = new SockJS('http://localhost:8080/ws');
+            const socket = new SockJS(`${Rest}/ws`);
             stompClient = Stomp.over(socket)
             stompClient.connect({}, onConnected, onError);
         }

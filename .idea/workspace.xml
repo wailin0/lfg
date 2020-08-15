@@ -16,28 +16,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="integrated jwt with spring">
-      <change afterPath="$PROJECT_DIR$/src/components/Chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChatSideBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/footer/Footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/footer/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/footer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/chat.css" afterDir="false" />
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="added websocket chat function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Community.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LeftSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommunitySideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Context.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/leftsidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/leftsidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Rest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rest.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +181,11 @@
       <workItem from="1597332047835" duration="17043000" />
       <workItem from="1597355909933" duration="6758000" />
       <workItem from="1597415702064" duration="3209000" />
-      <workItem from="1597436814061" duration="18012000" />
+      <workItem from="1597436814061" duration="18220000" />
+      <workItem from="1597501703181" duration="47000" />
+      <workItem from="1597503071726" duration="1068000" />
+      <workItem from="1597516750412" duration="18000" />
+      <workItem from="1597517522925" duration="102000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -306,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597281792017</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added websocket chat function">
+      <created>1597455350787</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1597455350787</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +346,8 @@
     <MESSAGE value="setting ui updated with transition groups" />
     <MESSAGE value="register form validation with ajax request" />
     <MESSAGE value="integrated jwt with spring" />
-    <option name="LAST_COMMIT_MESSAGE" value="integrated jwt with spring" />
+    <MESSAGE value="added websocket chat function" />
+    <option name="LAST_COMMIT_MESSAGE" value="added websocket chat function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="83" y="122" width="1016" height="918" key="#Intentions" timestamp="1594674120364">
@@ -376,30 +370,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596069688651" />
-    <state width="1058" height="313" key="GridCell.Tab.0.bottom" timestamp="1597363833215">
+    <state width="668" height="109" key="GridCell.Tab.0.bottom" timestamp="1597507694347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1058" height="313" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597363833215" />
-    <state width="1058" height="313" key="GridCell.Tab.0.center" timestamp="1597363833215">
+    <state width="668" height="109" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597507694347" />
+    <state width="668" height="109" key="GridCell.Tab.0.center" timestamp="1597507694347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1058" height="313" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597363833215" />
-    <state width="1058" height="313" key="GridCell.Tab.0.left" timestamp="1597363833215">
+    <state width="668" height="109" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597507694347" />
+    <state width="668" height="109" key="GridCell.Tab.0.left" timestamp="1597507694347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1058" height="313" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597363833215" />
-    <state width="1058" height="313" key="GridCell.Tab.0.right" timestamp="1597363833215">
+    <state width="668" height="109" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597507694347" />
+    <state width="668" height="109" key="GridCell.Tab.0.right" timestamp="1597507694347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1058" height="313" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597363833215" />
+    <state width="668" height="109" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597507694347" />
     <state x="131" y="102" key="SettingsEditor" timestamp="1595725500801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595725500801" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1597281798584">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1597455358991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597281798584" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597455358991" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -440,10 +434,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="405" y="425" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594514809477" />
-    <state x="127" y="222" width="840" height="1034" key="run.anything.popup" timestamp="1597451450297">
+    <state x="127" y="222" width="840" height="1034" key="run.anything.popup" timestamp="1597517597728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="127" y="222" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597451450297" />
+    <state x="127" y="222" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597517597728" />
     <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1597356695378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
