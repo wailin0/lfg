@@ -1,9 +1,15 @@
 https://wailin0.github.io/lfg/
 
+##### purely made with JSX and ES6 using context api and functional component
+
+###used libraries
+react-bootstrap, axios, transition-group, react-icon, sockjs, stompjs
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.<br />

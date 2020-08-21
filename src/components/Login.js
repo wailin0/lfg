@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {Form, InputGroup} from "react-bootstrap";
 import {FaEye} from "react-icons/fa";
 import {GiBleedingEye} from "react-icons/gi";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import Rest from "./Rest";
+import Context from "./Context";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -14,16 +15,21 @@ const Login = () => {
         error: ''
     })
 
+
+
     const toggleEye = () => {
         setShowPassword(!showPassword)
     }
 
+    const {auth, setAuth} = useContext(Context);
+
     const loginHandle = (e) => {
         e.preventDefault()
-        axios.post(`${Rest}/login`,login )
+        axios.post(`${Rest}/all/login`,login )
             .then(response => {
                 console.log(response.data)
                 localStorage.setItem("user", JSON.stringify(response.data))
+                setAuth(true)
             }).catch(error => {
             console.log(error)
         })
@@ -33,6 +39,7 @@ const Login = () => {
         <div>
             <div className="container">
                 <div className="signup-content">
+                    { auth && <span>Login success! u can check jwt in local storage</span> }
                     <Form onSubmit={loginHandle}>
                         <h4 className="text-center">Login</h4>
                         <Form.Group>

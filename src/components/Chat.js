@@ -1,4 +1,3 @@
-
 import React, {useContext, useState} from "react";
 import Context from "./Context";
 import ChatSideBar from "./ChatSideBar";
@@ -31,7 +30,7 @@ const Chat = () => {
     const connect = (event) => {
         event.preventDefault()
         if(messages.username) {
-            const socket = new SockJS(`${Rest}/ws`);
+            const socket = new SockJS(`${Rest}/all/ws`);
             stompClient = Stomp.over(socket)
             stompClient.connect({}, onConnected, onError);
         }
@@ -64,8 +63,8 @@ const Chat = () => {
     }
 
     const onMessageReceived = (payload) => {
-        const hello = Array('Hello!','Look It is','Welcome','Ohayo','Konnichiwa','Hajimemashite');
-        const bye = Array('Goodbye','We will miss you','Mata ashita','Sayounara','Good luck')
+        const hello = Array('Hello!','Look It is','Welcome');
+        const bye = Array('Goodbye','We will miss you','Good luck')
 
         let randomHello = hello[Math.floor(Math.random()*hello.length)]
         let randomBye = bye[Math.floor(Math.random()*bye.length)]
@@ -96,73 +95,73 @@ const Chat = () => {
             <ChatSideBar slideState={slideState}/>
 
             <div className="container">
-            <div className={state.usernamePage ? "username-page" : "hidden"}>
-                <div className="username-page-container">
-                    <h1 className="title">enter your username</h1>
-                    <form id="usernameForm" name="usernameForm" onSubmit={connect}>
-                        <div className="form-group">
-                            <input type="text" id="name" placeholder="Username" autoComplete="off" name="username"
-                                   onChange={(e) => setMessages({...messages, username: e.target.value})}
-                                   value={messages.username}
-                                   className="form-control"/>
-                        </div>
-                        <div className="form-group">
-                            <button type="submit" className="accent username-submit">Connect</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div id="chat-page" className={state.chatPage ? "" : "hidden"}>
-                <div className="chat-container">
-                    <div className="chat-header">
-                        <h2>group chat</h2>
-                    </div>
-                                 <ul id="messageArea">
-                                     {
-                                         noti.noti.map((noti) =>{
-                                             return (
-                                                 <div>
-                                                     <li className="event-message">{noti.noti}</li>
-                                                 </div>
-                                             )
-                                         })
-                                     }
-
-                                    {
-                                        messages.allMessages.map((message) =>{
-                                            return (
-                                                <div>
-                                                <li className="chat-message">
-                                                    <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"
-                                                         id="profile-pic"/>
-                                                    <span className="mx-3 font-weight-bold">{message.sender}</span>
-                                                    <p className="ml-5">{message.content}</p>
-                                                </li>
-                                                </div>
-                                            )
-                                        })
-                                    }
-                                 </ul>
-
-
-                    <form id="messageForm" name="messageForm" onSubmit={sendMessage}>
-                        <div className="form-group">
-                            <div className="input-group clearfix">
-                                <input type="text" id="message" placeholder="Type a message..." autoComplete="off" name="userMessage"
-                                       onChange={(e) => setMessages({...messages, userMessage: e.target.value})}
-                                       value={messages.userMessage}
-                                       className="form-control" />
-                                <button type="submit" className="primary">Send</button>
+                <div className={state.usernamePage ? "username-page" : "hidden"}>
+                    <div className="username-page-container">
+                        <h4 className="title">websocket based chat test</h4>
+                        <h5 className="title">enter your username</h5>
+                        <form id="usernameForm" name="usernameForm" onSubmit={connect}>
+                            <div className="form-group">
+                                <input type="text" id="name" placeholder="Username" autoComplete="off" name="username"
+                                       onChange={(e) => setMessages({...messages, username: e.target.value})}
+                                       value={messages.username}
+                                       className="form-control"/>
                             </div>
-                        </div>
-                    </form>
+                            <div className="form-group">
+                                <button type="submit" className="accent username-submit">Connect</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
+
+                <div id="chat-page" className={state.chatPage ? "" : "hidden"}>
+                    <div className="chat-container">
+                        <div className="chat-header">
+                            <h2>group chat</h2>
+                        </div>
+                        <ul id="messageArea">
+                            {
+                                noti.noti.map((noti) =>{
+                                    return (
+                                        <div>
+                                            <li className="event-message">{noti.noti}</li>
+                                        </div>
+                                    )
+                                })
+                            }
+
+                            {
+                                messages.allMessages.map((message) =>{
+                                    return (
+                                        <div>
+                                            <li className="chat-message">
+                                                <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"
+                                                     id="profile-pic"/>
+                                                <span className="mx-3 font-weight-bold">{message.sender}</span>
+                                                <p className="ml-5">{message.content}</p>
+                                            </li>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </ul>
+
+
+                        <form id="messageForm" name="messageForm" onSubmit={sendMessage}>
+                            <div className="form-group">
+                                <div className="input-group clearfix">
+                                    <input type="text" id="message" placeholder="Type a message..." autoComplete="off" name="userMessage"
+                                           onChange={(e) => setMessages({...messages, userMessage: e.target.value})}
+                                           value={messages.userMessage}
+                                           className="form-control" />
+                                    <button type="submit" className="primary">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </>
     )
 }
 
 export default Chat;
-

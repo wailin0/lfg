@@ -15,14 +15,17 @@ import Context from "./Context";
 
 const AppRouter = () => {
     const [slideState, setSlideState] = useState("sidebar");
+    const [auth, setAuth] = useState(false);
     const toggleSlide = () => {
         setSlideState(!slideState)
     }
 
+
+
     return (
         <BrowserRouter>
             <div>
-                <Context.Provider value={{slideState, toggleSlide}}>
+                <Context.Provider value={{slideState, toggleSlide, auth, setAuth}}>
                 <Header />
                 <Switch>
                     <Route path="/" component={Community} exact={true}  />

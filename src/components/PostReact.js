@@ -36,7 +36,7 @@ const PostReact = () => {
 
     //getting like for specifci user
     useEffect(() => {
-        axios.get(`${Rest}/like/post/${postId}/user/1`, { headers: JWTHeader() })
+        axios.get(`${Rest}/auth/like/post/${postId}/user/1`, { headers: JWTHeader() })
             .then(response => {
                 if((response.data.liked !== undefined)) {
                     setLike({...like, liked: response.data.liked})
@@ -47,7 +47,7 @@ const PostReact = () => {
 
     //getting like for specifci user
     useEffect(() => {
-        axios.get(`${Rest}/dislike/post/${postId}/user/1`, { headers: JWTHeader() })
+        axios.get(`${Rest}/auth/dislike/post/${postId}/user/1`, { headers: JWTHeader() })
             .then(response => {
                 if((response.data.liked !== undefined)) {
                     setDislike({...dislike, liked: true})
@@ -60,7 +60,7 @@ const PostReact = () => {
 
     //getting likes by postId
     useEffect(() => {
-        axios.get(`${Rest}/post/${postId}/like`, { headers: JWTHeader() })
+        axios.get(`${Rest}/auth/post/${postId}/like`, { headers: JWTHeader() })
             .then(response => {
                 setLikeCount(response.data.length)
             })
@@ -68,7 +68,7 @@ const PostReact = () => {
 
     //getting dislikes by postId
     useEffect(() => {
-        axios.get(`${Rest}/post/${postId}/dislike`, { headers: JWTHeader() })
+        axios.get(`${Rest}/auth/post/${postId}/dislike`, { headers: JWTHeader() })
             .then(response => {
                 setDislikeCount(response.data.length)
             })
@@ -79,25 +79,25 @@ const PostReact = () => {
     const postLike = () => {
         setLikeCount(likeCount + 1)
         setLike({...like, liked: true})
-        axios.post(`${Rest}/like/`, {liked: true, userId: 1, postId: postId}, { headers: JWTHeader() })
+        axios.post(`${Rest}/auth/like/`, {liked: true, userId: 1, postId: postId}, { headers: JWTHeader() })
             .catch(err => console.log(err))
     }
     const deleteLike = () => {
         setLikeCount(likeCount - 1)
         setLike({...like, liked: false})
-        axios.delete(`${Rest}/like/post/${postId}/user/1`, { headers: JWTHeader() })
+        axios.delete(`${Rest}/auth/like/post/${postId}/user/1`, { headers: JWTHeader() })
             .catch(error => console.log(error))
     }
     const postDislike = () => {
         setDislikeCount(dislikeCount + 1)
         setDislike({...dislike, liked: true})
-        axios.post(`${Rest}/dislike/`, {liked: false, userId: 1, postId: postId}, { headers: JWTHeader() })
+        axios.post(`${Rest}/auth/dislike/`, {liked: false, userId: 1, postId: postId}, { headers: JWTHeader() })
             .catch(err => console.log(err))
     }
     const deleteDislike = () => {
         setDislikeCount(dislikeCount - 1)
         setDislike({...dislike, liked: false})
-        axios.delete(`${Rest}/dislike/post/${postId}/user/1`, { headers: JWTHeader() })
+        axios.delete(`${Rest}/auth/dislike/post/${postId}/user/1`, { headers: JWTHeader() })
             .catch(error => console.log(error))
     }
 
@@ -106,7 +106,7 @@ const PostReact = () => {
         if(!like.liked) {
             setDislikeCount(dislikeCount - 1)
             setDislike({...dislike, liked: false})
-            axios.put(`${Rest}/like/post/${postId}/user/1`, {liked: true, userId: 1, postId: postId}, { headers: JWTHeader() })
+            axios.put(`${Rest}/auth/like/post/${postId}/user/1`, {liked: true, userId: 1, postId: postId}, { headers: JWTHeader() })
                 .catch(error => console.log(error))
             setLikeCount(likeCount + 1)
             setLike({...like, liked: true})
@@ -114,7 +114,7 @@ const PostReact = () => {
         else{
             setLikeCount(likeCount - 1)
             setLike({...like, liked: false})
-            axios.put(`${Rest}/like/post/${postId}/user/1`, {liked: false, userId: 1, postId: postId}, { headers: JWTHeader() })
+            axios.put(`${Rest}/auth/like/post/${postId}/user/1`, {liked: false, userId: 1, postId: postId}, { headers: JWTHeader() })
                 .catch(error => console.log(error))
             setDislikeCount(dislikeCount + 1)
             setDislike({...dislike, liked: true})

@@ -18,11 +18,11 @@ const ChatSideBar = () => {
                     <table className="table">
                         <tr>
                             <td><img src="https://picsum.photos/50/50" /></td>
-                            <td>commnw </td>
+                            <td>fridne 1 </td>
                         </tr>
                         <tr>
                             <td><img src="https://picsum.photos/50/50" /></td>
-                            <td>commnunity 1 2 2 2 2 </td>
+                            <td>friend 2 </td>
                         </tr>
                     </table>
                 </div>

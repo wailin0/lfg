@@ -25,7 +25,7 @@ const PostComment = () => {
         setUserComment({
             ...userComment, body: userComment.body
         })
-        axios.post(`${Rest}/comment/`, userComment, { headers: JWTHeader() })
+        axios.post(`${Rest}/auth/comment/`, userComment, { headers: JWTHeader() })
             .then(response => {
                 setComments(prevComments =>
                     [...prevComments, {id:response.data.id, ...userComment}])
@@ -34,7 +34,7 @@ const PostComment = () => {
     }
 
     useEffect(() => {
-        axios.get(`${Rest}/comment/post/${postId}`, { headers: JWTHeader() })
+        axios.get(`${Rest}/auth/comment/post/${postId}`, { headers: JWTHeader() })
             .then(response => {
                 setComments(response.data)
             })

@@ -51,7 +51,7 @@ const LFG = () => {
 
                             </div>
                             <div className="card-body">
-                                <h5 className="card-title"> lfg </h5>
+                                <h5 className="card-title"> Section under development </h5>
 
                                 <p className="card-text">
                                     lfg lfg lfg

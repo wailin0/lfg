@@ -3,7 +3,7 @@ import '../styles/register.css'
 import {FaEye, FaEyeSlash} from "react-icons/fa";
 import {GiBleedingEye} from 'react-icons/gi'
 import {Form, InputGroup} from 'react-bootstrap'
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
 import Rest from "./Rest";
 
@@ -30,7 +30,7 @@ const Register = () => {
         setUser({...user, [name]: value})
 
     }
-
+    const history = useHistory()
 
     const registerUser = (e) => {
         e.preventDefault()
@@ -39,16 +39,16 @@ const Register = () => {
             email : user.email,
             password : user.password
         }
-        axios.post(`${Rest}/register`,userData )
+        axios.post(`${Rest}/all/register`,userData )
             .then(response => {
-                console.log(response.data)
+                history.push("/login")
             }).catch(error => {
             console.log(error)
         })
     }
 
     useEffect(() => {
-        axios.get(`${Rest}/validation/username/${user.username}`)
+        axios.get(`${Rest}/all/validation/username/${user.username}`)
             .then(response => {
                 if(response.data) {
                     setValidation({...validation, username: response.data})
@@ -60,7 +60,7 @@ const Register = () => {
     },[user.username])
 
     useEffect(() => {
-        axios.get(`${Rest}/validation/email/${user.email}`)
+        axios.get(`${Rest}/all/validation/email/${user.email}`)
             .then(response => {
                 if(response.data){
                     setValidation({...validation, email: true})

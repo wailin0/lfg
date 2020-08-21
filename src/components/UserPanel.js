@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -8,42 +8,83 @@ import {FaCloudMoon, FaCog} from 'react-icons/fa'
 import {MdHelp } from 'react-icons/md'
 import {Link} from "react-router-dom";
 import Logout from "./Logout";
-
+import axios from "axios"
+import Rest from "./Rest";
+import JWTHeader from "./JWTHeader";
+import Login from "./Login";
+import Context from "./Context";
 
 const UserPanel = () => {
 
     const [darkMode, setDarkMode] = useState(false)
+    const [username, setUsername] = useState("")
+
+    const {auth} = useContext(Context);
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode)
     }
 
+    useEffect(() => {
+        axios.get(`${Rest}/auth/user/userInfo`, { headers: JWTHeader() })
+            .then(response => {
+                setUsername(response.data.username)
+            })
+            .catch(error => console.log(error))
+    },[])
 
     return (
         <div>
-            <OverlayTrigger
-                trigger="click"
-                placement="bottom"
-                rootClose
-                overlay={
-                    <Popover>
-                        <Popover.Title as="h3"><img
-                            src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"/> Wai
-                            Lin <br/>view your profile</Popover.Title>
+            { auth ?
+                <OverlayTrigger
+                    trigger="click"
+                    placement="bottom"
+                    rootClose
+                    overlay={
+                        <Popover>
+                            <Popover.Title as="h3"><img
+                                src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"/>
+                                {username} <br/>view your profile</Popover.Title>
 
-                        <ListGroup>
-                            <ListGroup.Item><Link to="/register" ><FaCog/> Register</Link></ListGroup.Item>
-                            <ListGroup.Item><Link to="/setting" ><FaCog/> Settings</Link></ListGroup.Item>
-                            <ListGroup.Item><MdHelp/> Help & Support</ListGroup.Item>
-                            <ListGroup.Item><FaCloudMoon/> Dark Mode <button onClick={toggleDarkMode}>switch</button></ListGroup.Item>
-                            <ListGroup.Item onClick={Logout}><FiLogOut/> Log Out</ListGroup.Item>
-                        </ListGroup>
-                    </Popover>
-                }
-            >
-                <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"
-                     id="profile-pic"/>
-            </OverlayTrigger>
+                            <ListGroup>
+                                <ListGroup.Item><Link to="/setting"><FaCog/> Settings</Link></ListGroup.Item>
+                                <ListGroup.Item><MdHelp/> Help & Support</ListGroup.Item>
+                                <ListGroup.Item><FaCloudMoon/> Dark Mode <button
+                                    onClick={toggleDarkMode}>switch</button></ListGroup.Item>
+                                <ListGroup.Item onClick={Logout}><FiLogOut/> Log Out</ListGroup.Item>
+                            </ListGroup>
+                        </Popover>
+                    }
+                >
+                    <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"
+                         id="profile-pic"/>
+                </OverlayTrigger>
+                :
+                <OverlayTrigger
+                    trigger="click"
+                    placement="bottom"
+                    rootClose
+                    overlay={
+                        <Popover>
+                            <Popover.Title as="h3"><img
+                                src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"/>
+                                Guest</Popover.Title>
+
+                            <ListGroup>
+                                <ListGroup.Item><Link to="/login"><FaCog/> Login</Link></ListGroup.Item>
+                                <ListGroup.Item><Link to="/register"><FaCog/> Register</Link></ListGroup.Item>
+                                <ListGroup.Item><Link to="/setting"><FaCog/> Settings</Link></ListGroup.Item>
+                                <ListGroup.Item><MdHelp/> Help & Support</ListGroup.Item>
+                                <ListGroup.Item><FaCloudMoon/> Dark Mode <button
+                                    onClick={toggleDarkMode}>switch</button></ListGroup.Item>
+                            </ListGroup>
+                        </Popover>
+                    }
+                >
+                    <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"
+                         id="profile-pic"/>
+                </OverlayTrigger>
+            }
         </div>
     )
 }

@@ -24,7 +24,7 @@ const Community = () => {
 
     useEffect(() => {
         setLoading(true)
-        axios.get(`${Rest}/post`, { headers: JWTHeader() })
+        axios.get(`${Rest}/all/post`, { headers: JWTHeader() })
             .then(response => {
                 setLoading(false)
                 setPosts(response.data)
@@ -37,7 +37,7 @@ const Community = () => {
 
     const addPost = posts => {
         setLoading(true)
-        axios.post(`${Rest}/post`,posts, { headers: JWTHeader() } )
+        axios.post(`${Rest}/auth/post`,posts, { headers: JWTHeader() } )
             .then(response => {
                 setLoading(false)
                 setPosts(prevPosts =>
@@ -50,7 +50,7 @@ const Community = () => {
 
     const deletePost = postId => {
         setLoading(true)
-        axios.delete(`${Rest}/post/${postId}`, {
+        axios.delete(`${Rest}/auth/post/${postId}`, {
         headers: JWTHeader()
         }).then(response => {
             setLoading(false)
@@ -72,7 +72,7 @@ const Community = () => {
 
                     <div id="post-input">
                         <div className="card-body input-group mb-3">
-                            <input type="text" className="form-control" placeholder="Blog something" data-toggle="modal" onClick={() => setModalShow(true)} />
+                            <input type="text" className="form-control" placeholder="Post something" data-toggle="modal" onClick={() => setModalShow(true)} />
                             <div className="btn-group input-group-append">
                                 <button className="btn btn-dark " type="button">
                                     <FaEdit />

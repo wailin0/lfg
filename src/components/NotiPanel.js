@@ -19,8 +19,8 @@ const NotiPanel = (props) => {
                     <Popover.Title as="h3">notifications</Popover.Title>
 
                     <ListGroup>
-                        <ListGroup.Item>fuuuuuuuuuu</ListGroup.Item>
-                        <ListGroup.Item>fufufufuffu</ListGroup.Item>
+                        <ListGroup.Item>fffffffff</ListGroup.Item>
+                        <ListGroup.Item>ffffffffffff</ListGroup.Item>
                     </ListGroup>
                 </Popover>
             }
