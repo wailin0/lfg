@@ -11,7 +11,7 @@ const CommunityModal = (props) => {
     return (
         <div>
 
-            <Modal {...props} size="lg" centered >
+            <Modal {...props} size="md" centered >
                 <Modal.Body>
                 <Tabs defaultActiveKey="post" transition={false}>
                     <Tab eventKey="post" title="Blog">

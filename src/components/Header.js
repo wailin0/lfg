@@ -7,7 +7,6 @@ import UserPanel from "./UserPanel";
 import {FaChevronRight, FaUserFriends, FaChevronLeft} from 'react-icons/fa'
 import {IoLogoGameControllerB} from 'react-icons/io'
 import {IoIosChatboxes, IoIosPeople} from 'react-icons/io'
-import CommunitySideBar from "./CommunitySideBar";
 import Search from "./Search";
 import Context from "./Context";
 

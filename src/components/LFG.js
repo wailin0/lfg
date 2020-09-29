@@ -1,22 +1,20 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import '../styles/community.css'
 import LFGModal from "./LFGModal";
-import axios from "axios";
-import Rest from "./Rest";
-import JWTHeader from "./JWTHeader";
+import CommunityRegModel from "./CommunityRegModel";
 
 const LFG = () => {
-
+    const [showLFGModal, setShowLFGModal] = useState(false)
     return (
-        <div>
-
-
+        <>
             <div className="container">
 
                 <div className="row">
                     <div className="col-md-6 mx-auto">
-
-                        <LFGModal/>
+                        <br/>
+                        <button className="btn btn-info " type="button" onClick={() => setShowLFGModal(true)}>Find Party</button>
+                        <br/>
+                        <br/>
 
                         <div className="card gedf-card">
                             <div className="card-header">
@@ -75,9 +73,13 @@ const LFG = () => {
 
                     </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+            <LFGModal
+                onHide={() => setShowLFGModal(false)}
+                show={showLFGModal}
+            />
+        </>
     )
 }
 

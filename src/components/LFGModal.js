@@ -1,86 +1,152 @@
-import React from 'react'
-import '../styles/modal.css'
+import React, {useEffect, useRef, useState} from 'react'
+import '../styles/lfgmodal.css'
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
+import {FaCog, FaLongArrowAltLeft, FaUser} from "react-icons/fa";
+import CSSTransition from "react-transition-group/CSSTransition";
+import axios from "axios"
+import Rest from "./Rest";
+import Form from "react-bootstrap/Form"
 
-const CommunityModal = () => (
-    <div>
-        <div className=" gedf-card">
+const LFGModal = (props) => {
+    const [activeMenu, setActiveMenu] = useState('lfg');
+    const [gameList, setGameList] = useState([])
 
-            <div className="card-body input-group ">
-                <input type="text" className="form-control" placeholder="Find Party" data-toggle="modal" data-target="#myModal" disabled />
-                    <div className="btn-group input-group-append">
-                        <button className="btn btn-info " type="button">Search</button>
-                    </div>
-            </div>
+    useEffect(() => {
+        axios.get(`${Rest}/all/gameList`)
+            .then(response => {
+                setGameList(response.data)
+            })
+            .catch(err => console.log(err))
+    },[])
 
-        </div>
 
-        <div className="modal fade" id="myModal">
-            <div className="modal-dialog modal-dialog-centered modal-lg">
-                <div className="modal-content">
-                    <div className="card gedf-card">
-                        <div className="card-header">
-                            <ul className="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                                <li className="nav-item">
-                                    <a className="nav-link active" id="posts-tab" data-toggle="tab" href="#posts"
-                                       role="tab" aria-controls="posts" aria-selected="true">Post</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" id="media-tab" data-toggle="tab" role="tab"
-                                       aria-controls="media" aria-selected="false" href="#images">Media</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" id="poll-tab" data-toggle="tab" role="tab"
-                                       aria-controls="poll" aria-selected="false" href="#poll">Poll</a>
-                                </li>
-                            </ul>
+
+
+    const SwitchComponents = (props) => {
+        return (
+            <a href="#" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+                <span >{props.leftIcon}</span>
+                {props.children}
+                <span >{props.rightIcon}</span>
+            </a>
+        );
+    }
+
+    return (
+        <>
+            <Modal
+                {...props}
+                size="lg"
+                backdrop="static"
+                centered
+            >
+                <Modal.Header>
+                    <input type="text" placeholder="search game"/>
+
+                        <SwitchComponents goToMenu="setting" leftIcon={<FaCog />}>
+                        </SwitchComponents>
+
+                </Modal.Header>
+
+                <div id="lfgmodal">
+
+                    <CSSTransition
+                        in={activeMenu === 'setting'}
+                        unmountOnExit >
+                        <div className="menu container">
+                            <SwitchComponents goToMenu="lfg" leftIcon={<FaLongArrowAltLeft />}>
+                            </SwitchComponents>
+
+                            <Form>
+                                <Form.Group as={Row} controlId="formHorizontalEmail">
+                                    <Form.Label column sm={2}>
+                                        Location
+                                    </Form.Label>
+                                    <Col>
+                                        <Form.Control
+                                            as="select"
+                                            className="my-1 mr-sm-2"
+                                            custom
+                                        >
+                                            <option value="0">Anywhere...</option>
+                                            <option value="1">Your Country</option>
+                                            <option value="2">US</option>
+                                            <option value="3">Canada</option>
+                                        </Form.Control>
+                                    </Col>
+                                </Form.Group>
+                                <Form.Group as={Row} controlId="formHorizontalPassword">
+                                    <Form.Label column sm={2}>
+                                        Min Age
+                                    </Form.Label>
+                                    <Col>
+                                        <Form.Control type="number" min="0" size="2" />
+                                    </Col>
+                                </Form.Group>
+                                <fieldset>
+                                    <Form.Group as={Row}>
+                                        <Form.Label as="legend" column sm={2}>
+                                            Privacy
+                                        </Form.Label>
+                                        <Col sm={10}>
+                                            <Form.Check
+                                                type="radio"
+                                                label="all"
+                                                name="formHorizontalRadios"
+                                            />
+                                            <Form.Check
+                                                type="radio"
+                                                label="public"
+                                                name="formHorizontalRadios"
+                                            />
+                                            <Form.Check
+                                                type="radio"
+                                                label="restricted"
+                                                name="formHorizontalRadios"
+                                            />
+                                        </Col>
+                                    </Form.Group>
+                                </fieldset>
+                            </Form>
+
+
                         </div>
-                        <div className="card-body">
-                            <div className="tab-content" id="myTabContent">
-                                <div className="tab-pane fade show active" id="posts" role="tabpanel"
-                                     aria-labelledby="posts-tab">
-                                    <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="title" />
-                                        <br/>
-                                        <textarea className="form-control" id="message" rows="3" placeholder="subject (optional)"></textarea>
-                                    </div>
-                                </div>
-                                <div className="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
-                                    <div className="form-group">
-                                        <div className="custom-file">
-                                            <input type="file" className="custom-file-input" id="customFile" />
-                                                <label className="custom-file-label" htmlFor="customFile">Upload
-                                                    media file</label>
-                                        </div>
-                                    </div>
-                                    <div className="py-4"></div>
-                                </div>
-                                <div className="tab-pane fade" id="poll" role="tabpanel" aria-labelledby="poll-tab">
-                                    <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="title" />
-                                    </div>
-                                    <div className="py-4"></div>
-                                </div>
-                            </div>
-                            <br/>
-                            <div className="btn-toolbar pull-left">
-                                <button type="button" className="btn btn-outline-danger btn-sm mr-1">NSFW</button>
-                                <button type="button" className="btn btn-outline-warning btn-sm mr-1">Spoiler</button>
-                                <button type="button" className="btn btn-outline-secondary btn-sm mr-1">Help</button>
-                                <button type="button" className="btn btn-outline-dark btn-sm mr-1">+</button>
-                            </div>
+                    </CSSTransition>
 
-                            <br/>
-                            <div className="modal-footer pull-right">
-                                <button type="button" className="btn btn-primary">Post</button>
-                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            </div>
+                    <CSSTransition
+                        in={activeMenu === 'lfg'}
+                        unmountOnExit >
+                    <Row>
 
-                        </div>
-                    </div>
+                        { gameList.map((game) => (
+                            <Col xs="auto" md="auto" key={game.id}>
+                                <SwitchComponents goToMenu="setting" leftIcon={<FaCog />}>
+                                    <Image width="160" src="https://scontent.frgn2-2.fna.fbcdn.net/v/t1.0-9/117385338_1265784783754957_5597550591614916103_n.jpg?_nc_cat=101&_nc_sid=a83260&_nc_eui2=AeExugFbI-TLU8oPMNNYiPzobgigYH2E9hBuCKBgfYT2EC8AW1J1-Df9076HyVI4G6wPttUEmK-Frfcqri3woSzv&_nc_ohc=uf-Gx01GWmwAX8535uw&_nc_ht=scontent.frgn2-2.fna&oh=50be4c81da778215fac1cd8f34df8bfb&oe=5F924DC7" thumbnail   />
+                                </SwitchComponents>
+                            </Col>
+                        )) }
+
+                        <Col xs="auto" md="auto">
+                            <SwitchComponents goToMenu="setting" >
+                                <Image width="160" src="https://scontent.frgn2-2.fna.fbcdn.net/v/t1.0-9/117385338_1265784783754957_5597550591614916103_n.jpg?_nc_cat=101&_nc_sid=a83260&_nc_eui2=AeExugFbI-TLU8oPMNNYiPzobgigYH2E9hBuCKBgfYT2EC8AW1J1-Df9076HyVI4G6wPttUEmK-Frfcqri3woSzv&_nc_ohc=uf-Gx01GWmwAX8535uw&_nc_ht=scontent.frgn2-2.fna&oh=50be4c81da778215fac1cd8f34df8bfb&oe=5F924DC7" thumbnail   />
+                            </SwitchComponents>
+                        </Col>
+                    </Row>
+                    </CSSTransition>
+
                 </div>
-            </div>
-        </div>
-    </div>
-)
 
-export default CommunityModal
+                <Modal.Footer>
+                    <Button variant="outline-info" >Find Party</Button>
+                    <Button variant="outline-secondary" onClick={props.onHide}>Close</Button>
+                </Modal.Footer>
+            </Modal>
+        </>
+    )
+}
+
+export default LFGModal

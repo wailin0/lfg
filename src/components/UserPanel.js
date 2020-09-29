@@ -11,7 +11,7 @@ import Logout from "./Logout";
 import axios from "axios"
 import Rest from "./Rest";
 import JWTHeader from "./JWTHeader";
-import Login from "./Login";
+import Form from "react-bootstrap/Form"
 import Context from "./Context";
 
 const UserPanel = () => {
@@ -75,8 +75,14 @@ const UserPanel = () => {
                                 <ListGroup.Item><Link to="/register"><FaCog/> Register</Link></ListGroup.Item>
                                 <ListGroup.Item><Link to="/setting"><FaCog/> Settings</Link></ListGroup.Item>
                                 <ListGroup.Item><MdHelp/> Help & Support</ListGroup.Item>
-                                <ListGroup.Item><FaCloudMoon/> Dark Mode <button
-                                    onClick={toggleDarkMode}>switch</button></ListGroup.Item>
+                                <ListGroup.Item>
+                                    <Form.Check
+                                        type="switch"
+                                        id="custom-switch"
+                                        label="Dark Mode"
+                                        onClick={toggleDarkMode}
+                                    />
+                                </ListGroup.Item>
                             </ListGroup>
                         </Popover>
                     }

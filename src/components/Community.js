@@ -18,7 +18,7 @@ import Context from "./Context";
 const Community = () => {
     const [posts,setPosts] = useState([])
     const [loading, setLoading] = useState(false)
-    const [modalShow, setModalShow] = React.useState(false);
+    const [modalShow, setModalShow] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
 
 

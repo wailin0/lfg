@@ -7,7 +7,6 @@ import Community from "./Community";
 import LFG from "./LFG";
 import Setting from "./Setting";
 import Register from "./Register";
-import CreateGroup from "./CreateGroup";
 import Login from "./Login";
 import Chat from "./Chat";
 import Context from "./Context";
@@ -31,8 +30,8 @@ const AppRouter = () => {
                     <Route path="/" component={Community} exact={true}  />
                     <Route path="/lfg" component={LFG} />
                     <Route path="/friends"/>
+                    <Route path="/x"/>
                     <Route path="/chat" component={Chat}  />
-                    <Route path="/community/create" component={CreateGroup} />
                     <Route path="/register" component={Register} />
                     <Route path="/login" component={Login} />
                     <Route path="/setting" component={Setting} />

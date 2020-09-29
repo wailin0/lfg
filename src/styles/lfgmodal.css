@@ -1,0 +1,6 @@
+#lfgmodal {
+    height: 400px;
+    width: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
