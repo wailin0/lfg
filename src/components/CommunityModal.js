@@ -13,7 +13,10 @@ const CommunityModal = (props) => {
 
             <Modal {...props} size="md" centered >
                 <Modal.Body>
-                <Tabs activeKey={props.selectedTab} transition={false}>
+                <Tabs activeKey={props.selectTab}
+                      transition={false}
+                      onSelect={props.onSelect}
+                >
                     <Tab eventKey="post" title="Blog">
                         <br/>
                         <PostForm onHide={props.onHide} addPost={props.addPost} loading={props.loading} />

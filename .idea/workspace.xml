@@ -25,9 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="added animated mobile view button and selectable tab for community">
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="fixed netlify cd error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Community.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommunityModal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +264,7 @@
       <workItem from="1602171569779" duration="8000" />
       <workItem from="1602260424801" duration="3514000" />
       <workItem from="1602269467214" duration="39000" />
-      <workItem from="1602348042753" duration="14316000" />
+      <workItem from="1602348042753" duration="15719000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -419,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602362137336</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fixed netlify cd error">
+      <created>1602362815387</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1602362815387</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +479,8 @@
     <MESSAGE value="updated websocket" />
     <MESSAGE value="added group registration and transition group modal" />
     <MESSAGE value="added animated mobile view button and selectable tab for community" />
-    <option name="LAST_COMMIT_MESSAGE" value="added animated mobile view button and selectable tab for community" />
+    <MESSAGE value="fixed netlify cd error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed netlify cd error" />
   </component>
   <component name="WindowStateProjectService">
     <state x="162" y="203" key="#135.js" timestamp="1599867571193">
@@ -566,10 +575,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602348334527" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602362145517">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602362821712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602362145517" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602362821712" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -26,6 +26,7 @@ const Community = () => {
         setModalShow(true)
     }
 
+    const onSelect = (selectTab) => setSelectTab(selectTab)
 
     useEffect(() => {
         setLoading(true)
@@ -89,7 +90,8 @@ const Community = () => {
                             </div>
                         </div>
                         <CommunityModal
-                            selectedTab={selectTab}
+                            onSelect={onSelect}
+                            selectTab={selectTab}
                             show={modalShow}
                             onHide={() => setModalShow(false)}
                             addPost={addPost}
