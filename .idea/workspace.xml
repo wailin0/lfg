@@ -25,23 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="changed chat ui">
-      <change afterPath="$PROJECT_DIR$/src/styles/AnimatedMobileButton.css" afterDir="false" />
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="added animated mobile view button and selectable tab for community">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Community.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommunityModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LFG.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LFG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LFGModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LFGModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MediaForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MediaForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Setting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/community.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/community.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +263,7 @@
       <workItem from="1602171569779" duration="8000" />
       <workItem from="1602260424801" duration="3514000" />
       <workItem from="1602269467214" duration="39000" />
-      <workItem from="1602348042753" duration="13581000" />
+      <workItem from="1602348042753" duration="14316000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -426,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602146734583</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added animated mobile view button and selectable tab for community">
+      <created>1602362137336</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1602362137336</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +470,8 @@
     <MESSAGE value="changed to heroku backend" />
     <MESSAGE value="updated websocket" />
     <MESSAGE value="added group registration and transition group modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="added group registration and transition group modal" />
+    <MESSAGE value="added animated mobile view button and selectable tab for community" />
+    <option name="LAST_COMMIT_MESSAGE" value="added animated mobile view button and selectable tab for community" />
   </component>
   <component name="WindowStateProjectService">
     <state x="162" y="203" key="#135.js" timestamp="1599867571193">
@@ -504,22 +498,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597974312182" />
-    <state width="1170" height="166" key="GridCell.Tab.0.bottom" timestamp="1602269081847">
+    <state width="1225" height="62" key="GridCell.Tab.0.bottom" timestamp="1602362164083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1170" height="166" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602269081847" />
-    <state width="1170" height="166" key="GridCell.Tab.0.center" timestamp="1602269081846">
+    <state width="1225" height="62" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602362164083" />
+    <state width="1225" height="62" key="GridCell.Tab.0.center" timestamp="1602362164083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1170" height="166" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602269081846" />
-    <state width="1170" height="166" key="GridCell.Tab.0.left" timestamp="1602269081846">
+    <state width="1225" height="62" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602362164083" />
+    <state width="1225" height="62" key="GridCell.Tab.0.left" timestamp="1602362164083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1170" height="166" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602269081846" />
-    <state width="1170" height="166" key="GridCell.Tab.0.right" timestamp="1602269081847">
+    <state width="1225" height="62" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602362164083" />
+    <state width="1225" height="62" key="GridCell.Tab.0.right" timestamp="1602362164083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1170" height="166" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602269081847" />
+    <state width="1225" height="62" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602362164083" />
     <state width="989" height="349" key="GridCell.Tab.1.bottom" timestamp="1599866288781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -572,10 +566,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602348334527" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602146824457">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602362145517">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602146824457" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602362145517" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
