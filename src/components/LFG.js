@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import '../styles/community.css'
 import LFGModal from "./LFGModal";
-import CommunityRegModel from "./CommunityRegModel";
+import {FaSearch} from "react-icons/fa";
+import Button from "react-bootstrap/Button";
 
 const LFG = () => {
     const [showLFGModal, setShowLFGModal] = useState(false)
+
     return (
         <>
             <div className="container">
@@ -12,7 +14,7 @@ const LFG = () => {
                 <div className="row">
                     <div className="col-md-6 mx-auto">
                         <br/>
-                        <button className="btn btn-info " type="button" onClick={() => setShowLFGModal(true)}>Find Party</button>
+                        <button className="btn btn-info " type="button" onClick={() => setShowLFGModal(true)}> <FaSearch /> LFG</button>
                         <br/>
                         <br/>
 
@@ -79,6 +81,10 @@ const LFG = () => {
                 onHide={() => setShowLFGModal(false)}
                 show={showLFGModal}
             />
+            <Button variant="primary" onClick={() => setShowLFGModal(true)} id="mobile-btn">
+                <FaSearch />
+            </Button>
+
         </>
     )
 }

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import '../styles/register.css'
-import {FaEye, FaEyeSlash} from "react-icons/fa";
+import {FaEye} from "react-icons/fa";
 import {GiBleedingEye} from 'react-icons/gi'
 import {Form, InputGroup} from 'react-bootstrap'
 import {Link, useHistory} from "react-router-dom";

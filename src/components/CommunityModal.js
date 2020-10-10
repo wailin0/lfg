@@ -13,7 +13,7 @@ const CommunityModal = (props) => {
 
             <Modal {...props} size="md" centered >
                 <Modal.Body>
-                <Tabs defaultActiveKey="post" transition={false}>
+                <Tabs activeKey={props.selectedTab} transition={false}>
                     <Tab eventKey="post" title="Blog">
                         <br/>
                         <PostForm onHide={props.onHide} addPost={props.addPost} loading={props.loading} />
@@ -32,7 +32,6 @@ const CommunityModal = (props) => {
 
                     </Tab>
                 </Tabs>
-
                             </Modal.Body>
             </Modal>
 

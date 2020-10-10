@@ -1,11 +1,11 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import '../styles/lfgmodal.css'
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-import {FaCog, FaLongArrowAltLeft, FaUser} from "react-icons/fa";
+import {FaCog, FaLongArrowAltLeft} from "react-icons/fa";
 import CSSTransition from "react-transition-group/CSSTransition";
 import axios from "axios"
 import Rest from "./Rest";
@@ -142,6 +142,7 @@ const LFGModal = (props) => {
 
                 <Modal.Footer>
                     <Button variant="outline-info" >Find Party</Button>
+                    <Button variant="outline-info" >Create Party</Button>
                     <Button variant="outline-secondary" onClick={props.onHide}>Close</Button>
                 </Modal.Footer>
             </Modal>

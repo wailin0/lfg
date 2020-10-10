@@ -1,8 +1,7 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, { useRef, useState} from 'react'
 import '../styles/setting.css'
-import {FaUser,FaLongArrowAltRight,FaBolt, FaLongArrowAltLeft} from "react-icons/fa";
+import {FaUser, FaLongArrowAltLeft} from "react-icons/fa";
 import CSSTransition from "react-transition-group/CSSTransition";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 
 const Setting = () => {

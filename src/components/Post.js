@@ -1,7 +1,6 @@
 import React from "react";
 import {FaClock} from "react-icons/fa";
 import PostReact from "./PostReact";
-import PostComment from "./PostComment";
 import PostTag from "./PostTag";
 import '../styles/post.css'
 import Modal from "react-bootstrap/Modal";

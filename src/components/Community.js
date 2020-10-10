@@ -1,30 +1,35 @@
 import React, {useContext, useEffect, useState} from 'react'
 import '../styles/community.css'
+import '../styles/AnimatedMobileButton.css'
 import CommunityModal from "./CommunityModal";
 import {
     FaListOl,
     FaImage,
-    FaEdit,
-    FaPlus
+    FaEdit
 } from 'react-icons/fa'
 import Post from "./Post";
 import axios from "axios";
-import Button from "react-bootstrap/Button";
 import Rest from "./Rest";
 import JWTHeader from "./JWTHeader";
 import CommunitySideBar from "./CommunitySideBar";
 import Context from "./Context";
 
 const Community = () => {
-    const [posts,setPosts] = useState([])
+    const [selectTab, setSelectTab] = useState('post');
+    const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(false)
     const [modalShow, setModalShow] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
 
+    const openSelectedTab = (tabName) => {
+        setSelectTab(tabName)
+        setModalShow(true)
+    }
+
 
     useEffect(() => {
         setLoading(true)
-        axios.get(`${Rest}/all/post`, { headers: JWTHeader() })
+        axios.get(`${Rest}/all/post`, {headers: JWTHeader()})
             .then(response => {
                 setLoading(false)
                 setPosts(response.data)
@@ -32,18 +37,18 @@ const Community = () => {
             .catch(e => {
                 console.log(e)
             })
-    },[])
+    }, [])
 
 
     const addPost = posts => {
         setLoading(true)
-        axios.post(`${Rest}/auth/post`,posts, { headers: JWTHeader() } )
+        axios.post(`${Rest}/auth/post`, posts, {headers: JWTHeader()})
             .then(response => {
                 setLoading(false)
                 setPosts(prevPosts =>
-                    [...prevPosts, {id:response.data.id, ...posts}])
+                    [...prevPosts, {id: response.data.id, ...posts}])
             }).catch(error => {
-                setLoading(false)
+            setLoading(false)
             console.log(error)
         })
     }
@@ -51,7 +56,7 @@ const Community = () => {
     const deletePost = postId => {
         setLoading(true)
         axios.delete(`${Rest}/auth/post/${postId}`, {
-        headers: JWTHeader()
+            headers: JWTHeader()
         }).then(response => {
             setLoading(false)
             setShowDeleteModal(false)
@@ -62,36 +67,34 @@ const Community = () => {
 
     const slideState = useContext(Context)
     return (
-    <>
-        <CommunitySideBar slideState={slideState}/>
-        <div className="container">
+        <>
+            <CommunitySideBar slideState={slideState}/>
+            <div className="container">
 
-            <div className="row">
-                <div className="col-md-6 mx-auto">
+                <div className="row">
+                    <div className="col-md-6 mx-auto">
 
 
-                    <div id="post-input">
-                        <div className="card-body input-group mb-3">
-                            <input type="text" className="form-control" placeholder="Post something" data-toggle="modal" onClick={() => setModalShow(true)} />
-                            <div className="btn-group input-group-append">
-                                <button className="btn btn-dark " type="button">
-                                    <FaEdit />
+                        <div id="post-input" className="mx-5">
+                            <div className="card-body  ">
+                                <button className="btn btn-dark " type="button" onClick={() => openSelectedTab('post') } >
+                                    <FaEdit/> Post
                                 </button>
-                                <button className="btn btn-dark" type="button"><FaImage />
+                                <button className="btn btn-dark mx-4" type="button" onClick={() => openSelectedTab('media') } >
+                                    <FaImage/> Media
                                 </button>
-                                <button className="btn btn-dark" type="button"><FaListOl />
+                                <button className="btn btn-dark " type="button" onClick={() => openSelectedTab('poll') } >
+                                    <FaListOl/> Poll
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <CommunityModal
-                        show={modalShow}
-                        onHide={() => setModalShow(false)}
-                        addPost={addPost}
-                        loading={loading}
-                    />
-
-
+                        <CommunityModal
+                            selectedTab={selectTab}
+                            show={modalShow}
+                            onHide={() => setModalShow(false)}
+                            addPost={addPost}
+                            loading={loading}
+                        />
 
                         <Post
                             posts={posts}
@@ -102,18 +105,19 @@ const Community = () => {
                             setPosts={setPosts}
                         />
 
-
-
-
-
+                    </div>
                 </div>
             </div>
-        </div>
-        <Button variant="primary" onClick={() => setModalShow(true)} id="mobile-btn">
-            <FaPlus />
-        </Button>
-    </>
-)
+
+            <div id="mobile-btn">
+                <input id="triggerButton" className="triggerButton" type="checkbox"/>
+                <label htmlFor="triggerButton"></label>
+                <div className="one" onClick={() => openSelectedTab('post') }><span className="button-icon"><FaEdit/></span></div>
+                <div className="two" onClick={() => openSelectedTab('media') }><span className="button-icon"><FaImage/></span></div>
+                <div className="three" onClick={() => openSelectedTab('poll') }><span className="button-icon"><FaListOl/></span></div>
+            </div>
+        </>
+    )
 }
 
 export default Community

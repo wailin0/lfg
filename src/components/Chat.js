@@ -2,9 +2,7 @@ import React, {useContext, useState} from "react";
 import Context from "./Context";
 import ChatSideBar from "./ChatSideBar";
 import "../styles/chat.css"
-import SockJS from 'sockjs-client'
-import Stomp from 'stompjs'
-import Rest from "./Rest";
+
 
 let stompClient = null
 

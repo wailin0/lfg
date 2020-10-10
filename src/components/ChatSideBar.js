@@ -1,5 +1,4 @@
 import React, {useContext, useState} from "react";
-import {FaChevronRight} from "react-icons/fa";
 import '../styles/leftsidebar.css'
 import Context from "./Context";
 
