@@ -7,12 +7,12 @@
 }
 
 .header-active:focus {
-    color: steelblue;
+    color: white;
     font-size: 30px;
 }
 
 .header-active {
-    color: steelblue;
+    color: white;
     font-size: 30px;
 }
 

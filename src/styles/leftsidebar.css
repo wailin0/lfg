@@ -16,10 +16,7 @@
     position: fixed;
     transition: all 0.4s;
     z-index: 5;
-    background: #8DD228;
-    background: -webkit-linear-gradient(top left, #8DD228, #D945EC);
-    background: -moz-linear-gradient(top left, #8DD228, #D945EC);
-    background: linear-gradient(to bottom right, #8DD228, #D945EC);
+    background: rgb(35,37,38) !important;
 }
 
 
@@ -28,8 +25,7 @@
         margin-left: -19rem;
     }
     .vertical-nav{
-        top: 10%;
-
+        top: 5rem;
     }
 
 }

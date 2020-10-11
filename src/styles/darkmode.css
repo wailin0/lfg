@@ -1,0 +1,46 @@
+
+
+a {
+    color: white !important;
+}
+
+.navbar {
+    border-bottom: rgb(58,59,60) solid 1px;
+    background: rgb(35,37,38) !important;
+}
+
+.card {
+    background: rgb(35,37,38) !important;
+    color: white;
+}
+
+.nav-item:focus, .nav-item:visited {
+    background: rgb(35,37,38) !important;
+}
+
+.card-header{
+    border-bottom: rgb(58,59,60) solid 1px !important;
+}
+
+input, textarea {
+    background: rgb(58,59,60) !important;
+    border: none;
+    color: white !important;
+}
+
+.modal-content {
+    background: rgb(35,37,38) !important;
+}
+
+.your-name {
+    color: white;
+    margin-right: 3rem;
+}
+
+.popover-header {
+    background: rgb(52,58,64) !important;
+}
+
+.list-group-item {
+    background: rgb(52,58,64) !important;
+}

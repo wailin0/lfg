@@ -1,6 +1,6 @@
 import React, {useContext, useState} from "react";
-import '../styles/leftsidebar.css'
-import Context from "./Context";
+import '../../styles/leftsidebar.css'
+import Context from "../Context";
 
 const ChatSideBar = () => {
     const {slideState} = useContext(Context)

@@ -6,7 +6,7 @@ import rest from './Rest.js'
 import Rest from "./Rest";
 import axios from "axios"
 import Context from "./Context";
-import JWTHeader from "./JWTHeader";
+import JWTHeader from "./auth/JWTHeader";
 
 const PostReact = () => {
     const [showComments, setShowComments] = useState(true)

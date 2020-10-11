@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
-import '../styles/register.css'
+import '../../styles/register.css'
 import {FaEye} from "react-icons/fa";
 import {GiBleedingEye} from 'react-icons/gi'
 import {Form, InputGroup} from 'react-bootstrap'
 import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
-import Rest from "./Rest";
+import Rest from "../Rest";
 
 const Register = () => {
     const [validation, setValidation] = useState({

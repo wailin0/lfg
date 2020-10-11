@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import '../styles/lfgmodal.css'
+import '../../styles/lfgmodal.css'
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -8,7 +8,7 @@ import Image from "react-bootstrap/Image";
 import {FaCog, FaLongArrowAltLeft} from "react-icons/fa";
 import CSSTransition from "react-transition-group/CSSTransition";
 import axios from "axios"
-import Rest from "./Rest";
+import Rest from "../Rest";
 import Form from "react-bootstrap/Form"
 
 const LFGModal = (props) => {

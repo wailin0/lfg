@@ -1,11 +1,11 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useState} from "react";
 import {Form, InputGroup} from "react-bootstrap";
 import {FaEye} from "react-icons/fa";
 import {GiBleedingEye} from "react-icons/gi";
 import {Link} from "react-router-dom";
 import axios from "axios";
-import Rest from "./Rest";
-import Context from "./Context";
+import Rest from "../Rest";
+import Context from "../Context";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)

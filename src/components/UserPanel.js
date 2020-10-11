@@ -7,10 +7,10 @@ import {FiLogOut} from 'react-icons/fi'
 import {FaCloudMoon, FaCog} from 'react-icons/fa'
 import {MdHelp } from 'react-icons/md'
 import {Link} from "react-router-dom";
-import Logout from "./Logout";
+import Logout from "./pages/Logout";
 import axios from "axios"
 import Rest from "./Rest";
-import JWTHeader from "./JWTHeader";
+import JWTHeader from "./auth/JWTHeader";
 import Form from "react-bootstrap/Form"
 import Context from "./Context";
 
@@ -68,21 +68,14 @@ const UserPanel = () => {
                         <Popover>
                             <Popover.Title as="h3"><img
                                 src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"/>
-                                Guest</Popover.Title>
+                            <span className="your-name">Guest</span>
+                            </Popover.Title>
 
                             <ListGroup>
                                 <ListGroup.Item><Link to="/login"><FaCog/> Login</Link></ListGroup.Item>
                                 <ListGroup.Item><Link to="/register"><FaCog/> Register</Link></ListGroup.Item>
                                 <ListGroup.Item><Link to="/setting"><FaCog/> Settings</Link></ListGroup.Item>
-                                <ListGroup.Item><MdHelp/> Help & Support</ListGroup.Item>
-                                <ListGroup.Item>
-                                    <Form.Check
-                                        type="switch"
-                                        id="custom-switch"
-                                        label="Dark Mode"
-                                        onClick={toggleDarkMode}
-                                    />
-                                </ListGroup.Item>
+                                <ListGroup.Item><Link to="/support"><MdHelp/> Help & Support</Link></ListGroup.Item>
                             </ListGroup>
                         </Popover>
                     }

@@ -25,10 +25,51 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="fixed netlify cd error">
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="fixed controlled tab bug">
+      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/chat/Chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/party/Party.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/app/Appearance.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/app/Language.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/app/Notification.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/app/VideoAndAudio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/info/Policies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/info/Support.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/info/TermsOfService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Account.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Blocking.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Premiun.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Privacy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/darkmode.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/lfg.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Community.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommunityModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/ChatSideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/Community.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommunityRegModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommunitySideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunitySideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JWTHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/JWTHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LFG.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lfg/LFG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LFGModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lfg/LFGModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/NotFoundPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/Setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/chat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/community.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/community.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/leftsidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/leftsidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/userpanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/userpanel.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +118,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/auth" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -88,16 +129,16 @@
     <property name="ts.external.directory.path" value="D:\IntelliJ IDEA 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\lfg\src\components\chat" />
+      <recent name="D:\IdeaProjects\lfg\src\components\settings\app" />
+      <recent name="D:\IdeaProjects\lfg\src\components\settings\user" />
+      <recent name="D:\IdeaProjects\lfg\src\components\setting" />
+      <recent name="D:\IdeaProjects\lfg\src\components\pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src" />
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\components" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IdeaProjects\lfg\public\images" />
-      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\styles" />
-      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src" />
-      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\components" />
-      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\build\images" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -264,7 +305,10 @@
       <workItem from="1602171569779" duration="8000" />
       <workItem from="1602260424801" duration="3514000" />
       <workItem from="1602269467214" duration="39000" />
-      <workItem from="1602348042753" duration="15719000" />
+      <workItem from="1602348042753" duration="23814000" />
+      <workItem from="1602428519594" duration="5941000" />
+      <workItem from="1602435292028" duration="23000" />
+      <workItem from="1602435336169" duration="6671000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -427,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602362815387</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fixed controlled tab bug">
+      <created>1602364284961</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1602364284961</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,7 +531,8 @@
     <MESSAGE value="added group registration and transition group modal" />
     <MESSAGE value="added animated mobile view button and selectable tab for community" />
     <MESSAGE value="fixed netlify cd error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed netlify cd error" />
+    <MESSAGE value="fixed controlled tab bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed controlled tab bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="162" y="203" key="#135.js" timestamp="1599867571193">
@@ -503,26 +555,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602355107003" />
-    <state x="349" y="249" key="FileChooserDialogImpl" timestamp="1597974312182">
+    <state x="349" y="249" key="FileChooserDialogImpl" timestamp="1602372502659">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597974312182" />
-    <state width="1225" height="62" key="GridCell.Tab.0.bottom" timestamp="1602362164083">
+    <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602372502659" />
+    <state width="1434" height="62" key="GridCell.Tab.0.bottom" timestamp="1602367911090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1225" height="62" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602362164083" />
-    <state width="1225" height="62" key="GridCell.Tab.0.center" timestamp="1602362164083">
+    <state width="1434" height="62" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602367911090" />
+    <state width="1434" height="62" key="GridCell.Tab.0.center" timestamp="1602367911090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1225" height="62" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602362164083" />
-    <state width="1225" height="62" key="GridCell.Tab.0.left" timestamp="1602362164083">
+    <state width="1434" height="62" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602367911090" />
+    <state width="1434" height="62" key="GridCell.Tab.0.left" timestamp="1602367911090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1225" height="62" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602362164083" />
-    <state width="1225" height="62" key="GridCell.Tab.0.right" timestamp="1602362164083">
+    <state width="1434" height="62" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602367911090" />
+    <state width="1434" height="62" key="GridCell.Tab.0.right" timestamp="1602367911090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1225" height="62" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602362164083" />
+    <state width="1434" height="62" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602367911090" />
     <state width="989" height="349" key="GridCell.Tab.1.bottom" timestamp="1599866288781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -575,10 +627,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602348334527" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602362821712">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602364292399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602362821712" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602364292399" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -587,10 +639,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602350919735" />
-    <state x="818" y="506" width="850" height="795" key="dock-window-1" timestamp="1600830336184">
+    <state x="150" y="76" width="1070" height="864" key="dock-window-1" timestamp="1602365634503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="818" y="506" width="850" height="795" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1600830336184" />
+    <state x="150" y="76" width="1070" height="864" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1602365634503" />
     <state x="690" y="550" width="1111" height="795" key="dock-window-2" timestamp="1600831236008">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -623,10 +675,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="211" y="115" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602263214270" />
-    <state x="127" y="222" width="840" height="1034" key="run.anything.popup" timestamp="1602351984564">
+    <state x="127" y="222" width="840" height="1034" key="run.anything.popup" timestamp="1602437164652">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="127" y="222" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602351984564" />
+    <state x="127" y="222" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602437164652" />
     <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1597978769201">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -646,7 +698,7 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/CommunityModal.js</url>
+          <url>file://$PROJECT_DIR$/src/components/community/CommunityModal.js</url>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

@@ -1,11 +1,11 @@
 import React from 'react'
-import '../styles/modal.css'
+import '../../styles/modal.css'
 import Modal from "react-bootstrap/Modal";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
-import PostForm from "./PostForm";
-import MediaForm from "./MediaForm";
-import PollForm from "./PollForm";
+import PostForm from "../PostForm";
+import MediaForm from "../MediaForm";
+import PollForm from "../PollForm";
 
 const CommunityModal = (props) => {
     return (
@@ -15,7 +15,7 @@ const CommunityModal = (props) => {
                 <Modal.Body>
                 <Tabs activeKey={props.selectTab}
                       transition={false}
-                      onSelect={props.onSelect}
+                      onSelect={(key) => props.setSelectTab(key) }
                 >
                     <Tab eventKey="post" title="Blog">
                         <br/>

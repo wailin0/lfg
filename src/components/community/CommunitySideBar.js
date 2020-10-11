@@ -1,10 +1,10 @@
 import React, {useContext, useEffect, useState} from "react";
-import '../styles/leftsidebar.css'
-import Context from "./Context";
+import '../../styles/leftsidebar.css'
+import Context from "../Context";
 import CommunityRegModel from "./CommunityRegModel";
 import axios from "axios"
-import Rest from "./Rest";
-import JWTHeader from "./JWTHeader";
+import Rest from "../Rest";
+import JWTHeader from "../auth/JWTHeader";
 
 const CommunitySideBar = () => {
     const [groupRegModel, setModalShow] = useState(false);

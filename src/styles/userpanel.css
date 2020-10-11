@@ -6,3 +6,9 @@
         width: 35px;
         border-radius: 50%;
     }
+
+
+.dark-mode {
+    background: black !important;
+    color: red;
+}

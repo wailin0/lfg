@@ -1,18 +1,18 @@
 import React, {useContext, useEffect, useState} from 'react'
-import '../styles/community.css'
-import '../styles/AnimatedMobileButton.css'
+import '../../styles/community.css'
+import '../../styles/AnimatedMobileButton.css'
 import CommunityModal from "./CommunityModal";
 import {
     FaListOl,
     FaImage,
     FaEdit
 } from 'react-icons/fa'
-import Post from "./Post";
+import Post from "../Post";
 import axios from "axios";
-import Rest from "./Rest";
-import JWTHeader from "./JWTHeader";
+import Rest from "../Rest";
+import JWTHeader from "../auth/JWTHeader";
 import CommunitySideBar from "./CommunitySideBar";
-import Context from "./Context";
+import Context from "../Context";
 
 const Community = () => {
     const [selectTab, setSelectTab] = useState('post');
@@ -25,8 +25,6 @@ const Community = () => {
         setSelectTab(tabName)
         setModalShow(true)
     }
-
-    const onSelect = (selectTab) => setSelectTab(selectTab)
 
     useEffect(() => {
         setLoading(true)
@@ -90,7 +88,7 @@ const Community = () => {
                             </div>
                         </div>
                         <CommunityModal
-                            onSelect={onSelect}
+                            setSelectTab={setSelectTab}
                             selectTab={selectTab}
                             show={modalShow}
                             onHide={() => setModalShow(false)}

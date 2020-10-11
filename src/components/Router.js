@@ -1,15 +1,17 @@
 
 import React, {useState} from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import notFoundPage from '../components/NotFoundPage'
+import notFoundPage from './pages/NotFoundPage'
 import Header from './Header'
-import Community from "./Community";
-import LFG from "./LFG";
-import Setting from "./Setting";
-import Register from "./Register";
-import Login from "./Login";
-import Chat from "./Chat";
+import Community from "./community/Community";
+import LFG from "./lfg/LFG";
+import Setting from "./settings/Setting";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Chat from "./chat/Chat";
 import Context from "./Context";
+import Party from "./party/Party";
+import "../styles/darkmode.css"
 
 
 const AppRouter = () => {
@@ -27,10 +29,9 @@ const AppRouter = () => {
                 <Context.Provider value={{slideState, toggleSlide, auth, setAuth}}>
                 <Header />
                 <Switch>
-                    <Route path="/" component={Community} exact={true}  />
+                    <Route path="/community" component={Community} exact={true}  />
                     <Route path="/lfg" component={LFG} />
-                    <Route path="/friends"/>
-                    <Route path="/x"/>
+                    <Route path="/party" component={Party} />
                     <Route path="/chat" component={Chat}  />
                     <Route path="/register" component={Register} />
                     <Route path="/login" component={Login} />

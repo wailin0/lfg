@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import '../styles/community.css'
+import '../../styles/lfg.css'
 import LFGModal from "./LFGModal";
 import {FaSearch} from "react-icons/fa";
 import Button from "react-bootstrap/Button";
@@ -14,7 +14,7 @@ const LFG = () => {
                 <div className="row">
                     <div className="col-md-6 mx-auto">
                         <br/>
-                        <button className="btn btn-info " type="button" onClick={() => setShowLFGModal(true)}> <FaSearch /> LFG</button>
+                        <button className="btn lfg-button btn-info" type="button" onClick={() => setShowLFGModal(true)}> <FaSearch /> LFG</button>
                         <br/>
                         <br/>
 

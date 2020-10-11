@@ -8,7 +8,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import {MdHelp} from "react-icons/md";
 import {FiLogOut} from "react-icons/fi";
 import Popover from "react-bootstrap/Popover";
-import JWTHeader from "./JWTHeader";
+import JWTHeader from "./auth/JWTHeader";
 
 const PostComment = () => {
     const postId = useContext(Context)
