@@ -17,7 +17,7 @@ const Post = (props) => {
         <>
             { props.loading ? <span id="loading"><Spinner animation="grow" variant="danger" /> Loading feeds... <br/>please wait for backend server to start</span> :
                 props.posts.map((eachPost) => (
-                    <div key={eachPost.id}>
+                    <div key={eachPost.id} className="post">
                     <div className="card">
                         <div className="card-header">
                             <div className="d-flex justify-content-between align-items-center">
@@ -35,10 +35,9 @@ const Post = (props) => {
                                 <div>
                                         <DropdownButton drop='left'>
                                             <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
-                                            <Dropdown.Divider />
                                             <Dropdown.Item onClick={() => props.setShowDeleteModal(true)}>Delete</Dropdown.Item>
-                                            <Dropdown.Divider />
                                             <Dropdown.Item href="#/action-3">Hide</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Report</Dropdown.Item>
                                         </DropdownButton>
                                 </div>
                             </div>

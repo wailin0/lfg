@@ -9,7 +9,7 @@ const LFG = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="container lfg-post">
 
                 <div className="row">
                     <div className="col-md-6 mx-auto">

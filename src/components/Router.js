@@ -29,7 +29,7 @@ const AppRouter = () => {
                 <Context.Provider value={{slideState, toggleSlide, auth, setAuth}}>
                 <Header />
                 <Switch>
-                    <Route path="/community" component={Community} exact={true}  />
+                    <Route path={["/", "/community"]} component={Community} exact={true}  />
                     <Route path="/lfg" component={LFG} />
                     <Route path="/party" component={Party} />
                     <Route path="/chat" component={Chat}  />

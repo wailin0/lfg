@@ -3,4 +3,8 @@
     .lfg-button {
         display: none !important;
     }
+    .lfg-post {
+        margin-top: -4.5rem;
+    }
 }
+

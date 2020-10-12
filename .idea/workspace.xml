@@ -25,51 +25,17 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="fixed controlled tab bug">
-      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/chat/Chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/party/Party.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/app/Appearance.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/app/Language.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/app/Notification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/app/VideoAndAudio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/info/Policies.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/info/Support.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/info/TermsOfService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Account.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Blocking.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Premiun.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Privacy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/darkmode.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/lfg.css" afterDir="false" />
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="changed to darkmode and fixed input focus losing bug">
+      <change afterPath="$PROJECT_DIR$/src/components/lfg/LFGSideBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/ChatSideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/Community.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommunityRegModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommunitySideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunitySideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JWTHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/JWTHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LFG.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lfg/LFG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LFGModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lfg/LFGModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Logout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/NotFoundPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/Setting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/community.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/community.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/leftsidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/leftsidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/userpanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/userpanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/Community.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/lfg/LFG.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lfg/LFG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/darkmode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/darkmode.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/lfg.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/lfg.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/post.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -118,7 +84,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -308,7 +274,9 @@
       <workItem from="1602348042753" duration="23814000" />
       <workItem from="1602428519594" duration="5941000" />
       <workItem from="1602435292028" duration="23000" />
-      <workItem from="1602435336169" duration="6671000" />
+      <workItem from="1602435336169" duration="8552000" />
+      <workItem from="1602449525909" duration="3716000" />
+      <workItem from="1602519163826" duration="621000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -478,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602364284961</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="changed to darkmode and fixed input focus losing bug">
+      <created>1602442406068</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1602442406068</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +507,8 @@
     <MESSAGE value="added animated mobile view button and selectable tab for community" />
     <MESSAGE value="fixed netlify cd error" />
     <MESSAGE value="fixed controlled tab bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed controlled tab bug" />
+    <MESSAGE value="changed to darkmode and fixed input focus losing bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to darkmode and fixed input focus losing bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="162" y="203" key="#135.js" timestamp="1599867571193">
@@ -559,22 +535,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602372502659" />
-    <state width="1434" height="62" key="GridCell.Tab.0.bottom" timestamp="1602367911090">
+    <state width="970" height="218" key="GridCell.Tab.0.bottom" timestamp="1602453247891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1434" height="62" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602367911090" />
-    <state width="1434" height="62" key="GridCell.Tab.0.center" timestamp="1602367911090">
+    <state width="970" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602453247891" />
+    <state width="970" height="218" key="GridCell.Tab.0.center" timestamp="1602453247891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1434" height="62" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602367911090" />
-    <state width="1434" height="62" key="GridCell.Tab.0.left" timestamp="1602367911090">
+    <state width="970" height="218" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602453247891" />
+    <state width="970" height="218" key="GridCell.Tab.0.left" timestamp="1602453247891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1434" height="62" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602367911090" />
-    <state width="1434" height="62" key="GridCell.Tab.0.right" timestamp="1602367911090">
+    <state width="970" height="218" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602453247891" />
+    <state width="970" height="218" key="GridCell.Tab.0.right" timestamp="1602453247891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1434" height="62" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602367911090" />
+    <state width="970" height="218" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602453247891" />
     <state width="989" height="349" key="GridCell.Tab.1.bottom" timestamp="1599866288781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -627,10 +603,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602348334527" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602364292399">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602442420467">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602364292399" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602442420467" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -714,11 +690,6 @@
           <url>file://$PROJECT_DIR$/src/components/Post.js</url>
           <line>9</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Post.js</url>
-          <line>32</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/../lfg-spring/src/main/resources/templates/index.js</url>

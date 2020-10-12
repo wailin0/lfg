@@ -95,7 +95,6 @@ const Community = () => {
                             addPost={addPost}
                             loading={loading}
                         />
-
                         <Post
                             posts={posts}
                             deletePost={deletePost}
