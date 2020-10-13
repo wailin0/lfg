@@ -27,7 +27,7 @@ const Post = (props) => {
                                              alt=""/>
                                     </div>
                                     <div className="ml-2">
-                                        <div className="h5 m-0">Wai Lin</div>
+                                        <div className="h5 m-0">username</div>
                                         <div className="text-muted  mb-2"><FaClock /> 10 min ago
                                         </div>
                                     </div>
