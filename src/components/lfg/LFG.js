@@ -27,7 +27,7 @@ const LFG = () => {
                                                  alt=""/>
                                         </div>
                                         <div className="ml-2">
-                                            <div className="h5 m-0">Wai Lin</div>
+                                            <div className="h5 m-0">Username</div>
                                             <div className="text-muted h7 mb-2"><i className="fa fa-clock-o"></i> 10 min
                                                 ago
                                             </div>

@@ -123,7 +123,7 @@ const Setting = () => {
                     </DropdownItem>
                     <DropdownItem> <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"
                                         id="profile-pic"/>
-                        Wai Lin</DropdownItem>
+                        username</DropdownItem>
                     <DropdownItem>Email <br/>e@e.e</DropdownItem>
                     <DropdownItem>Password <br/>******</DropdownItem>
 
