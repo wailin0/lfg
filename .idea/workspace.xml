@@ -25,10 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="added darkmode and responsive mobile tweaks to chat page">
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="darkmode fix attempt 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lfg/LFG.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lfg/LFG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/settings/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/Setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/Chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Chat.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -276,7 +275,10 @@
       <workItem from="1602626167201" duration="7187000" />
       <workItem from="1602667198212" duration="428000" />
       <workItem from="1602672046140" duration="564000" />
-      <workItem from="1602687153035" duration="110000" />
+      <workItem from="1602687153035" duration="536000" />
+      <workItem from="1602697587496" duration="2805000" />
+      <workItem from="1602701071862" duration="4693000" />
+      <workItem from="1602755582963" duration="118000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -467,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602633397820</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="darkmode fix attempt 1">
+      <created>1602687404163</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1602687404163</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +508,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="efefef" />
     <MESSAGE value="updated smaple ui" />
     <MESSAGE value="updated readme" />
     <MESSAGE value="up" />
@@ -524,7 +532,8 @@
     <MESSAGE value="fixed same responsive ui problem" />
     <MESSAGE value="fixed some responsive ui problem" />
     <MESSAGE value="added darkmode and responsive mobile tweaks to chat page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added darkmode and responsive mobile tweaks to chat page" />
+    <MESSAGE value="darkmode fix attempt 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="darkmode fix attempt 1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="162" y="203" key="#135.js" timestamp="1599867571193">
@@ -551,22 +560,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602372502659" />
-    <state width="1055" height="207" key="GridCell.Tab.0.bottom" timestamp="1602672610670">
+    <state width="1189" height="34" key="GridCell.Tab.0.bottom" timestamp="1602706408698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1055" height="207" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602672610670" />
-    <state width="1055" height="207" key="GridCell.Tab.0.center" timestamp="1602672610670">
+    <state width="1189" height="34" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602706408698" />
+    <state width="1189" height="34" key="GridCell.Tab.0.center" timestamp="1602706408698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1055" height="207" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602672610670" />
-    <state width="1055" height="207" key="GridCell.Tab.0.left" timestamp="1602672610670">
+    <state width="1189" height="34" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602706408698" />
+    <state width="1189" height="34" key="GridCell.Tab.0.left" timestamp="1602706408697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1055" height="207" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602672610670" />
-    <state width="1055" height="207" key="GridCell.Tab.0.right" timestamp="1602672610670">
+    <state width="1189" height="34" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602706408697" />
+    <state width="1189" height="34" key="GridCell.Tab.0.right" timestamp="1602706408698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1055" height="207" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602672610670" />
+    <state width="1189" height="34" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602706408698" />
     <state width="989" height="349" key="GridCell.Tab.1.bottom" timestamp="1599866288781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -615,14 +624,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="989" height="349" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599866288782" />
+    <state x="312" y="137" key="RollbackChangesDialog" timestamp="1602698682741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="312" y="137" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602698682741" />
     <state x="131" y="102" key="SettingsEditor" timestamp="1602348334527">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602348334527" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602633402229">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602687408008">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602633402229" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602687408008" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

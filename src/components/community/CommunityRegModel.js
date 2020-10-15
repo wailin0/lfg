@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form"
 import axios from "axios"
 import Rest from "../Rest";
 import {useHistory} from "react-router-dom";
+import JWTHeader from "../auth/JWTHeader";
 
 const CommunityRegModel = (props) => {
     const [form, setForm] = useState({
@@ -23,11 +24,11 @@ const CommunityRegModel = (props) => {
             description: form.description,
             type: form.type
         }
-        axios.post(`${Rest}/all/registerCommunity`, formData)
+        axios.post(`${Rest}/auth/group/createGroup`, formData, {headers: JWTHeader()})
             .then(response => {
-                history.push("/x/"+form.name)
+                history.push("/community/" + form.name)
             }).catch(err => {
-                console.log(err)
+            console.log("community name already exist")
         })
     }
 
@@ -48,7 +49,8 @@ const CommunityRegModel = (props) => {
                 <Modal.Body>
                     <Form.Group>
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" name="name" value={form.name} onChange={e => setForm({...form, name: e.target.value})} />
+                        <Form.Control type="text" name="name" value={form.name}
+                                      onChange={e => setForm({...form, name: e.target.value})}/>
                         <Form.Text className="text-muted">
                             give it something unique, you can change it later
                         </Form.Text>
@@ -56,7 +58,8 @@ const CommunityRegModel = (props) => {
 
                     <Form.Group>
                         <Form.Label>Topics</Form.Label>
-                        <Form.Control type="text" name="topics" value={form.topics} onChange={e => setForm({...form, topics: e.target.value})}/>
+                        <Form.Control type="text" name="topics" value={form.topics}
+                                      onChange={e => setForm({...form, topics: e.target.value})}/>
                         <Form.Text className="text-muted">
                             what kind of community is it?
                         </Form.Text>
@@ -64,7 +67,8 @@ const CommunityRegModel = (props) => {
 
                     <Form.Group>
                         <Form.Label>Description</Form.Label>
-                        <Form.Control type="text" name="description" value={form.description} onChange={e => setForm({...form, description: e.target.value})}/>
+                        <Form.Control type="text" name="description" value={form.description}
+                                      onChange={e => setForm({...form, description: e.target.value})}/>
                         <Form.Text className="text-muted">
                             explain what your community is about
                         </Form.Text>
@@ -102,7 +106,9 @@ const CommunityRegModel = (props) => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="outline-secondary" onClick={props.onHide}>Cancel</Button>
-                    <Button type="submit" variant="outline-info" disabled={!(form.name.trim() && form.topics.trim() && form.description.trim() && form.type)}>Create Community</Button>
+                    <Button type="submit" variant="outline-info"
+                            disabled={!(form.name.trim() && form.topics.trim() && form.description.trim() && form.type)}>Create
+                        Community</Button>
                 </Modal.Footer>
             </Form>
         </Modal>
