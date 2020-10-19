@@ -29,7 +29,7 @@
 }
 
 
-.content, #sidebar {
+.content {
   background: rgb(27,31,35) !important;
   grid-row-start: 1;
   transition: all 0.2s;

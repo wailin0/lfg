@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import notFoundPage from './pages/NotFoundPage'
 import Header from './Header'
@@ -18,6 +18,12 @@ import UserPage from "./UserPage";
 const AppRouter = () => {
     const [slideState, setSlideState] = useState("sidebar");
     const [auth, setAuth] = useState(false);
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if(user){
+            setAuth(true)
+        }
+    },[])
     const toggleSlide = () => {
         setSlideState(!slideState)
     }

@@ -11,7 +11,7 @@ const CommunitySideBar = () => {
     const [communityList, setCommunityList] = useState([]);
 
     useEffect(() => {
-        axios.get(`${Rest}/all/community`, {headers: JWTHeader()})
+        axios.get(`${Rest}/community`, {headers: JWTHeader()})
             .then(response => {
                 setCommunityList(response.data)
             })

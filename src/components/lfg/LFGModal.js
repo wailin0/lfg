@@ -16,7 +16,7 @@ const LFGModal = (props) => {
     const [gameList, setGameList] = useState([])
 
     useEffect(() => {
-        axios.get(`${Rest}/all/gameList`)
+        axios.get(`${Rest}/gameList`)
             .then(response => {
                 setGameList(response.data)
             })

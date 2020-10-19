@@ -8,10 +8,8 @@ input:focus {
 
 
 .signup-content {
-    background: #fff;
+    background: rgb(35,37,38);
     padding: 50px 85px; }
-
-
 
 
 .form-submit {
@@ -24,7 +22,8 @@ input:focus {
     color: #fff;
     text-transform: uppercase;
     border: none;
-    background: linear-gradient(to left, #74ebd5, #9face6); }
+    background: rgb(58, 59, 60);
+}
 
 .label-agree-term {
     font-size: 12px;
