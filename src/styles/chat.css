@@ -20,27 +20,27 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.sidebar {
+.sidebar, #sidebar {
   background: rgb(35,37,38) !important;
   grid-row-start: 1;
   grid-row-end: span 3;
-  transition: all 0.4s;
+  transition: all 0.2s;
   z-index: 5;
 }
 
 
-.content {
+.content, #sidebar {
   background: rgb(27,31,35) !important;
   grid-row-start: 1;
-  transition: all 0.4s;
+  transition: all 0.2s;
   grid-row-end: span 3;
 }
 
 @media (max-width: 768px) {
-  .sidebar {
+  #sidebar {
     margin-left: -19rem !important;
   }
-  .scrollable {
+  #sidebar {
     position: fixed !important;
   }
   .content {

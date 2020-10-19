@@ -25,9 +25,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="darkmode fix attempt 1">
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="fixed chat page white color bug">
+      <change afterPath="$PROJECT_DIR$/src/components/UserPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/Chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/ConversationList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/ConversationList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/Community.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/Chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Chat.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -278,7 +283,9 @@
       <workItem from="1602687153035" duration="536000" />
       <workItem from="1602697587496" duration="2805000" />
       <workItem from="1602701071862" duration="4693000" />
-      <workItem from="1602755582963" duration="118000" />
+      <workItem from="1602755582963" duration="165000" />
+      <workItem from="1602974884746" duration="1365000" />
+      <workItem from="1603092816562" duration="1551000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -476,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602687404163</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fixed chat page white color bug">
+      <created>1602755726967</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1602755726967</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +522,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="updated smaple ui" />
     <MESSAGE value="updated readme" />
     <MESSAGE value="up" />
     <MESSAGE value="fixed mobile view" />
@@ -533,7 +546,8 @@
     <MESSAGE value="fixed some responsive ui problem" />
     <MESSAGE value="added darkmode and responsive mobile tweaks to chat page" />
     <MESSAGE value="darkmode fix attempt 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="darkmode fix attempt 1" />
+    <MESSAGE value="fixed chat page white color bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed chat page white color bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="162" y="203" key="#135.js" timestamp="1599867571193">
@@ -560,22 +574,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602372502659" />
-    <state width="1189" height="34" key="GridCell.Tab.0.bottom" timestamp="1602706408698">
+    <state width="1285" height="351" key="GridCell.Tab.0.bottom" timestamp="1603092912878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1189" height="34" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602706408698" />
-    <state width="1189" height="34" key="GridCell.Tab.0.center" timestamp="1602706408698">
+    <state width="1285" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603092912878" />
+    <state width="1285" height="351" key="GridCell.Tab.0.center" timestamp="1603092912878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1189" height="34" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602706408698" />
-    <state width="1189" height="34" key="GridCell.Tab.0.left" timestamp="1602706408697">
+    <state width="1285" height="351" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603092912878" />
+    <state width="1285" height="351" key="GridCell.Tab.0.left" timestamp="1603092912878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1189" height="34" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602706408697" />
-    <state width="1189" height="34" key="GridCell.Tab.0.right" timestamp="1602706408698">
+    <state width="1285" height="351" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603092912878" />
+    <state width="1285" height="351" key="GridCell.Tab.0.right" timestamp="1603092912878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1189" height="34" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602706408698" />
+    <state width="1285" height="351" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603092912878" />
     <state width="989" height="349" key="GridCell.Tab.1.bottom" timestamp="1599866288781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -632,10 +646,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="102" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602348334527" />
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602687408008">
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2" timestamp="1602755732404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602687408008" />
+    <state x="345" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602755732404" />
     <state x="77" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595363959657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

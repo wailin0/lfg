@@ -12,6 +12,7 @@ import Chat from "./chat/Chat";
 import Context from "./Context";
 import Party from "./party/Party";
 import "../styles/darkmode.css"
+import UserPage from "./UserPage";
 
 
 const AppRouter = () => {
@@ -36,6 +37,7 @@ const AppRouter = () => {
                     <Route path="/register" component={Register} />
                     <Route path="/login" component={Login} />
                     <Route path="/setting" component={Setting} />
+                    <Route path="/user" component={UserPage} />
                     <Route component={notFoundPage} />
                 </Switch>
                 </Context.Provider>
