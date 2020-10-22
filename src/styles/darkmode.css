@@ -14,6 +14,11 @@ a {
     color: white !important;
 }
 
+select {
+    background: rgb(58,59,60) !important;
+    color: white;
+}
+
 .navbar {
     border-bottom: rgb(58,59,60) solid 1px;
     background: rgb(35,37,38) !important;
@@ -35,6 +40,7 @@ a {
 .dropdown-item:hover {
     background: rgb(58,59,60) !important;
 }
+
 
 .dropdown-item {
     border-bottom: none;

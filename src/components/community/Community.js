@@ -20,6 +20,17 @@ const Community = () => {
     const [loading, setLoading] = useState(false)
     const [modalShow, setModalShow] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const [communityList, setCommunityList] = useState([]);
+
+    useEffect(() => {
+        axios.get(`${Rest}/group/user`, {headers: JWTHeader()})
+            .then(response => {
+                setCommunityList(response.data)
+            })
+            .catch(e => {
+                console.log(e)
+            })
+    }, [])
 
     const openSelectedTab = (tabName) => {
         setSelectTab(tabName)
@@ -28,7 +39,7 @@ const Community = () => {
 
     useEffect(() => {
         setLoading(true)
-        axios.get(`${Rest}/post`, {headers: JWTHeader()})
+        axios.get(`${Rest}/all/post`, {headers: JWTHeader()})
             .then(response => {
                 setLoading(false)
                 setPosts(response.data)
@@ -39,13 +50,14 @@ const Community = () => {
     }, [])
 
 
-    const addPost = posts => {
+    const addPost = (post,groupId) => {
         setLoading(true)
-        axios.post(`${Rest}/post`, posts, {headers: JWTHeader()})
+        axios.post(`${Rest}/group/${groupId}/post`, post, {headers: JWTHeader()})
             .then(response => {
                 setLoading(false)
-                setPosts(prevPosts =>
-                    [...prevPosts, {id: response.data.id, ...posts}])
+                console.log(response.data)
+                setPosts(
+                    [...posts, response.data])
             }).catch(error => {
             setLoading(false)
             console.log(error)
@@ -67,7 +79,7 @@ const Community = () => {
     const slideState = useContext(Context)
     return (
         <>
-            <CommunitySideBar slideState={slideState}/>
+            <CommunitySideBar slideState={slideState} groupList={communityList}/>
             <div className="container">
 
                 <div className="row">
@@ -75,7 +87,6 @@ const Community = () => {
 
 
                         <div id="post-input" className="mx-5">
-                            <div className="card-body  ">
                                 <button className="btn btn-dark " type="button" onClick={() => openSelectedTab('post') } >
                                     <FaEdit/> Post
                                 </button>
@@ -85,9 +96,9 @@ const Community = () => {
                                 <button className="btn btn-dark " type="button" onClick={() => openSelectedTab('poll') } >
                                     <FaListOl/> Poll
                                 </button>
-                            </div>
                         </div>
                         <CommunityModal
+                            groupList={communityList}
                             setSelectTab={setSelectTab}
                             selectTab={selectTab}
                             show={modalShow}

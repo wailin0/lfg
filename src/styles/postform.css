@@ -1,3 +1,7 @@
 button:disabled {
     cursor: not-allowed;
 }
+
+.post-to {
+    display: inline-block;
+}

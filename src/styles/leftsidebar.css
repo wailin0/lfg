@@ -9,6 +9,9 @@
     outline: none;
 }
 
+.td-name {
+    color: white;
+}
 
 .vertical-nav {
     width: 19rem;

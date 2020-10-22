@@ -25,7 +25,7 @@ const Login = () => {
 
     const loginHandle = (e) => {
         e.preventDefault()
-        axios.post(`${Rest}/login`,login )
+        axios.post(`${Rest}/all/login`,login )
             .then(response => {
                 console.log(response.data)
                 localStorage.setItem("user", JSON.stringify(response.data))

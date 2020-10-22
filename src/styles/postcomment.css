@@ -1,18 +1,19 @@
 /* comment box */
 .comment{
-    display: flex;
+    align-items: center;
 }
 .comment-box{
     border-radius: 20px;
-    margin-left: 5px;
     width: 100%;
-    padding-left: 8px;
-    padding-right: 30px;
+    padding-left: 10px;
+    padding-right: 2rem;
+
 }
 
 #send-icon {
     position: absolute;
     right: 30px;
     color: green;
+    bottom: 1rem;
     font-size:18px;
 }

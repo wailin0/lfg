@@ -9,6 +9,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Spinner from "react-bootstrap/Spinner";
 import Context from "./Context";
+import {Link} from "react-router-dom";
 
 const Post = (props) => {
 
@@ -27,7 +28,11 @@ const Post = (props) => {
                                              alt=""/>
                                     </div>
                                     <div className="ml-2">
-                                        <div className="h5 m-0">username</div>
+                                        <div className="h5 m-0">
+                                            <Link to={`/user/${eachPost.users.username}`}>{eachPost.users.username}</Link>
+                                            >
+                                            <Link to={`/community/${eachPost.groups.name}`}>{eachPost.groups.name}</Link>
+                                        </div>
                                         <div className="text-muted  mb-2"><FaClock /> 10 min ago
                                         </div>
                                     </div>

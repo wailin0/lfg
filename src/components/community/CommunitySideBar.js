@@ -5,20 +5,11 @@ import CommunityRegModel from "./CommunityRegModel";
 import axios from "axios"
 import Rest from "../Rest";
 import JWTHeader from "../auth/JWTHeader";
+import {Link} from "react-router-dom";
 
-const CommunitySideBar = () => {
+const CommunitySideBar = ({groupList}) => {
     const [groupRegModel, setModalShow] = useState(false);
-    const [communityList, setCommunityList] = useState([]);
 
-    useEffect(() => {
-        axios.get(`${Rest}/community`, {headers: JWTHeader()})
-            .then(response => {
-                setCommunityList(response.data)
-            })
-            .catch(e => {
-                console.log(e)
-            })
-    }, [])
 
 
     const {slideState} = useContext(Context)
@@ -35,22 +26,14 @@ const CommunitySideBar = () => {
                 <p className="text-white font-weight-bold px-3  pb-4 mb-0">Your Community</p>
                 <div className="container">
                     <table className="table">
-                        {communityList.map((community) => (
+                        {groupList.map((community) => (
                             <>
                                 <tr key={community.id}>
                                     <td><img src="https://picsum.photos/50/50" alt={community.name}/></td>
-                                    <td>{community.name}</td>
+                                    <td className="td-name"><Link to={`/community/${community.name}`}>{community.name}</Link></td>
                                 </tr>
                             </>
                         ))}
-                        <tr>
-                            <td><img src="https://picsum.photos/50/50"/></td>
-                            <td>commnunity 1 2 2 2 2</td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://picsum.photos/50/50"/></td>
-                            <td>commnunity 1 2 2 2 2</td>
-                        </tr>
                     </table>
                 </div>
             </div>

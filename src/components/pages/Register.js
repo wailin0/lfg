@@ -39,7 +39,7 @@ const Register = () => {
             email : user.email,
             password : user.password
         }
-        axios.post(`${Rest}/register`,userData )
+        axios.post(`${Rest}/all/user`,userData )
             .then(response => {
                 history.push("/login")
             }).catch(error => {
@@ -48,19 +48,21 @@ const Register = () => {
     }
 
     useEffect(() => {
-        axios.get(`${Rest}/validation/username/${user.username}`)
-            .then(response => {
-                if(response.data) {
-                    setValidation({...validation, username: response.data})
-                }
-                else {
-                    setValidation({...validation, username: response.data})
-                }
-            })
+        setTimeout(() => {
+            axios.get(`${Rest}/all/validation/username/${user.username}`)
+                .then(response => {
+                    if (response.data) {
+                        setValidation({...validation, username: response.data})
+                    } else {
+                        setValidation({...validation, username: response.data})
+                    }
+                })
+        },2000)
     },[user.username])
 
     useEffect(() => {
-        axios.get(`${Rest}/validation/email/${user.email}`)
+        setTimeout(() => {
+        axios.get(`${Rest}/all/validation/email/${user.email}`)
             .then(response => {
                 if(response.data){
                     setValidation({...validation, email: true})
@@ -69,6 +71,7 @@ const Register = () => {
                     setValidation({...validation, email: false})
                 }
             })
+        },2000)
     },[user.email])
 
 

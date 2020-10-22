@@ -11,7 +11,7 @@ const CommunityRegModel = (props) => {
     const [form, setForm] = useState({
         id: null,
         name: '',
-        topics: '',
+        topic: '',
         description: '',
         type: ''
     })
@@ -20,13 +20,13 @@ const CommunityRegModel = (props) => {
         event.preventDefault()
         const formData = {
             name: form.name,
-            topics: form.topics,
+            topic: form.topic,
             description: form.description,
             type: form.type
         }
-        axios.post(`${Rest}/auth/group/createGroup`, formData, {headers: JWTHeader()})
-            .then(response => {
-                history.push("/community/" + form.name)
+        axios.post(`${Rest}/group`, formData, {headers: JWTHeader()})
+            .then(() => {
+                history.push('/community/' + form.name)
             }).catch(err => {
             console.log("community name already exist")
         })
@@ -57,9 +57,9 @@ const CommunityRegModel = (props) => {
                     </Form.Group>
 
                     <Form.Group>
-                        <Form.Label>Topics</Form.Label>
-                        <Form.Control type="text" name="topics" value={form.topics}
-                                      onChange={e => setForm({...form, topics: e.target.value})}/>
+                        <Form.Label>Topic</Form.Label>
+                        <Form.Control type="text" name="topic" value={form.topic}
+                                      onChange={e => setForm({...form, topic: e.target.value})}/>
                         <Form.Text className="text-muted">
                             what kind of community is it?
                         </Form.Text>
@@ -107,7 +107,7 @@ const CommunityRegModel = (props) => {
                 <Modal.Footer>
                     <Button variant="outline-secondary" onClick={props.onHide}>Cancel</Button>
                     <Button type="submit" variant="outline-info"
-                            disabled={!(form.name.trim() && form.topics.trim() && form.description.trim() && form.type)}>Create
+                            disabled={!(form.name.trim() && form.topic.trim() && form.description.trim() && form.type)}>Create
                         Community</Button>
                 </Modal.Footer>
             </Form>
