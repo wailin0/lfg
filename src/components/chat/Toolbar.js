@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styles/Toolbar.css';
-import {FaCloudMoon, FaCog} from 'react-icons/fa'
 
 
 export default function Toolbar(props) {

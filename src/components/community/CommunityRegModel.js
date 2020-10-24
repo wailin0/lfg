@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form"
@@ -6,6 +6,7 @@ import axios from "axios"
 import Rest from "../Rest";
 import {useHistory} from "react-router-dom";
 import JWTHeader from "../auth/JWTHeader";
+import Context from "../Context";
 
 const CommunityRegModel = (props) => {
     const [form, setForm] = useState({
@@ -15,6 +16,7 @@ const CommunityRegModel = (props) => {
         description: '',
         type: ''
     })
+    const {user, setUser} = useContext(Context)
     const history = useHistory()
     const createCommunity = event => {
         event.preventDefault()
@@ -25,8 +27,9 @@ const CommunityRegModel = (props) => {
             type: form.type
         }
         axios.post(`${Rest}/group`, formData, {headers: JWTHeader()})
-            .then(() => {
+            .then((response) => {
                 history.push('/community/' + form.name)
+                const addToUser = {...user, groups: user.groups.push(response.data)}
             }).catch(err => {
             console.log("community name already exist")
         })

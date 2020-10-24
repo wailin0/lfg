@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from "react";
 import {FaCommentDots, FaShare, FaThumbsDown, FaThumbsUp} from "react-icons/fa";
 import PostComment from "./PostComment";
 import '../styles/postreact.css'
-import rest from './Rest.js'
 import Rest from "./Rest";
 import axios from "axios"
 import Context from "./Context";

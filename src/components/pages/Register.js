@@ -114,7 +114,7 @@ const Register = () => {
                                     </InputGroup>
                                     { (user.password.length>0 && user.confirmPassword.length>0
                                         && user.password!==user.confirmPassword)
-                                        && <span>must be the password as above</span> }
+                                        && <span>must be the same as above</span> }
                                 </Form.Group>
 
                                 <Form.Group>

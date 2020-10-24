@@ -13,16 +13,26 @@ import Context from "./Context";
 import Party from "./party/Party";
 import "../styles/darkmode.css"
 import UserPage from "./UserPage";
+import axios from "axios";
+import Rest from "./Rest";
+import JWTHeader from "./auth/JWTHeader";
 
 
 const AppRouter = () => {
     const [slideState, setSlideState] = useState("sidebar");
     const [auth, setAuth] = useState(false);
+    const [user, setUser] = useState(null)
+
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('user'));
         if(user){
             setAuth(true)
         }
+        axios.get(`${Rest}/user`, {headers: JWTHeader()})
+            .then(response => {
+                setUser(response.data)
+            })
+            .catch(error => console.log(error))
     },[])
     const toggleSlide = () => {
         setSlideState(!slideState)
@@ -33,7 +43,7 @@ const AppRouter = () => {
     return (
         <BrowserRouter>
             <div>
-                <Context.Provider value={{slideState, toggleSlide, auth, setAuth}}>
+                <Context.Provider value={{slideState, toggleSlide, auth, setAuth, user, setUser}}>
                 <Header />
                 <Switch>
                     <Route path={["/", "/community"]} component={Community} exact={true}  />

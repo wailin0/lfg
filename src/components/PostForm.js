@@ -5,7 +5,6 @@ import Modal from "react-bootstrap/Modal";
 
 import '../styles/postform.css'
 import Spinner from "react-bootstrap/Spinner";
-import Tabs from "react-bootstrap/Tabs";
 
 const PostForm = React.memo(props => {
     const [title, setTitle] = useState('')

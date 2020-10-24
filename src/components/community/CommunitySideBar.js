@@ -2,14 +2,12 @@ import React, {useContext, useEffect, useState} from "react";
 import '../../styles/leftsidebar.css'
 import Context from "../Context";
 import CommunityRegModel from "./CommunityRegModel";
-import axios from "axios"
-import Rest from "../Rest";
-import JWTHeader from "../auth/JWTHeader";
 import {Link} from "react-router-dom";
 
-const CommunitySideBar = ({groupList}) => {
+const CommunitySideBar = () => {
     const [groupRegModel, setModalShow] = useState(false);
 
+    const {user} = useContext(Context)
 
 
     const {slideState} = useContext(Context)
@@ -26,11 +24,11 @@ const CommunitySideBar = ({groupList}) => {
                 <p className="text-white font-weight-bold px-3  pb-4 mb-0">Your Community</p>
                 <div className="container">
                     <table className="table">
-                        {groupList.map((community) => (
+                        {user && user.groups.map((group) => (
                             <>
-                                <tr key={community.id}>
-                                    <td><img src="https://picsum.photos/50/50" alt={community.name}/></td>
-                                    <td className="td-name"><Link to={`/community/${community.name}`}>{community.name}</Link></td>
+                                <tr key={group.id}>
+                                    <td><img src="https://picsum.photos/50/50" alt={group.name}/></td>
+                                    <td className="td-name"><Link to={`/community/${group.name}`}>{group.name}</Link></td>
                                 </tr>
                             </>
                         ))}

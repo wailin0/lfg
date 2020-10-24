@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 import axios from "axios";
 import Rest from "../Rest";
 import Context from "../Context";
+import JWTHeader from "../auth/JWTHeader";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -16,12 +17,11 @@ const Login = () => {
     })
 
 
-
     const toggleEye = () => {
         setShowPassword(!showPassword)
     }
 
-    const {auth, setAuth} = useContext(Context);
+    const {auth, setAuth, setUser} = useContext(Context);
 
     const loginHandle = (e) => {
         e.preventDefault()
@@ -30,9 +30,18 @@ const Login = () => {
                 console.log(response.data)
                 localStorage.setItem("user", JSON.stringify(response.data))
                 setAuth(true)
+                getUserData()
             }).catch(error => {
             console.log(error)
         })
+    }
+
+    const getUserData = () => {
+        axios.get(`${Rest}/user`, {headers: JWTHeader()})
+            .then(response => {
+                setUser(response.data)
+            })
+            .catch(error => console.log(error))
     }
 
     return (

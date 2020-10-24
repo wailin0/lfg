@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import '../../styles/modal.css'
 import Modal from "react-bootstrap/Modal";
 import Tabs from "react-bootstrap/Tabs";
@@ -6,9 +6,11 @@ import Tab from "react-bootstrap/Tab";
 import PostForm from "../PostForm";
 import MediaForm from "../MediaForm";
 import PollForm from "../PollForm";
+import Context from "../Context";
 
 const CommunityModal = (props) => {
     const [groupId, setGroupId] = useState(null)
+    const {user} = useContext(Context)
     return (
         <div>
 
@@ -18,8 +20,8 @@ const CommunityModal = (props) => {
                         Post to
                         <select onChange={e => setGroupId(e.target.value)}>
                             <option>choose a community</option>
-                            {
-                                props.groupList.map(group => (
+                            {user &&
+                                user.groups.map(group => (
                                     <option value={group.id}>
                                         {group.name}
                                     </option>

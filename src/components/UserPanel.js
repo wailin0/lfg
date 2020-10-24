@@ -7,29 +7,18 @@ import {FiLogOut} from 'react-icons/fi'
 import {FaCog} from 'react-icons/fa'
 import {MdHelp} from 'react-icons/md'
 import {Link, useHistory} from "react-router-dom";
-import axios from "axios"
-import Rest from "./Rest";
-import JWTHeader from "./auth/JWTHeader";
 import Context from "./Context";
 
 const UserPanel = () => {
-    const [username, setUsername] = useState("")
 
-    const {auth, setAuth} = useContext(Context);
+    const {auth, setAuth, user, setUser} = useContext(Context);
     const history = useHistory()
     const Logout = () => {
         localStorage.removeItem("user")
         setAuth(false)
+        setUser(null)
         history.push("/login")
     }
-
-    useEffect(() => {
-        axios.get(`${Rest}/user`, {headers: JWTHeader()})
-            .then(response => {
-                setUsername(response.data.username)
-            })
-            .catch(error => console.log(error))
-    }, [])
 
     return (
         <div>
@@ -42,7 +31,7 @@ const UserPanel = () => {
                         <Popover>
                             <Popover.Title as="h3"><img
                                 src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"/>
-                                {username} <br/>view your profile</Popover.Title>
+                                {user && user.username} <br/>view your profile</Popover.Title>
 
                             <ListGroup>
                                 <ListGroup.Item><Link to="/setting"><FaCog/> Settings</Link></ListGroup.Item>

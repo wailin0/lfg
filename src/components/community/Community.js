@@ -20,17 +20,6 @@ const Community = () => {
     const [loading, setLoading] = useState(false)
     const [modalShow, setModalShow] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
-    const [communityList, setCommunityList] = useState([]);
-
-    useEffect(() => {
-        axios.get(`${Rest}/group/user`, {headers: JWTHeader()})
-            .then(response => {
-                setCommunityList(response.data)
-            })
-            .catch(e => {
-                console.log(e)
-            })
-    }, [])
 
     const openSelectedTab = (tabName) => {
         setSelectTab(tabName)
@@ -79,7 +68,7 @@ const Community = () => {
     const slideState = useContext(Context)
     return (
         <>
-            <CommunitySideBar slideState={slideState} groupList={communityList}/>
+            <CommunitySideBar slideState={slideState} />
             <div className="container">
 
                 <div className="row">
@@ -98,7 +87,6 @@ const Community = () => {
                                 </button>
                         </div>
                         <CommunityModal
-                            groupList={communityList}
                             setSelectTab={setSelectTab}
                             selectTab={selectTab}
                             show={modalShow}
