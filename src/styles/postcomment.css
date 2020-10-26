@@ -6,14 +6,52 @@
     border-radius: 20px;
     width: 100%;
     padding-left: 10px;
-    padding-right: 2rem;
+    padding-right: 1rem;
 
+}
+
+.user-comment-list {
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+.user-pic {
+    bottom: 33px;
+}
+
+.username-comment {
+    display: flex;
+    padding-top: 2px;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.user-comment {
+    line-break: anywhere;
+    display: flex;
+    flex-direction: column;
+    background: rgb(58,59,60);
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-bottom: 5px;
+}
+
+
+
+.react-comment {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #send-icon {
     position: absolute;
-    right: 30px;
+    right: 2rem;
+    margin-top: -1.8rem;
     color: green;
-    bottom: 1rem;
     font-size:18px;
 }

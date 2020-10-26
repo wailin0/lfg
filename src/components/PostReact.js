@@ -15,8 +15,22 @@ const PostReact = () => {
 
     const [likeCount, setLikeCount] = useState(0)
     const [dislikeCount, setDislikeCount] = useState(0)
+    const [commentCount, setCommentCount] = useState(0)
+    const [comments, setComments] = useState([])
 
     const postId = useContext(Context)
+
+    useEffect(() => {
+        axios.get(`${Rest}/post/${postId}/comment`, { headers: JWTHeader() })
+            .then(response => {
+                setComments(response.data)
+                setCommentCount(response.data.length)
+            })
+            .catch(e => {
+                console.log(e)
+            })
+    }, [])
+
 
 
     const [like, setLike] = useState({
@@ -161,14 +175,19 @@ const PostReact = () => {
             {dislikeCount} <button id={ dislike.liked ? 'react-button-clicked' : 'react-button' } onClick={() => clickDislike()} >
             <FaThumbsDown />
         </button>
-            0 <button id="react-button" onClick={() => toggleCommentBox()}>
+            {commentCount} <button id="react-button" onClick={() => toggleCommentBox()}>
             <FaCommentDots />
         </button>
             0 <button id="react-button">
             <FaShare />
         </button>
         </div>
-            {showComments &&  <PostComment />  }
+            {showComments &&  <PostComment
+                comments={comments}
+                setComments={setComments}
+                commentCount={commentCount}
+                setCommentCount={setCommentCount}
+            />  }
 
             </>
     )

@@ -16,12 +16,14 @@ import UserPage from "./UserPage";
 import axios from "axios";
 import Rest from "./Rest";
 import JWTHeader from "./auth/JWTHeader";
+import GroupPage from "./community/page/GroupPage";
 
 
 const AppRouter = () => {
     const [slideState, setSlideState] = useState("sidebar");
     const [auth, setAuth] = useState(false);
     const [user, setUser] = useState(null)
+    const [group, setGroup] = useState(null)
 
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('user'));
@@ -31,6 +33,12 @@ const AppRouter = () => {
         axios.get(`${Rest}/user`, {headers: JWTHeader()})
             .then(response => {
                 setUser(response.data)
+            })
+            .catch(error => console.log(error))
+
+        axios.get(`${Rest}/user/group/user`, {headers: JWTHeader()})
+            .then(response => {
+                setGroup(response.data)
             })
             .catch(error => console.log(error))
     },[])
@@ -43,10 +51,11 @@ const AppRouter = () => {
     return (
         <BrowserRouter>
             <div>
-                <Context.Provider value={{slideState, toggleSlide, auth, setAuth, user, setUser}}>
+                <Context.Provider value={{slideState, toggleSlide, auth, setAuth, user, setUser, group, setGroup}}>
                 <Header />
                 <Switch>
                     <Route path={["/", "/community"]} component={Community} exact={true}  />
+                    <Route path="/community/:groupName" component={GroupPage} />
                     <Route path="/lfg" component={LFG} />
                     <Route path="/party" component={Party} />
                     <Route path="/chat" component={Chat}  />

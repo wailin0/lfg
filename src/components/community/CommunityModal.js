@@ -10,7 +10,7 @@ import Context from "../Context";
 
 const CommunityModal = (props) => {
     const [groupId, setGroupId] = useState(null)
-    const {user} = useContext(Context)
+    const {group} = useContext(Context)
     return (
         <div>
 
@@ -20,12 +20,12 @@ const CommunityModal = (props) => {
                         Post to
                         <select onChange={e => setGroupId(e.target.value)}>
                             <option>choose a community</option>
-                            {user &&
-                                user.groups.map(group => (
-                                    <option value={group.id}>
-                                        {group.name}
-                                    </option>
-                                ))
+                            {group &&
+                            group.map(group => (
+                                <option value={group.id}>
+                                    {group.name}
+                                </option>
+                            ))
                             }
                         </select>
                     </div>

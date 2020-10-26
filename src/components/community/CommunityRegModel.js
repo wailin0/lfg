@@ -16,7 +16,7 @@ const CommunityRegModel = (props) => {
         description: '',
         type: ''
     })
-    const {user, setUser} = useContext(Context)
+    const {group, setGroup} = useContext(Context)
     const history = useHistory()
     const createCommunity = event => {
         event.preventDefault()
@@ -29,9 +29,9 @@ const CommunityRegModel = (props) => {
         axios.post(`${Rest}/group`, formData, {headers: JWTHeader()})
             .then((response) => {
                 history.push('/community/' + form.name)
-                const addToUser = {...user, groups: user.groups.push(response.data)}
+                const addToGroup = {...group, groups: group.push(response.data)}
             }).catch(err => {
-            console.log("community name already exist")
+            console.log(err+ " community name already exist")
         })
     }
 

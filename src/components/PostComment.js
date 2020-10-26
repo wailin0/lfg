@@ -4,12 +4,12 @@ import {FaPaperPlane} from "react-icons/fa";
 import axios from "axios";
 import Rest from "./Rest";
 import Context from "./Context";
-import ListGroup from "react-bootstrap/ListGroup";
+import {FaThumbsUp, FaThumbsDown, FaEllipsisV, FaCommentDots} from "react-icons/fa"
 import JWTHeader from "./auth/JWTHeader";
+import {Link} from "react-router-dom";
 
-const PostComment = () => {
+const PostComment = (props) => {
     const postId = useContext(Context)
-    const [comments, setComments] = useState([])
 
     const [userComment, setUserComment] = useState({
         id: null,
@@ -22,20 +22,13 @@ const PostComment = () => {
         }
         axios.post(`${Rest}/post/${postId}/comment`, userComment, { headers: JWTHeader() })
             .then(response => {
-                setComments([...comments, response.data])
+                props.setComments([...props.comments, response.data])
+                setUserComment({body: ""})
+                props.setCommentCount(props.commentCount+1)
             })
             .catch(err => console.log(err))
     }
 
-    useEffect(() => {
-        axios.get(`${Rest}/post/${postId}/comment`, { headers: JWTHeader() })
-            .then(response => {
-                setComments(response.data)
-            })
-            .catch(e => {
-                console.log(e)
-            })
-    }, [])
 
 
     return (
@@ -48,11 +41,20 @@ const PostComment = () => {
                 {userComment.body.length>0 && <span id="send-icon"><FaPaperPlane onClick={() => sendComment()} /></span> }
             </div>
         </div>
-            { comments.map(eachComment => (
-
-                <ListGroup key={eachComment.id}>
-                    <ListGroup.Item>{eachComment.users.username} > {eachComment.body}</ListGroup.Item>
-                </ListGroup>
+            { props.comments.map(eachComment => (
+                <div className="user-comment-list" key={eachComment.id}>
+                    <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png" id="profile-pic" className="user-pic" alt={eachComment.users.username} />
+                    <div className="user-comment">
+                        <div className="username-comment">
+                            <Link to={`/user/${eachComment.users.username}`}> {eachComment.users.username} </Link>
+                            <FaEllipsisV />
+                        </div>
+                        {eachComment.body}
+                        <div className="react-comment">
+                        <FaThumbsUp /> <FaThumbsDown /> <FaCommentDots />
+                        </div>
+                    </div>
+                </div>
             ))}
             </>
     )

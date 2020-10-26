@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 const CommunitySideBar = () => {
     const [groupRegModel, setModalShow] = useState(false);
 
-    const {user} = useContext(Context)
+    const {group} = useContext(Context)
 
 
     const {slideState} = useContext(Context)
@@ -24,7 +24,7 @@ const CommunitySideBar = () => {
                 <p className="text-white font-weight-bold px-3  pb-4 mb-0">Your Community</p>
                 <div className="container">
                     <table className="table">
-                        {user && user.groups.map((group) => (
+                        {group && group.map((group) => (
                             <>
                                 <tr key={group.id}>
                                     <td><img src="https://picsum.photos/50/50" alt={group.name}/></td>
