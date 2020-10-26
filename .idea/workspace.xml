@@ -25,25 +25,26 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="added context api for user data">
-      <change afterPath="$PROJECT_DIR$/src/components/community/page/GroupAbout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/community/page/GroupEvent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/community/page/GroupPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/community/page/GroupPost.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reducers/PostReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/groupPage.css" afterDir="false" />
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="backup before changing to redux">
+      <change afterPath="$PROJECT_DIR$/src/reducers/community/CommentReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/community/GroupReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/community/PostReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/community/comments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/community/groups.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/community/posts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Rest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/Community.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/community/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/CommunitySideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunitySideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/page/GroupPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/page/GroupPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/page/GroupPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/page/GroupPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reducers/PostReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/Chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/darkmode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/darkmode.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/postcomment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/postcomment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/postreact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/postreact.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,11 +105,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\lfg\src\reducers\community" />
+      <recent name="D:\IdeaProjects\lfg\src\services\community" />
+      <recent name="D:\IdeaProjects\lfg\src" />
       <recent name="D:\IdeaProjects\lfg\src\components\chat" />
       <recent name="D:\IdeaProjects\lfg\src\components\settings\app" />
-      <recent name="D:\IdeaProjects\lfg\src\components\settings\user" />
-      <recent name="D:\IdeaProjects\lfg\src\components\setting" />
-      <recent name="D:\IdeaProjects\lfg\src\components\pages" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src" />
@@ -125,7 +126,7 @@
     <configuration name="140.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/140.js" working-dir="$PROJECT_DIR$/src">
       <method v="2" />
     </configuration>
-    <configuration name="37.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/37.js" working-dir="$PROJECT_DIR$/src">
+    <configuration name="37.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/37.js" working-dir="$PROJECT_DIR$/src">
       <method v="2" />
     </configuration>
     <configuration name="test.js (1)" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/test.js" working-dir="$PROJECT_DIR$/src/components">
@@ -150,7 +151,6 @@
         <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.135.js" />
         <item itemvalue="Node.js.140.js" />
-        <item itemvalue="Node.js.37.js" />
       </list>
     </recent_temporary>
   </component>
@@ -314,7 +314,8 @@
       <workItem from="1603569042639" duration="1909000" />
       <workItem from="1603576750528" duration="19000" />
       <workItem from="1603577373498" duration="6672000" />
-      <workItem from="1603660795466" duration="13965000" />
+      <workItem from="1603660795466" duration="20427000" />
+      <workItem from="1603714992640" duration="9208000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -547,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603556874760</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="backup before changing to redux">
+      <created>1603674814638</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1603674814638</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +587,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ex" />
     <MESSAGE value="changed to spring" />
     <MESSAGE value="updated like" />
     <MESSAGE value="fixed dislike logic" />
@@ -604,45 +611,38 @@
     <MESSAGE value="added sliding sidebar for chat page" />
     <MESSAGE value="finished integrating with spring rest endpoint" />
     <MESSAGE value="added context api for user data" />
-    <option name="LAST_COMMIT_MESSAGE" value="added context api for user data" />
+    <MESSAGE value="backup before changing to redux" />
+    <option name="LAST_COMMIT_MESSAGE" value="backup before changing to redux" />
   </component>
   <component name="WindowStateProjectService">
     <state x="162" y="203" key="#135.js" timestamp="1599867571193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="162" y="203" key="#135.js/0.0.1920.1040@0.0.1920.1040" timestamp="1599867571193" />
-    <state x="876" y="491" key="#Notifications" timestamp="1595030609419">
+    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603718536000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="876" y="491" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1595030609419" />
-    <state x="821" y="329" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595037244003">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="821" y="329" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595037244003" />
-    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603097313178">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603097313178" />
+    <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603718536000" />
     <state x="349" y="249" key="FileChooserDialogImpl" timestamp="1602372502659">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602372502659" />
-    <state width="1205" height="306" key="GridCell.Tab.0.bottom" timestamp="1603667404195">
+    <state width="984" height="332" key="GridCell.Tab.0.bottom" timestamp="1603716864698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1205" height="306" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603667404195" />
-    <state width="1205" height="306" key="GridCell.Tab.0.center" timestamp="1603667404194">
+    <state width="984" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603716864698" />
+    <state width="984" height="332" key="GridCell.Tab.0.center" timestamp="1603716864698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1205" height="306" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603667404194" />
-    <state width="1205" height="306" key="GridCell.Tab.0.left" timestamp="1603667404194">
+    <state width="984" height="332" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603716864698" />
+    <state width="984" height="332" key="GridCell.Tab.0.left" timestamp="1603716864698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1205" height="306" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603667404194" />
-    <state width="1205" height="306" key="GridCell.Tab.0.right" timestamp="1603667404195">
+    <state width="984" height="332" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603716864698" />
+    <state width="984" height="332" key="GridCell.Tab.0.right" timestamp="1603716864698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1205" height="306" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603667404195" />
+    <state width="984" height="332" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603716864698" />
     <state width="989" height="349" key="GridCell.Tab.1.bottom" timestamp="1599866288781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -747,10 +747,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="211" y="115" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602263214270" />
-    <state x="127" y="222" width="1009" height="1034" key="run.anything.popup" timestamp="1603672627318">
+    <state x="127" y="222" width="1009" height="1034" key="run.anything.popup" timestamp="1603676689714">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="127" y="222" width="1009" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603672627318" />
+    <state x="127" y="222" width="1009" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603676689714" />
     <state x="156" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1597978769201">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -782,11 +782,6 @@
           <url>file://$PROJECT_DIR$/../lfg-spring/src/main/resources/templates/index.js</url>
           <line>64</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/community/Community.js</url>
-          <line>93</line>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Router.js</url>

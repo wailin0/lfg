@@ -3,7 +3,7 @@ import axios from 'axios'
 import {useParams} from 'react-router-dom'
 import Rest from "../../Rest";
 import "../../../styles/groupPage.css"
-import {Nav, Tab, Tabs} from "react-bootstrap";
+import {Tab, Tabs} from "react-bootstrap";
 import GroupPost from "./GroupPost";
 
 const GroupPage = () => {
@@ -11,13 +11,14 @@ const GroupPage = () => {
 
     const {groupName} = useParams();
 
+
     useEffect(() => {
         axios.get(`${Rest}/group/${groupName}`)
             .then(response => {
                 setGroupInfo(response.data)
-
             })
     }, [])
+
 
     return (groupInfo &&
         <div className="container">
@@ -35,17 +36,17 @@ const GroupPage = () => {
             </div>
 
                 <div className="col-md-6 mx-auto">
-                    <Tabs defaultActiveKey="profile">
-                        <Tab eventKey="home" title="Posts">
+                    <Tabs defaultActiveKey="posts">
+                        <Tab eventKey="posts" title="Posts">
                             <div className="gree">
-                                <GroupPost groupId={groupInfo.id}/>
+                                <GroupPost groupId={groupInfo && groupInfo.id}/>
                             </div>
                         </Tab>
 
                         <Tab eventKey="events" title="Events">
                             evehts
                         </Tab>
-                        <Tab eventKey="contact" title="About">
+                        <Tab eventKey="about" title="About">
                             {groupInfo.description}
                         </Tab>
                     </Tabs>

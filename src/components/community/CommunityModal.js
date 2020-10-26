@@ -38,7 +38,6 @@ const CommunityModal = (props) => {
                         <Tab eventKey="post" title="Blog">
                             <br/>
                             <PostForm onHide={props.onHide}
-                                      addPost={props.addPost}
                                       loading={props.loading}
                                       groupId={groupId}
                             />

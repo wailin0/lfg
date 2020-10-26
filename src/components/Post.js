@@ -10,14 +10,24 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Spinner from "react-bootstrap/Spinner";
 import Context from "./Context";
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {deleteAPost} from "../reducers/community/PostReducer";
 
 const Post = (props) => {
+    const posts = useSelector(state => state.posts)
+
+    const dispatch = useDispatch()
+
+    const deletePost = (postId) => {
+        dispatch(deleteAPost(postId))
+        props.setShowDeleteModal(false)
+    }
 
 
     return(
         <>
             { props.loading ? <span id="loading"><Spinner animation="grow" variant="danger" /> Loading feeds... <br/>please wait for backend server to start</span> :
-                props.posts.map((eachPost) => (
+                posts.map((eachPost) => (
                     <div key={eachPost.id} className="post">
                     <div className="card">
                         <div className="card-header">
@@ -76,7 +86,7 @@ const Post = (props) => {
                             </Modal.Header>
                             <Modal.Body>{props.loading ? <span>Deleting <Spinner animation="grow" size="sm" /></span> : <span>r u sure u wanna do this?</span>}</Modal.Body>
                             <Modal.Footer>
-                                <Button variant="secondary" onClick={() => props.deletePost(eachPost.id) }>
+                                <Button variant="secondary" onClick={() => deletePost(eachPost.id) }>
                                     Delete
                                 </Button>
                                 <Button variant="primary" onClick={() => props.setShowDeleteModal(false)}>

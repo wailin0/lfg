@@ -8,62 +8,29 @@ import {
     FaEdit
 } from 'react-icons/fa'
 import Post from "../Post";
-import axios from "axios";
-import Rest from "../Rest";
-import JWTHeader from "../auth/JWTHeader";
 import CommunitySideBar from "./CommunitySideBar";
 import Context from "../Context";
+import {useDispatch} from "react-redux";
+import {getPosts} from "../../reducers/community/PostReducer";
 
 const Community = () => {
     const [selectTab, setSelectTab] = useState('post');
-    const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(false)
     const [modalShow, setModalShow] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
+
+
+
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getPosts())
+    }, [dispatch])
 
     const openSelectedTab = (tabName) => {
         setSelectTab(tabName)
         setModalShow(true)
     }
 
-    useEffect(() => {
-        setLoading(true)
-        axios.get(`${Rest}/all/post`, {headers: JWTHeader()})
-            .then(response => {
-                setLoading(false)
-                setPosts(response.data)
-            })
-            .catch(e => {
-                console.log(e)
-            })
-    }, [])
-
-
-    const addPost = (post,groupId) => {
-        setLoading(true)
-        axios.post(`${Rest}/group/${groupId}/post`, post, {headers: JWTHeader()})
-            .then(response => {
-                setLoading(false)
-                console.log(response.data)
-                setPosts(
-                    [...posts, response.data])
-            }).catch(error => {
-            setLoading(false)
-            console.log(error)
-        })
-    }
-
-    const deletePost = postId => {
-        setLoading(true)
-        axios.delete(`${Rest}/post/${postId}`, {
-            headers: JWTHeader()
-        }).then(response => {
-            setLoading(false)
-            setShowDeleteModal(false)
-            setPosts(prevPosts =>
-                prevPosts.filter(post => post.id !== postId))
-        }).catch(error => console.log(error))
-    }
 
     const slideState = useContext(Context)
     return (
@@ -73,7 +40,6 @@ const Community = () => {
 
                 <div className="row">
                     <div className="col-md-6 mx-auto">
-
 
                         <div id="post-input" className="mx-5">
                                 <button className="btn btn-dark " type="button" onClick={() => openSelectedTab('post') } >
@@ -91,16 +57,13 @@ const Community = () => {
                             selectTab={selectTab}
                             show={modalShow}
                             onHide={() => setModalShow(false)}
-                            addPost={addPost}
                             loading={loading}
+                            setShowDeleteModal={setShowDeleteModal}
                         />
                         <Post
-                            posts={posts}
-                            deletePost={deletePost}
                             loading={loading}
                             showDeleteModal={showDeleteModal}
                             setShowDeleteModal={setShowDeleteModal}
-                            setPosts={setPosts}
                         />
 
                     </div>

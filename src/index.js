@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import Router from "./components/Router";
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {Provider} from "react-redux";
+import store from "./store";
 
 const Index = () => {
     return (
-        <div>
+        <Provider store={store}>
             <Router/>
-        </div>
+        </Provider>
     )
 }
 

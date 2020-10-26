@@ -5,19 +5,22 @@ import Modal from "react-bootstrap/Modal";
 
 import '../styles/postform.css'
 import Spinner from "react-bootstrap/Spinner";
+import {useDispatch} from "react-redux";
+import {createAPost, createPost} from "../reducers/community/PostReducer";
 
 const PostForm = React.memo(props => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-    const submitPost = event => {
+
+    const dispatch = useDispatch()
+
+    const submitPost = async event => {
         event.preventDefault()
-        props.addPost(
-            {
-                title: title,
-                body: body
-            },
-            props.groupId)
-        console.log(title + " " + body + " " + props.groupId)
+        const newPost = {
+            title: title,
+            body: body
+        }
+        await dispatch(createAPost(props.groupId, newPost))
         props.onHide()
     }
 

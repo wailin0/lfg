@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {FaClock} from "react-icons/fa";
 import PostReact from "../../PostReact";
 import PostTag from "../../PostTag";
@@ -9,32 +9,24 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import Spinner from "react-bootstrap/Spinner";
 import Context from "../../Context";
 import {Link} from "react-router-dom";
-import axios from "axios";
-import Rest from "../../Rest";
-import JWTHeader from "../../auth/JWTHeader";
-import {Tab} from "react-bootstrap";
+import {deleteAPost, getPostsFromAGroup} from "../../../reducers/community/PostReducer";
+import {useDispatch, useSelector} from "react-redux";
 
 const GroupPost = (props) => {
-    const [loading, setLoading] = useState(false)
-    const [groupPosts, setGroupPosts] = useState([])
+
+    const groupPosts = useSelector(state => state.posts)
+
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        setLoading(true)
-        axios.get(`${Rest}/group/${props.groupId}/post`, {headers: JWTHeader()})
-            .then(response => {
-                setLoading(false)
-                setGroupPosts(response.data)
-            })
-            .catch(e => {
-                console.log(e)
-            })
-    }, [])
+        dispatch(getPostsFromAGroup(props.groupId))
+    },[])
 
     return(
         <>
 
-            { loading ? <span id="loading"><Spinner animation="grow" variant="danger" /> Loading feeds... <br/>please wait for backend server to start</span> :
-                groupPosts.map((eachPost) => (
+            { props.loading ? <span id="loading"><Spinner animation="grow" variant="danger" /> Loading feeds... <br/>please wait for backend server to start</span> :
+                 groupPosts.map((eachPost) => (
                     <div key={eachPost.id} className="post">
                         <div className="card">
                             <div className="card-header">
@@ -91,7 +83,7 @@ const GroupPost = (props) => {
                             </Modal.Header>
                             <Modal.Body>{props.loading ? <span>Deleting <Spinner animation="grow" size="sm" /></span> : <span>r u sure u wanna do this?</span>}</Modal.Body>
                             <Modal.Footer>
-                                <Button variant="secondary" onClick={() => props.deletePost(eachPost.id) }>
+                                <Button variant="secondary" onClick={() => deleteAPost(eachPost.id) }>
                                     Delete
                                 </Button>
                                 <Button variant="primary" onClick={() => props.setShowDeleteModal(false)}>
