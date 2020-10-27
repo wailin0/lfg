@@ -1,4 +1,3 @@
-
 import React, {useEffect, useState} from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import notFoundPage from './pages/NotFoundPage'
@@ -25,9 +24,33 @@ const AppRouter = () => {
     const [user, setUser] = useState(null)
     const [group, setGroup] = useState(null)
 
+    const [showPostDeleteModal, setShowPostDeleteModal] = useState({
+        show: false,
+        postId: null
+    });
+    const openPostDeleteModal = (postId) => {
+        setShowPostDeleteModal({show: true, postId})
+    }
+    const closePostDeleteModal = () => {
+        setShowPostDeleteModal({})
+    }
+
+
+    const [showPostEditModal, setShowPostEditModal] = useState({
+        show: false,
+        post: null
+    });
+    const openPostEditModal = (post) => {
+        setShowPostEditModal({show: true, post})
+    }
+    const closePostEditModal = () => {
+        setShowPostEditModal({})
+    }
+
+
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('user'));
-        if(user){
+        if (user) {
             setAuth(true)
         }
         axios.get(`${Rest}/user`, {headers: JWTHeader()})
@@ -41,30 +64,44 @@ const AppRouter = () => {
                 setGroup(response.data)
             })
             .catch(error => console.log(error))
-    },[])
+    }, [])
     const toggleSlide = () => {
         setSlideState(!slideState)
     }
 
 
-
     return (
         <BrowserRouter>
             <div>
-                <Context.Provider value={{slideState, toggleSlide, auth, setAuth, user, setUser, group, setGroup}}>
-                <Header />
-                <Switch>
-                    <Route path={["/", "/community"]} component={Community} exact={true}  />
-                    <Route path="/community/:groupName" component={GroupPage} />
-                    <Route path="/lfg" component={LFG} />
-                    <Route path="/party" component={Party} />
-                    <Route path="/chat" component={Chat}  />
-                    <Route path="/register" component={Register} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/setting" component={Setting} />
-                    <Route path="/user" component={UserPage} />
-                    <Route component={notFoundPage} />
-                </Switch>
+                <Context.Provider value={{
+                    slideState,
+                    toggleSlide,
+                    auth,
+                    setAuth,
+                    user,
+                    setUser,
+                    group,
+                    setGroup,
+                    showPostDeleteModal,
+                    openPostDeleteModal,
+                    closePostDeleteModal,
+                    showPostEditModal,
+                    openPostEditModal,
+                    closePostEditModal
+                }}>
+                    <Header/>
+                    <Switch>
+                        <Route path={["/", "/community"]} component={Community} exact={true}/>
+                        <Route path="/community/:groupName" component={GroupPage}/>
+                        <Route path="/lfg" component={LFG}/>
+                        <Route path="/party" component={Party}/>
+                        <Route path="/chat" component={Chat}/>
+                        <Route path="/register" component={Register}/>
+                        <Route path="/login" component={Login}/>
+                        <Route path="/setting" component={Setting}/>
+                        <Route path="/user" component={UserPage}/>
+                        <Route component={notFoundPage}/>
+                    </Switch>
                 </Context.Provider>
             </div>
 

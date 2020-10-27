@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useContext, useEffect} from "react";
 import {FaClock} from "react-icons/fa";
 import PostReact from "../../PostReact";
 import PostTag from "../../PostTag";
@@ -11,6 +11,8 @@ import Context from "../../Context";
 import {Link} from "react-router-dom";
 import {deleteAPost, getPostsFromAGroup} from "../../../reducers/community/PostReducer";
 import {useDispatch, useSelector} from "react-redux";
+import PostDeleteModal from "../modals/PostDeleteModal";
+import PostEditModal from "../modals/PostEditModal";
 
 const GroupPost = (props) => {
 
@@ -18,15 +20,19 @@ const GroupPost = (props) => {
 
     const dispatch = useDispatch()
 
+
+    const {showPostDeleteModal, showPostEditModal,
+        openPostEditModal, openPostDeleteModal} = useContext(Context)
+
     useEffect(() => {
         dispatch(getPostsFromAGroup(props.groupId))
     },[])
 
-    return(
+    return (
         <>
-
-            { props.loading ? <span id="loading"><Spinner animation="grow" variant="danger" /> Loading feeds... <br/>please wait for backend server to start</span> :
-                 groupPosts.map((eachPost) => (
+            {props.loading ?
+                <span id="loading"><Spinner animation="grow" variant="danger"/> Loading feeds... <br/>please wait for backend server to start</span> :
+                groupPosts.map((eachPost) => (
                     <div key={eachPost.id} className="post">
                         <div className="card">
                             <div className="card-header">
@@ -38,16 +44,22 @@ const GroupPost = (props) => {
                                         </div>
                                         <div className="ml-2">
                                             <div className="h5 m-0">
-                                                <Link to={`/user/${eachPost.users.username}`}>{eachPost.users.username}</Link>
+                                                <Link
+                                                    to={`/user/${eachPost.users.username}`}>{eachPost.users.username}</Link>
+                                                >
+                                                <Link
+                                                    to={`/community/${eachPost.groups.name}`}>{eachPost.groups.name}</Link>
                                             </div>
-                                            <div className="text-muted  mb-2"><FaClock /> 10 min ago
+                                            <div className="text-muted  mb-2"><FaClock/> 10 min ago
                                             </div>
                                         </div>
                                     </div>
                                     <div>
                                         <DropdownButton drop='left'>
-                                            <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
-                                            <Dropdown.Item onClick={() => props.setShowDeleteModal(true)}>Delete</Dropdown.Item>
+                                            <Dropdown.Item
+                                                onClick={() => openPostEditModal(eachPost)}>Edit</Dropdown.Item>
+                                            <Dropdown.Item
+                                                onClick={() => openPostDeleteModal(eachPost.id)}>Delete</Dropdown.Item>
                                             <Dropdown.Item href="#/action-3">Hide</Dropdown.Item>
                                             <Dropdown.Item href="#/action-3">Report</Dropdown.Item>
                                         </DropdownButton>
@@ -56,16 +68,16 @@ const GroupPost = (props) => {
 
                             </div>
                             <div className="card-body">
-                                <h5 className="card-title" > {eachPost.title} </h5>
+                                <h5 className="card-title"> {eachPost.title} </h5>
                                 <hr/>
                                 <p className="card-text">
                                     {eachPost.body}
 
                                 </p>
-                                <PostTag />
+                                <PostTag/>
                             </div>
 
-                            <Context.Provider value={eachPost.id} >
+                            <Context.Provider value={eachPost.id}>
                                 <PostReact
                                     posts={props.posts}
                                     currentPost={eachPost}
@@ -75,27 +87,12 @@ const GroupPost = (props) => {
                             </Context.Provider>
 
                         </div>
-                        <br/>
-                        <Modal show={props.showDeleteModal}
-                               onHide={() => props.setShowDeleteModal(false)} centered>
-                            <Modal.Header closeButton>
-                                <Modal.Title>Delete Post</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>{props.loading ? <span>Deleting <Spinner animation="grow" size="sm" /></span> : <span>r u sure u wanna do this?</span>}</Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="secondary" onClick={() => deleteAPost(eachPost.id) }>
-                                    Delete
-                                </Button>
-                                <Button variant="primary" onClick={() => props.setShowDeleteModal(false)}>
-                                    Cancel
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
                     </div>
 
                 ))
             }
-
+            {showPostDeleteModal.show && <PostDeleteModal  />}
+            {showPostEditModal.show && <PostEditModal  /> }
         </>
     )
 }

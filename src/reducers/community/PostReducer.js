@@ -9,6 +9,9 @@ const PostReducer = (state = [], action) => {
             return action.data
         case 'CREATE_POST':
             return [...state, action.data]
+        case 'UPDATE_POST':
+            const updatedPost = action.data
+            return state.map(post => post.id === updatedPost.id ? updatedPost : post)
         case 'DELETE_POST':
             return state.filter(post => post.id !== action.postId)
         default:
@@ -46,6 +49,17 @@ export const createAPost = (groupId, post) => {
         })
     }
 }
+
+export const updateAPost = (post) => {
+    return async dispatch => {
+        const data = await postService.updatePost(post)
+        dispatch({
+            type: 'UPDATE_POST',
+            data
+        })
+    }
+}
+
 
 export const deleteAPost = (postId) => {
     return async dispatch => {

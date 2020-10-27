@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import ConversationList from './ConversationList';
 import MessageList from './MessageList';
-import '../../styles/Chat.css';
+import '../../styles/chat.css';
 import Context from "../Context";
 
 export default function Chat(props) {
