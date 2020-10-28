@@ -12,25 +12,24 @@ const PostDeleteModal = (props) => {
 
     const deletePost = async postId => {
         await dispatch(deleteAPost(postId))
-        closePostDeleteModal()
+        props.closePostDeleteModal()
     }
 
-    const {showPostDeleteModal, closePostDeleteModal} = useContext(Context)
 
     return (
         <>
-            <Modal show={showPostDeleteModal.show}
-                   onHide={() => closePostDeleteModal()}
+            <Modal show={props.showPostDeleteModal.show}
+                   onHide={() => props.closePostDeleteModal()}
                    centered>
                 <Modal.Header closeButton>
                     <Modal.Title>Delete Post</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>{props.loading ? <span>Deleting <Spinner animation="grow" size="sm" /></span> : <span>r u sure u wanna do this?</span>}</Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={() => deletePost(showPostDeleteModal.postId) }>
+                    <Button variant="secondary" onClick={() => deletePost(props.showPostDeleteModal.postId) }>
                         Delete
                     </Button>
-                    <Button variant="primary" onClick={() => closePostDeleteModal()}>
+                    <Button variant="primary" onClick={() => props.closePostDeleteModal()}>
                         Cancel
                     </Button>
                 </Modal.Footer>

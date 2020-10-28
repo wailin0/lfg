@@ -4,7 +4,7 @@ import Toolbar from './Toolbar';
 import ToolbarButton from './ToolbarButton';
 import Message from './Message';
 import moment from 'moment';
-import {FaPhone, FaVideo, FaInfoCircle} from 'react-icons/fa'
+import {FaInfoCircle, FaPhone, FaVideo} from 'react-icons/fa'
 
 import '../../styles/MessageList.css';
 

@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import '../styles/postform.css'
 import Spinner from "react-bootstrap/Spinner";
 import {useDispatch} from "react-redux";
-import {createAPost, createPost} from "../reducers/community/PostReducer";
+import {createAPost} from "../reducers/community/PostReducer";
 
 const PostForm = React.memo(props => {
     const [title, setTitle] = useState('')

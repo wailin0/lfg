@@ -25,15 +25,41 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="changed post and group state to redux store">
-      <change afterPath="$PROJECT_DIR$/src/components/community/modals/PostDeleteModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/community/modals/PostEditModal.js" afterDir="false" />
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="added context api for user data">
+      <change afterPath="$PROJECT_DIR$/src/components/community/modals/CommentDeleteModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/community/modals/CommentEditModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/AuthReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/community/userReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/community/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/chat/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/community/PostReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/community/PostReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/ConversationList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/ConversationList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/MessageList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/Community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/Community.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/CommunitySideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunitySideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/modals/PostDeleteModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/modals/PostDeleteModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/modals/PostEditModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/modals/PostEditModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/page/GroupPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/page/GroupPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/community/page/GroupPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/page/GroupPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/Setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/community/CommentReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/community/CommentReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/community/GroupReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/community/GroupReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/community/groups.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/community/groups.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/Chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Chat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/darkmode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/darkmode.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/post.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,16 +120,16 @@
     <property name="ts.external.directory.path" value="D:\IntelliJ IDEA 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src" />
+      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\lfg\src\reducers" />
       <recent name="D:\IdeaProjects\lfg\src\reducers\community" />
       <recent name="D:\IdeaProjects\lfg\src\services\community" />
       <recent name="D:\IdeaProjects\lfg\src" />
       <recent name="D:\IdeaProjects\lfg\src\components\chat" />
-      <recent name="D:\IdeaProjects\lfg\src\components\settings\app" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src" />
-      <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -139,8 +165,9 @@
       <list>
         <item itemvalue="Node.js.test.js (1)" />
         <item itemvalue="Node.js.test.js" />
-        <item itemvalue="Node.js.135.js" />
         <item itemvalue="Node.js.140.js" />
+        <item itemvalue="Node.js.135.js" />
+        <item itemvalue="Node.js.test.js (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -306,6 +333,11 @@
       <workItem from="1603577373498" duration="6672000" />
       <workItem from="1603660795466" duration="20427000" />
       <workItem from="1603714992640" duration="40974000" />
+      <workItem from="1603882445128" duration="1615000" />
+      <workItem from="1603888911400" duration="67000" />
+      <workItem from="1603899251322" duration="12652000" />
+      <workItem from="1603912626951" duration="72000" />
+      <workItem from="1603912852573" duration="2696000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -624,22 +656,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602372502659" />
-    <state width="1469" height="349" key="GridCell.Tab.0.bottom" timestamp="1603749847073">
+    <state width="1056" height="332" key="GridCell.Tab.0.bottom" timestamp="1603913018930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1469" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603749847073" />
-    <state width="1469" height="349" key="GridCell.Tab.0.center" timestamp="1603749847073">
+    <state width="1056" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603913018930" />
+    <state width="1056" height="332" key="GridCell.Tab.0.center" timestamp="1603913018930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1469" height="349" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603749847073" />
-    <state width="1469" height="349" key="GridCell.Tab.0.left" timestamp="1603749847073">
+    <state width="1056" height="332" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603913018930" />
+    <state width="1056" height="332" key="GridCell.Tab.0.left" timestamp="1603913018929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1469" height="349" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603749847073" />
-    <state width="1469" height="349" key="GridCell.Tab.0.right" timestamp="1603749847073">
+    <state width="1056" height="332" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603913018929" />
+    <state width="1056" height="332" key="GridCell.Tab.0.right" timestamp="1603913018930">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1469" height="349" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603749847073" />
+    <state width="1056" height="332" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603913018930" />
     <state width="989" height="349" key="GridCell.Tab.1.bottom" timestamp="1599866288781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -708,10 +740,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="404" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603743946770" />
-    <state x="569" y="198" width="675" height="872" key="dock-window-1" timestamp="1603731651415">
+    <state x="873" y="191" width="1050" height="882" key="dock-window-1" timestamp="1603900546646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="569" y="198" width="675" height="872" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1603731651415" />
+    <state x="873" y="191" width="1050" height="882" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1603900546646" />
     <state x="129" y="743" width="895" height="971" key="dock-window-2" timestamp="1603735527428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -744,10 +776,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="211" y="115" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602263214270" />
-    <state x="127" y="222" width="1009" height="1034" key="run.anything.popup" timestamp="1603749272937">
+    <state x="127" y="222" width="1009" height="1034" key="run.anything.popup" timestamp="1603905943601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="127" y="222" width="1009" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603749272937" />
+    <state x="127" y="222" width="1009" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603905943601" />
     <state x="156" y="5" width="1009" height="1034" key="search.everywhere.popup" timestamp="1603732231406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -779,6 +811,11 @@
           <url>file://$PROJECT_DIR$/../lfg-spring/src/main/resources/templates/index.js</url>
           <line>64</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Router.js</url>
+          <line>1</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

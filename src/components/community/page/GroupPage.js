@@ -27,7 +27,7 @@ const GroupPage = () => {
                 <div className="container">
                     <div className="profile-pic">
                         <img
-                            src="https://res.cloudinary.com/dt4ob4b4c/image/upload/v1601820096/wailin/wlh_v8hy6m_ssha1d.jpg"
+                            src=""
                             alt=""/>
                     </div>
                     <h1 className="title1 mini-hero-title"><strong>{groupInfo.name}</strong></h1>

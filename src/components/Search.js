@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef } from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import '../styles/search.css'
 import UserPanel from "./UserPanel";
 import Popover from "react-bootstrap/Popover";

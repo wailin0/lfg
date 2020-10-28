@@ -1,25 +1,59 @@
-import React, {useCallback, useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {FaClock} from "react-icons/fa";
 import PostReact from "./PostReact";
 import PostTag from "./PostTag";
 import '../styles/post.css'
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Spinner from "react-bootstrap/Spinner";
 import Context from "./Context";
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {deleteAPost} from "../reducers/community/PostReducer";
 import PostDeleteModal from "./community/modals/PostDeleteModal";
 import PostEditModal from "./community/modals/PostEditModal";
+import {deleteAPost, getPosts, updateAPost} from "../reducers/community/PostReducer";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 const Post = (props) => {
     const posts = useSelector(state => state.posts)
+    const [title, setTitle] = useState('')
+    const [body, setBody] = useState('')
 
-    const {showPostDeleteModal, showPostEditModal,
-           openPostEditModal, openPostDeleteModal} = useContext(Context)
+    const [showPostDeleteModal, setShowPostDeleteModal] = useState({
+        show: false,
+        postId: null
+    });
+    const openPostDeleteModal = (postId) => {
+        setShowPostDeleteModal({show: true, postId})
+    }
+    const closePostDeleteModal = () => {
+        setShowPostDeleteModal({})
+    }
+
+
+    const [showPostEditModal, setShowPostEditModal] = useState({
+        show: false,
+        post: null
+    });
+    const openPostEditModal = (post) => {
+        setShowPostEditModal({show: true, post})
+        setTitle(post.title)
+        setBody(post.body)
+    }
+    const closePostEditModal = () => {
+        setShowPostEditModal({})
+    }
+
+
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getPosts())
+    }, [dispatch])
+
+
+    const {user} = useContext(Context)
 
     return (
         <>
@@ -39,22 +73,35 @@ const Post = (props) => {
                                             <div className="h5 m-0">
                                                 <Link
                                                     to={`/user/${eachPost.users.username}`}>{eachPost.users.username}</Link>
-                                                >
-                                                <Link
+                                                <span className="text-muted ml-3 small"><FaClock/> 10 min ago</span>
+                                                <div id="group-name">
+                                                    Posted to <Link
                                                     to={`/community/${eachPost.groups.name}`}>{eachPost.groups.name}</Link>
+                                                </div>
                                             </div>
-                                            <div className="text-muted  mb-2"><FaClock/> 10 min ago
-                                            </div>
+
                                         </div>
                                     </div>
                                     <div>
                                         <DropdownButton drop='left'>
-                                            <Dropdown.Item
-                                                onClick={() => openPostEditModal(eachPost)}>Edit</Dropdown.Item>
-                                            <Dropdown.Item
-                                                onClick={() => openPostDeleteModal(eachPost.id)}>Delete</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-3">Hide</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-3">Report</Dropdown.Item>
+                                            {(user && eachPost.users.id === user.id) &&
+                                            <>
+                                                <Dropdown.Item
+                                                    onClick={() => openPostEditModal(eachPost)}>Edit</Dropdown.Item>
+                                                <Dropdown.Item
+                                                    onClick={() => openPostDeleteModal(eachPost.id)}>Delete</Dropdown.Item>
+                                            </>
+                                            }
+                                            {(user && eachPost.users.id !== user.id) &&
+                                            <>
+                                                <Dropdown.Item>
+                                                    <Link
+                                                        to={`/user/${eachPost.users.username}`}>Visit {eachPost.users.username} </Link>
+                                                </Dropdown.Item>
+                                                <Dropdown.Item href="#/action-3">Hide</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-3">Report</Dropdown.Item>
+                                            </>
+                                            }
                                         </DropdownButton>
                                     </div>
                                 </div>
@@ -70,7 +117,7 @@ const Post = (props) => {
                                 <PostTag/>
                             </div>
 
-                            <Context.Provider value={eachPost.id}>
+                            <Context.Provider value={{postId: eachPost.id, user}}>
                                 <PostReact
                                     posts={props.posts}
                                     currentPost={eachPost}
@@ -84,8 +131,16 @@ const Post = (props) => {
 
                 ))
             }
-            {showPostDeleteModal.show && <PostDeleteModal  />}
-            {showPostEditModal.show && <PostEditModal  /> }
+
+            <PostDeleteModal showPostDeleteModal={showPostDeleteModal}
+                             closePostDeleteModal={closePostDeleteModal}
+            />
+
+            <PostEditModal showPostEditModal={showPostEditModal}
+                           closePostEditModal={closePostEditModal}
+                           title={title} setTitle={setTitle}
+                           body={body} setBody={setBody}
+            />
         </>
     )
 }

@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useState} from 'react'
 import '../../styles/modal.css'
 import Modal from "react-bootstrap/Modal";
 import Tabs from "react-bootstrap/Tabs";
@@ -6,11 +6,13 @@ import Tab from "react-bootstrap/Tab";
 import PostForm from "../PostForm";
 import MediaForm from "../MediaForm";
 import PollForm from "../PollForm";
-import Context from "../Context";
+import {useSelector} from "react-redux";
 
 const CommunityModal = (props) => {
     const [groupId, setGroupId] = useState(null)
-    const {group} = useContext(Context)
+
+    const groups = useSelector(state => state.groups)
+
     return (
         <div>
 
@@ -20,8 +22,7 @@ const CommunityModal = (props) => {
                         Post to
                         <select onChange={e => setGroupId(e.target.value)}>
                             <option>choose a community</option>
-                            {group &&
-                            group.map(group => (
+                            {groups.map(group => (
                                 <option value={group.id}>
                                     {group.name}
                                 </option>

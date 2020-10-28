@@ -22,31 +22,6 @@ const AppRouter = () => {
     const [slideState, setSlideState] = useState("sidebar");
     const [auth, setAuth] = useState(false);
     const [user, setUser] = useState(null)
-    const [group, setGroup] = useState(null)
-
-    const [showPostDeleteModal, setShowPostDeleteModal] = useState({
-        show: false,
-        postId: null
-    });
-    const openPostDeleteModal = (postId) => {
-        setShowPostDeleteModal({show: true, postId})
-    }
-    const closePostDeleteModal = () => {
-        setShowPostDeleteModal({})
-    }
-
-
-    const [showPostEditModal, setShowPostEditModal] = useState({
-        show: false,
-        post: null
-    });
-    const openPostEditModal = (post) => {
-        setShowPostEditModal({show: true, post})
-    }
-    const closePostEditModal = () => {
-        setShowPostEditModal({})
-    }
-
 
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('user'));
@@ -56,12 +31,6 @@ const AppRouter = () => {
         axios.get(`${Rest}/user`, {headers: JWTHeader()})
             .then(response => {
                 setUser(response.data)
-            })
-            .catch(error => console.log(error))
-
-        axios.get(`${Rest}/user/group/user`, {headers: JWTHeader()})
-            .then(response => {
-                setGroup(response.data)
             })
             .catch(error => console.log(error))
     }, [])
@@ -79,15 +48,7 @@ const AppRouter = () => {
                     auth,
                     setAuth,
                     user,
-                    setUser,
-                    group,
-                    setGroup,
-                    showPostDeleteModal,
-                    openPostDeleteModal,
-                    closePostDeleteModal,
-                    showPostEditModal,
-                    openPostEditModal,
-                    closePostEditModal
+                    setUser
                 }}>
                     <Header/>
                     <Switch>

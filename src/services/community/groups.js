@@ -5,8 +5,8 @@ import JWTHeader from "../../components/auth/JWTHeader";
 const baseUrl = Rest
 
 
-const getUserGroup = async (postId) => {
-    const response = await axios.get(`${baseUrl}/user/group/user`)
+const getUserGroup = async () => {
+    const response = await axios.get(`${baseUrl}/user/group/user`, {headers: JWTHeader()})
     return response.data
 }
 

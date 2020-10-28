@@ -1,17 +1,11 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useState} from 'react'
 import '../../styles/community.css'
 import '../../styles/AnimatedMobileButton.css'
 import CommunityModal from "./CommunityModal";
-import {
-    FaListOl,
-    FaImage,
-    FaEdit
-} from 'react-icons/fa'
+import {FaEdit, FaImage, FaListOl} from 'react-icons/fa'
 import Post from "../Post";
 import CommunitySideBar from "./CommunitySideBar";
 import Context from "../Context";
-import {useDispatch} from "react-redux";
-import {getPosts} from "../../reducers/community/PostReducer";
 
 const Community = () => {
     const [selectTab, setSelectTab] = useState('post');
@@ -20,11 +14,6 @@ const Community = () => {
     const [showDeleteModal, setShowDeleteModal] = useState(false);
 
 
-
-    const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(getPosts())
-    }, [dispatch])
 
     const openSelectedTab = (tabName) => {
         setSelectTab(tabName)

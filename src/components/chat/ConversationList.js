@@ -1,10 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import ConversationSearch from './ConversationSearch';
 import ConversationListItem from './ConversationListItem';
 import Toolbar from './Toolbar';
-import ToolbarButton from './ToolbarButton';
 import axios from 'axios';
-import {FaPlusCircle, FaCog} from 'react-icons/fa'
+import {FaCog, FaPlusCircle} from 'react-icons/fa'
 
 import '../../styles/ConversationList.css';
 

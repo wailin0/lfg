@@ -1,6 +1,6 @@
-import React, { useRef, useState} from 'react'
+import React, {useRef, useState} from 'react'
 import '../../styles/setting.css'
-import {FaUser, FaLongArrowAltLeft} from "react-icons/fa";
+import {FaLongArrowAltLeft, FaUser} from "react-icons/fa";
 import CSSTransition from "react-transition-group/CSSTransition";
 
 

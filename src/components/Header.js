@@ -1,15 +1,13 @@
 import React, {useContext} from "react";
 import '../styles/header.css'
-import { NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {Navbar} from "react-bootstrap";
 import NotiPanel from "./NotiPanel";
 import UserPanel from "./UserPanel";
-import {FaChevronRight, FaUsers, FaChevronLeft} from 'react-icons/fa'
-import {IoLogoGameControllerB} from 'react-icons/io'
-import {IoIosChatboxes, IoIosPeople} from 'react-icons/io'
+import {FaChevronLeft, FaChevronRight, FaUsers} from 'react-icons/fa'
+import {IoIosChatboxes, IoIosPeople, IoLogoGameControllerB} from 'react-icons/io'
 import Search from "./Search";
 import Context from "./Context";
-
 
 
 const Header = () => {

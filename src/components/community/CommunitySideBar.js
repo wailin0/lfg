@@ -3,12 +3,20 @@ import '../../styles/leftsidebar.css'
 import Context from "../Context";
 import CommunityRegModel from "./CommunityRegModel";
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {getUserGroup} from "../../reducers/community/GroupReducer";
 
 const CommunitySideBar = () => {
     const [groupRegModel, setModalShow] = useState(false);
 
-    const {group} = useContext(Context)
+    const dispatch = useDispatch()
 
+    useEffect(() => {
+        dispatch(getUserGroup())
+    }, [])
+
+
+    const groups = useSelector(state => state.groups)
 
     const {slideState} = useContext(Context)
     return (
@@ -24,7 +32,7 @@ const CommunitySideBar = () => {
                 <p className="text-white font-weight-bold px-3  pb-4 mb-0">Your Community</p>
                 <div className="container">
                     <table className="table">
-                        {group && group.map((group) => (
+                        {groups.map((group) => (
                             <>
                                 <tr key={group.id}>
                                     <td><img src="https://picsum.photos/50/50" alt={group.name}/></td>

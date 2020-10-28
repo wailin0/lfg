@@ -27,6 +27,7 @@ select {
 .card {
     background: rgb(35,37,38) !important;
     color: white;
+    margin-top: 10px;
 }
 
 .nav-item:focus, .nav-item:visited {

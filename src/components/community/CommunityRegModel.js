@@ -1,12 +1,10 @@
-import React, {useContext, useState} from "react";
+import React, {useState} from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form"
-import axios from "axios"
-import Rest from "../Rest";
 import {useHistory} from "react-router-dom";
-import JWTHeader from "../auth/JWTHeader";
-import Context from "../Context";
+import {useDispatch} from "react-redux";
+import {createAGroup} from "../../reducers/community/GroupReducer";
 
 const CommunityRegModel = (props) => {
     const [form, setForm] = useState({
@@ -16,23 +14,19 @@ const CommunityRegModel = (props) => {
         description: '',
         type: ''
     })
-    const {group, setGroup} = useContext(Context)
+
     const history = useHistory()
-    const createCommunity = event => {
+    const dispatch = useDispatch()
+    const createCommunity = async event => {
         event.preventDefault()
-        const formData = {
+        const newGroup = {
             name: form.name,
             topic: form.topic,
             description: form.description,
             type: form.type
         }
-        axios.post(`${Rest}/group`, formData, {headers: JWTHeader()})
-            .then((response) => {
-                history.push('/community/' + form.name)
-                const addToGroup = {...group, groups: group.push(response.data)}
-            }).catch(err => {
-            console.log(err+ " community name already exist")
-        })
+        await dispatch(createAGroup(newGroup))
+        history.push('/community/' + form.name)
     }
 
     return (

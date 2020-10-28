@@ -8,7 +8,7 @@ import Context from "./Context";
 import JWTHeader from "./auth/JWTHeader";
 
 const PostReact = () => {
-    const [showComments, setShowComments] = useState(true)
+    const [showComments, setShowComments] = useState(false)
     const toggleCommentBox = () => {
         setShowComments(!showComments)
     }
@@ -16,21 +16,8 @@ const PostReact = () => {
     const [likeCount, setLikeCount] = useState(0)
     const [dislikeCount, setDislikeCount] = useState(0)
     const [commentCount, setCommentCount] = useState(0)
-    const [comments, setComments] = useState([])
 
-    const postId = useContext(Context)
-
-    useEffect(() => {
-        axios.get(`${Rest}/post/${postId}/comment`, { headers: JWTHeader() })
-            .then(response => {
-                setComments(response.data)
-                setCommentCount(response.data.length)
-            })
-            .catch(e => {
-                console.log(e)
-            })
-    }, [])
-
+    const {postId} = useContext(Context)
 
 
     const [like, setLike] = useState({
@@ -44,6 +31,17 @@ const PostReact = () => {
         liked: false,
         postId: postId
     })
+
+    //getting like, dislike and comment counts
+    useEffect(() => {
+        axios.get(`${Rest}/post/${postId}/vote`, { headers: JWTHeader() })
+            .then(response => {
+                setLikeCount(response.data.likeCount)
+                setDislikeCount(response.data.dislikeCount)
+                setCommentCount(response.data.commentCount)
+            })
+    },[])
+
 
     //getting like for specifci user
     useEffect(() => {
@@ -62,29 +60,10 @@ const PostReact = () => {
             .then(response => {
                 if((response.data.liked !== undefined)) {
                     setDislike({...dislike, liked: true})
-                    console.log(response.data.liked)
                 }
 
             })
     },[postId])
-
-
-    //getting likes by postId
-    useEffect(() => {
-        axios.get(`${Rest}/post/${postId}/like`, { headers: JWTHeader() })
-            .then(response => {
-                setLikeCount(response.data.length)
-            })
-    },[postId])
-
-    //getting dislikes by postId
-    useEffect(() => {
-        axios.get(`${Rest}/post/${postId}/dislike`, { headers: JWTHeader() })
-            .then(response => {
-                setDislikeCount(response.data.length)
-            })
-    },[])
-
 
     //rest request for like dislike logic
     const postLike = () => {
@@ -168,7 +147,7 @@ const PostReact = () => {
 
     return (
         <>
-        <div className=" mx-auto justify-content-between">
+        <div className=" mx-auto justify-content-between mb-2">
             {likeCount} <button id={ like.liked ? 'react-button-clicked' : 'react-button'} onClick={() => clickLike()} >
             <FaThumbsUp/>
         </button>
@@ -183,8 +162,6 @@ const PostReact = () => {
         </button>
         </div>
             {showComments &&  <PostComment
-                comments={comments}
-                setComments={setComments}
                 commentCount={commentCount}
                 setCommentCount={setCommentCount}
             />  }

@@ -1,15 +1,68 @@
 import React, {useContext, useEffect, useState} from "react";
 import '../styles/postcomment.css'
-import {FaPaperPlane} from "react-icons/fa";
+import {FaCommentDots, FaEllipsisV, FaPaperPlane, FaThumbsDown, FaThumbsUp} from "react-icons/fa";
 import axios from "axios";
 import Rest from "./Rest";
 import Context from "./Context";
-import {FaThumbsUp, FaThumbsDown, FaEllipsisV, FaCommentDots} from "react-icons/fa"
 import JWTHeader from "./auth/JWTHeader";
 import {Link} from "react-router-dom";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Dropdown from "react-bootstrap/Dropdown";
+import {useDispatch, useSelector} from "react-redux";
+import Modal from "react-bootstrap/Modal";
+import Spinner from "react-bootstrap/Spinner";
+import Button from "react-bootstrap/Button";
+import {deleteAPost} from "../reducers/community/PostReducer";
+import {
+    createAComment,
+    deleteAComment,
+    getCommentFromAPost,
+    updateAComment
+} from "../reducers/community/CommentReducer";
+import Form from "react-bootstrap/Form";
+import CommentDeleteModal from "./community/modals/CommentDeleteModal";
+import CommentEditModal from "./community/modals/CommentEditModal";
 
 const PostComment = (props) => {
-    const postId = useContext(Context)
+    const {postId, user} = useContext(Context)
+    // const comments = useSelector(state => state.comments)
+    const [comments, setComments] = useState([])
+
+    const [showCommentDeleteModal, setShowCommentDeleteModal] = useState({
+        show: false,
+        commentId: null
+    });
+    const openCommentDeleteModal = (commentId) => {
+        setShowCommentDeleteModal({show: true, commentId})
+    }
+    const closeCommentDeleteModal = () => {
+        setShowCommentDeleteModal({})
+    }
+
+
+    const [showCommentEditModal, setShowCommentEditModal] = useState({
+        show: false,
+        comment: null
+    });
+    const closeCommentEditModal = () => {
+        setShowCommentEditModal({})
+    }
+
+
+    const dispatch = useDispatch()
+
+
+    useEffect(() => {
+        axios.get(`${Rest}/post/${postId}/comment`, {headers: JWTHeader()})
+            .then(response => {
+                setComments(response.data)
+                props.setCommentCount(response.data.length)
+            })
+            .catch(e => {
+                console.log(e)
+            })
+        // dispatch(getCommentFromAPost(postId))
+    }, [])
 
     const [userComment, setUserComment] = useState({
         id: null,
@@ -17,46 +70,89 @@ const PostComment = (props) => {
     })
 
     const sendComment = (e) => {
-        if(e) {
-            e.preventDefault()
-        }
-        axios.post(`${Rest}/post/${postId}/comment`, userComment, { headers: JWTHeader() })
+        e && e.preventDefault()
+        axios.post(`${Rest}/post/${postId}/comment`, userComment, {headers: JWTHeader()})
             .then(response => {
-                props.setComments([...props.comments, response.data])
+                setComments([...comments, response.data])
                 setUserComment({body: ""})
-                props.setCommentCount(props.commentCount+1)
+                props.setCommentCount(props.commentCount + 1)
             })
             .catch(err => console.log(err))
+        // dispatch(createAComment(postId, userComment))
+        // setUserComment({body: ""})
+        // props.setCommentCount(props.commentCount + 1)
     }
 
+    const [body, setBody] = useState('')
+
+
+    const openCommentEditModal = (comment) => {
+        setShowCommentEditModal({show: true, comment})
+        setBody(comment.body)
+    }
 
 
     return (
         <>
-        <div className=" card-footer">
-            <div className="comment">
+            <div className=" card-footer">
+                <div className="comment">
                     <form onSubmit={sendComment}>
-                <input className="comment-box" value={userComment.body} onChange={e => setUserComment({...userComment, body: e.target.value})} />
+                        <input className="comment-box" value={userComment.body}
+                               onChange={e => setUserComment({...userComment, body: e.target.value})}/>
                     </form>
-                {userComment.body.length>0 && <span id="send-icon"><FaPaperPlane onClick={() => sendComment()} /></span> }
+                    {userComment.body.length > 0 &&
+                    <span id="send-icon"><FaPaperPlane onClick={() => sendComment()}/></span>}
+                </div>
             </div>
-        </div>
-            { props.comments.map(eachComment => (
+            {comments.map(eachComment => (
                 <div className="user-comment-list" key={eachComment.id}>
-                    <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png" id="profile-pic" className="user-pic" alt={eachComment.users.username} />
+                    <img src="https://res.cloudinary.com/gamingage/image/upload/v1594573284/favicon_xl6rpu.png"
+                         id="profile-pic" className="user-pic" alt={eachComment.users.username}/>
                     <div className="user-comment">
                         <div className="username-comment">
                             <Link to={`/user/${eachComment.users.username}`}> {eachComment.users.username} </Link>
-                            <FaEllipsisV />
+
+                            <DropdownButton drop='left'>
+                                {(user && eachComment.users.id === user.id) &&
+                                <>
+                                    <Dropdown.Item
+                                        onClick={() => openCommentEditModal(eachComment)}>Edit</Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() => openCommentDeleteModal(eachComment.id)}>Delete</Dropdown.Item>
+                                </>
+                                }
+                                {(user && eachComment.users.id !== user.id) &&
+                                <>
+                                    <Dropdown.Item>
+                                        <Link
+                                            to={`/user/${eachComment.users.username}`}>Visit {eachComment.users.username} </Link>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Hide</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Report</Dropdown.Item>
+                                </>
+                                }
+                            </DropdownButton>
+
                         </div>
                         {eachComment.body}
                         <div className="react-comment">
-                        <FaThumbsUp /> <FaThumbsDown /> <FaCommentDots />
+                            <FaThumbsUp/> <FaThumbsDown/> <FaCommentDots/>
                         </div>
                     </div>
                 </div>
             ))}
-            </>
+
+            <CommentDeleteModal showCommentDeleteModal={showCommentDeleteModal}
+                                closeCommentDeleteModal={closeCommentDeleteModal}
+                                comments={comments} setComments={setComments}
+            />
+
+            <CommentEditModal showCommentEditModal={showCommentEditModal}
+                              closeCommentEditModal={closeCommentEditModal}
+                              body={body} setBody={setBody}
+                              comments={comments} setComments={setComments}
+            />
+        </>
     )
 }
 
