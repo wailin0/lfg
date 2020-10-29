@@ -1,10 +1,9 @@
-import React, {useContext} from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import {deleteAPost} from "../../../reducers/community/PostReducer";
 import {useDispatch} from "react-redux";
-import Context from "../../Context";
 
 const PostDeleteModal = (props) => {
 

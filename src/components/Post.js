@@ -11,10 +11,7 @@ import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import PostDeleteModal from "./community/modals/PostDeleteModal";
 import PostEditModal from "./community/modals/PostEditModal";
-import {deleteAPost, getPosts, updateAPost} from "../reducers/community/PostReducer";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import {getPosts} from "../reducers/community/PostReducer";
 
 const Post = (props) => {
     const posts = useSelector(state => state.posts)

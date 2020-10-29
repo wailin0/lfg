@@ -33,12 +33,10 @@ const CommunitySideBar = () => {
                 <div className="container">
                     <table className="table">
                         {groups.map((group) => (
-                            <>
                                 <tr key={group.id}>
                                     <td><img src="https://picsum.photos/50/50" alt={group.name}/></td>
                                     <td className="td-name"><Link to={`/community/${group.name}`}>{group.name}</Link></td>
                                 </tr>
-                            </>
                         ))}
                     </table>
                 </div>

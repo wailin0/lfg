@@ -1,11 +1,10 @@
-import React, {useContext, useState} from "react";
+import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Spinner from "react-bootstrap/Spinner";
 import {useDispatch} from "react-redux";
 import {updateAPost} from "../../../reducers/community/PostReducer";
-import Context from "../../Context";
 
 const PostEditModal = (props) => {
 

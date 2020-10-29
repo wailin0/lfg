@@ -1,7 +1,7 @@
-import userService from '../../services/community/user'
+import userService from '../../services/user'
 
 
-const CommentReducer = (state = [], action) => {
+const CommentReducer = (state = {}, action) => {
     switch (action.type) {
         case 'GET_AUTHED_USER':
             return action.data
@@ -36,12 +36,11 @@ export const registerUser = (user) => {
     }
 }
 
-export const deleteAComment = (commentId) => {
+export const deleteAComment = () => {
     return async dispatch => {
-        await commentService.deleteComment(commentId)
+        await userService.deleteUser()
         dispatch({
-            type: 'DELETE_COMMENT',
-            commentId
+            type: 'DELETE_USER'
         })
     }
 }

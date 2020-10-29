@@ -1,10 +1,7 @@
-import React, {useContext} from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
-import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Spinner from "react-bootstrap/Spinner";
-import {deleteAComment} from "../../../reducers/community/CommentReducer";
-import Context from "../../Context";
 import {useDispatch} from "react-redux";
 import axios from "axios";
 import Rest from "../../Rest";

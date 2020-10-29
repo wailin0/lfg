@@ -35,7 +35,7 @@ const UserPanel = () => {
 
                             <ListGroup>
                                 <ListGroup.Item><Link to="/setting"><FaCog/> Settings</Link></ListGroup.Item>
-                                <ListGroup.Item><MdHelp/> Help & Support</ListGroup.Item>
+                                <ListGroup.Item><MdHelp/> Info</ListGroup.Item>
                                 <ListGroup.Item onClick={() => Logout()}><FiLogOut/> Log Out</ListGroup.Item>
                             </ListGroup>
                         </Popover>

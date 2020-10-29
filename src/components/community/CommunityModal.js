@@ -23,7 +23,7 @@ const CommunityModal = (props) => {
                         <select onChange={e => setGroupId(e.target.value)}>
                             <option>choose a community</option>
                             {groups.map(group => (
-                                <option value={group.id}>
+                                <option key={group.id} value={group.id}>
                                     {group.name}
                                 </option>
                             ))

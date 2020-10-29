@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import '../styles/postcomment.css'
-import {FaCommentDots, FaEllipsisV, FaPaperPlane, FaThumbsDown, FaThumbsUp} from "react-icons/fa";
+import {FaCommentDots, FaPaperPlane, FaThumbsDown, FaThumbsUp} from "react-icons/fa";
 import axios from "axios";
 import Rest from "./Rest";
 import Context from "./Context";
@@ -8,18 +8,7 @@ import JWTHeader from "./auth/JWTHeader";
 import {Link} from "react-router-dom";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
-import {useDispatch, useSelector} from "react-redux";
-import Modal from "react-bootstrap/Modal";
-import Spinner from "react-bootstrap/Spinner";
-import Button from "react-bootstrap/Button";
-import {deleteAPost} from "../reducers/community/PostReducer";
-import {
-    createAComment,
-    deleteAComment,
-    getCommentFromAPost,
-    updateAComment
-} from "../reducers/community/CommentReducer";
-import Form from "react-bootstrap/Form";
+import {useDispatch} from "react-redux";
 import CommentDeleteModal from "./community/modals/CommentDeleteModal";
 import CommentEditModal from "./community/modals/CommentEditModal";
 

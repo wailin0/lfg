@@ -11,7 +11,6 @@ const GroupPage = () => {
 
     const {groupName} = useParams();
 
-
     useEffect(() => {
         axios.get(`${Rest}/group/${groupName}`)
             .then(response => {
@@ -31,7 +30,7 @@ const GroupPage = () => {
                             alt=""/>
                     </div>
                     <h1 className="title1 mini-hero-title"><strong>{groupInfo.name}</strong></h1>
-                    <h2 className="title2 mini-hero-subtitle">Full Stack Web App Developer</h2>
+                    <h2 className="title2 mini-hero-subtitle">{groupInfo.description}</h2>
                 </div>
             </div>
 

@@ -1,5 +1,4 @@
 import commentService from '../../services/community/comments'
-import groupService from "../../services/community/groups";
 
 
 const CommentReducer = (state = [], action) => {

@@ -1,6 +1,6 @@
 import axios from 'axios'
-import Rest from "../../components/Rest";
-import JWTHeader from "../../components/auth/JWTHeader";
+import Rest from "../components/Rest";
+import JWTHeader from "../components/auth/JWTHeader";
 
 const baseUrl = Rest
 

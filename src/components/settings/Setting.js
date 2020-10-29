@@ -1,7 +1,9 @@
-import React, {useRef, useState} from 'react'
+import React, {useContext, useRef, useState} from 'react'
 import '../../styles/setting.css'
 import {FaLongArrowAltLeft, FaUser} from "react-icons/fa";
 import CSSTransition from "react-transition-group/CSSTransition";
+import Context from "../Context";
+import SettingList from "./SettingList";
 
 
 const Setting = () => {
@@ -26,7 +28,7 @@ const Setting = () => {
             <CSSTransition
                 in={activeMenu === 'main'}
                 unmountOnExit
-               >
+            >
                 <div className="menu">
                     User Setting
                     <DropdownItem
@@ -55,7 +57,7 @@ const Setting = () => {
             <CSSTransition
                 in={activeMenu === 'main'}
                 unmountOnExit
-                >
+            >
                 <div className="menu">
                     App Setting
                     <DropdownItem
@@ -90,7 +92,7 @@ const Setting = () => {
             <CSSTransition
                 in={activeMenu === 'main'}
                 unmountOnExit
-               >
+            >
                 <div className="menu">
                     Information
                     <DropdownItem
@@ -116,7 +118,7 @@ const Setting = () => {
             <CSSTransition
                 in={activeMenu === 'settings'}
                 unmountOnExit
-                >
+            >
                 <div className="menu">
                     <DropdownItem goToMenu="main" leftIcon={<FaLongArrowAltLeft />}>
                         <h5>Account</h5>
@@ -135,7 +137,7 @@ const Setting = () => {
             <CSSTransition
                 in={activeMenu === 'animals'}
                 unmountOnExit
-               >
+            >
                 <div className="menu">
                     <DropdownItem goToMenu="main" leftIcon={<FaLongArrowAltLeft />}>
                         <h5>Animals</h5>
