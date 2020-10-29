@@ -25,29 +25,18 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="comment crud ui finished">
-      <change afterPath="$PROJECT_DIR$/src/components/settings/SettingItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/SettingList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Security.js" afterDir="false" />
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="fixed findDOMNode error">
+      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Account/Account.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Account/ChangeEmail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Account/ChangePassword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/settings/user/Account/ChangeUsername.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/CommunitySideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunitySideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/modals/CommentDeleteModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/modals/CommentDeleteModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/modals/PostDeleteModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/modals/PostDeleteModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/modals/PostEditModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/modals/PostEditModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/page/GroupPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/page/GroupPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/page/GroupPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/page/GroupPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lfg/LFG.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lfg/LFG.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/settings/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/Setting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/settings/user/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/user/Account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/community/CommentReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/community/CommentReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/community/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/community/UserReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/community/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/SettingItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/SettingItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/SettingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/SettingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/user/Account.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/Chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Chat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/setting.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/setting.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,11 +98,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\lfg\src\components\settings\user\Account" />
       <recent name="D:\IdeaProjects\lfg\src\services" />
       <recent name="D:\IdeaProjects\lfg\src\reducers" />
       <recent name="D:\IdeaProjects\lfg\src\reducers\community" />
       <recent name="D:\IdeaProjects\lfg\src\services\community" />
-      <recent name="D:\IdeaProjects\lfg\src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\OMEGA\IdeaProjects\lfg\src" />
@@ -648,6 +637,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="226" y="189" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603718536000" />
+    <state x="289" y="385" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604014447986">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="289" y="385" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1604014447986" />
     <state x="349" y="249" key="FileChooserDialogImpl" timestamp="1602372502659">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

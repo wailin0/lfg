@@ -3,7 +3,7 @@ import Context from "../Context";
 import CSSTransition from "react-transition-group/CSSTransition";
 import {FaLongArrowAltLeft, FaUser} from "react-icons/fa";
 import SettingItem from "./SettingItem";
-import Account from "./user/Account";
+import Account from "./user/Account/Account";
 import Security from "./user/Security";
 
 
