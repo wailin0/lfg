@@ -51,14 +51,14 @@ const GroupPost = (props) => {
 
 
 
-    const {user} = useContext(Context)
+    const user = useSelector(state => state.user)
 
     return (
         <>
             {props.loading ?
                 <span id="loading"><Spinner animation="grow" variant="danger"/> Loading feeds... <br/>please wait for backend server to start</span> :
                 groupPosts.map((eachPost) => (
-                    <div key={eachPost.id} className="post">
+                    <div key={eachPost.postId} className="post">
                         <div className="card">
                             <div className="card-header">
                                 <div className="d-flex justify-content-between align-items-center">
@@ -70,11 +70,11 @@ const GroupPost = (props) => {
                                         <div className="ml-2">
                                             <div className="h5 m-0">
                                                 <Link
-                                                    to={`/user/${eachPost.users.username}`}>{eachPost.users.username}</Link>
+                                                    to={`/user/${eachPost.user.username}`}>{eachPost.user.username}</Link>
                                                 <span className="text-muted ml-3 small"><FaClock/> 10 min ago</span>
                                                 <div id="group-name">
                                                     Posted to <Link
-                                                    to={`/community/${eachPost.groups.name}`}>{eachPost.groups.name}</Link>
+                                                    to={`/community/${eachPost.group.name}`}>{eachPost.group.name}</Link>
                                                 </div>
                                             </div>
 
@@ -82,19 +82,19 @@ const GroupPost = (props) => {
                                     </div>
                                     <div>
                                         <DropdownButton drop='left'>
-                                            {(user && eachPost.users.id === user.id) &&
+                                            {(user && eachPost.user.userId === user.userId) &&
                                             <>
                                                 <Dropdown.Item
                                                     onClick={() => openPostEditModal(eachPost)}>Edit</Dropdown.Item>
                                                 <Dropdown.Item
-                                                    onClick={() => openPostDeleteModal(eachPost.id)}>Delete</Dropdown.Item>
+                                                    onClick={() => openPostDeleteModal(eachPost.postId)}>Delete</Dropdown.Item>
                                             </>
                                             }
-                                            {(user && eachPost.users.id !== user.id) &&
+                                            {(user && eachPost.user.userId !== user.userId) &&
                                             <>
                                                 <Dropdown.Item>
                                                     <Link
-                                                        to={`/user/${eachPost.users.username}`}>Visit {eachPost.users.username} </Link>
+                                                        to={`/user/${eachPost.user.username}`}>Visit {eachPost.user.username} </Link>
                                                 </Dropdown.Item>
                                                 <Dropdown.Item href="#/action-3">Hide</Dropdown.Item>
                                                 <Dropdown.Item href="#/action-3">Report</Dropdown.Item>
@@ -115,11 +115,11 @@ const GroupPost = (props) => {
                                 <PostTag/>
                             </div>
 
-                            <Context.Provider value={{postId: eachPost.id, user}}>
+                            <Context.Provider value={{postId: eachPost.postId, user}}>
                                 <PostReact
                                     posts={props.posts}
                                     currentPost={eachPost}
-                                    postId={eachPost.id}
+                                    postId={eachPost.postId}
                                     setPosts={props.setPosts}
                                 />
                             </Context.Provider>

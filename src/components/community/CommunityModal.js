@@ -12,6 +12,7 @@ const CommunityModal = (props) => {
     const [groupId, setGroupId] = useState(null)
 
     const groups = useSelector(state => state.groups)
+    console.log(groups)
 
     return (
         <div>
@@ -23,7 +24,7 @@ const CommunityModal = (props) => {
                         <select onChange={e => setGroupId(e.target.value)}>
                             <option>choose a community</option>
                             {groups.map(group => (
-                                <option key={group.id} value={group.id}>
+                                <option key={group.groupId} value={group.groupId}>
                                     {group.name}
                                 </option>
                             ))

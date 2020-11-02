@@ -38,7 +38,7 @@ const GroupPage = () => {
                     <Tabs defaultActiveKey="posts">
                         <Tab eventKey="posts" title="Posts">
                             <div className="gree">
-                                <GroupPost groupId={groupInfo && groupInfo.id}/>
+                                <GroupPost groupId={groupInfo && groupInfo.groupId}/>
                             </div>
                         </Tab>
 

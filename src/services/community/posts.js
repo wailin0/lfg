@@ -20,7 +20,7 @@ const createNewPost = async (groupId, post) => {
 }
 
 const updatePost = async (post) => {
-    const response = await axios.put(`${baseUrl}/post/${post.id}`, post, {headers: JWTHeader()})
+    const response = await axios.put(`${baseUrl}/post/${post.postId}`, post, {headers: JWTHeader()})
     return response.data
 }
 

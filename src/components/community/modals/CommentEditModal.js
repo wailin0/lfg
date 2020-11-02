@@ -12,12 +12,12 @@ const CommentEditModal = (props) => {
     const editComment = (e) => {
         e.preventDefault()
         const editedComment = {
-            id: props.showCommentEditModal.comment.id,
+            commentId: props.showCommentEditModal.comment.commentId,
             body: props.body
         }
-        axios.put(`${Rest}/comment/${editedComment.id}`, editedComment, {headers: JWTHeader()})
+        axios.put(`${Rest}/comment/${editedComment.commentId}`, editedComment, {headers: JWTHeader()})
             .then(res => {
-                const updatedComment = props.comments.map(comment => comment.id === res.data.id ? res.data : comment)
+                const updatedComment = props.comments.map(comment => comment.commentId === res.data.commentId ? res.data : comment)
                 props.setComments(updatedComment)
                 console.log(res.data)
                 props.closeCommentEditModal()

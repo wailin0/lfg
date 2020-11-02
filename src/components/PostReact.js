@@ -154,9 +154,9 @@ const PostReact = () => {
             {dislikeCount} <button id={ dislike.liked ? 'react-button-clicked' : 'react-button' } onClick={() => clickDislike()} >
             <FaThumbsDown />
         </button>
-            {commentCount} <button id="react-button" onClick={() => toggleCommentBox()}>
+            {commentCount} <bvutton id="react-button" onClick={() => toggleCommentBox()}>
             <FaCommentDots />
-        </button>
+        </bvutton>
             0 <button id="react-button">
             <FaShare />
         </button>

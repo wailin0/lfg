@@ -8,7 +8,6 @@ import {createAGroup} from "../../reducers/community/GroupReducer";
 
 const CommunityRegModel = (props) => {
     const [form, setForm] = useState({
-        id: null,
         name: '',
         topic: '',
         description: '',

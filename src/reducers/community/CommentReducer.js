@@ -9,9 +9,9 @@ const CommentReducer = (state = [], action) => {
             return [...state, action.data]
         case 'UPDATE_COMMENT':
             const updatedComment = action.data
-            return state.map(comment => comment.id === updatedComment.id ? updatedComment : comment)
+            return state.map(comment => comment.commentId === updatedComment.commentId ? updatedComment : comment)
         case 'DELETE_COMMENT':
-            return state.filter(comment => comment.id !== action.commentId)
+            return state.filter(comment => comment.commentId !== action.commentId)
         default:
             return state
     }

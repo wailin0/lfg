@@ -1,12 +1,15 @@
-import userService from '../../services/user'
+import userService from '../services/user'
 
+const initState = null
 
-const CommentReducer = (state = {}, action) => {
+const UserReducer = (state = initState, action) => {
     switch (action.type) {
         case 'GET_AUTHED_USER':
             return action.data
+        case 'CLEAR_AUTHED_USER':
+            return null
         case 'CREATE_USER':
-            return [...state, action.data]
+            return null
         case 'UPDATE_USER':
             return null
         case 'DELETE_USER':
@@ -23,6 +26,12 @@ export const getLoggedInUser = () => {
             type: 'GET_AUTHED_USER',
             data
         })
+    }
+}
+
+export const clearLoggedInUser = () => {
+    return dispatch => {
+        dispatch({ type: 'CLEAR_AUTHED_USER' })
     }
 }
 
@@ -46,4 +55,4 @@ export const deleteAComment = () => {
 }
 
 
-export default CommentReducer
+export default UserReducer

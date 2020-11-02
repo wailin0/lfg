@@ -8,15 +8,20 @@ import {FaCog} from 'react-icons/fa'
 import {MdHelp} from 'react-icons/md'
 import {Link, useHistory} from "react-router-dom";
 import Context from "./Context";
+import {useDispatch, useSelector} from "react-redux";
+import {clearLoggedInUser} from "../reducers/UserReducer";
 
 const UserPanel = () => {
 
-    const {auth, setAuth, user, setUser} = useContext(Context);
+    const user = useSelector(state => state.user)
+    const dispatch = useDispatch()
+
+    const {auth, setAuth} = useContext(Context);
     const history = useHistory()
     const Logout = () => {
-        localStorage.removeItem("user")
+        localStorage.removeItem("LFGUser")
         setAuth(false)
-        setUser(null)
+        dispatch(clearLoggedInUser())
         history.push("/login")
     }
 

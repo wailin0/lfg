@@ -16,23 +16,24 @@ import axios from "axios";
 import Rest from "./Rest";
 import JWTHeader from "./auth/JWTHeader";
 import GroupPage from "./community/page/GroupPage";
+import {useDispatch, useSelector} from "react-redux";
+import {getLoggedInUser} from "../reducers/UserReducer";
+import Notification from "./Notification";
 
 
 const AppRouter = () => {
     const [slideState, setSlideState] = useState("sidebar");
     const [auth, setAuth] = useState(false);
-    const [user, setUser] = useState(null)
+
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem('user'));
+        const user = JSON.parse(localStorage.getItem('LFGUser'));
         if (user) {
             setAuth(true)
         }
-        axios.get(`${Rest}/user`, {headers: JWTHeader()})
-            .then(response => {
-                setUser(response.data)
-            })
-            .catch(error => console.log(error))
+        dispatch(getLoggedInUser())
+
     }, [])
     const toggleSlide = () => {
         setSlideState(!slideState)
@@ -41,14 +42,13 @@ const AppRouter = () => {
 
     return (
         <BrowserRouter>
+            <Notification />
             <div>
                 <Context.Provider value={{
                     slideState,
                     toggleSlide,
                     auth,
-                    setAuth,
-                    user,
-                    setUser
+                    setAuth
                 }}>
                     <Header/>
                     <Switch>

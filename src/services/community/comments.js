@@ -16,7 +16,7 @@ const createNewComment = async (postId, comment) => {
 }
 
 const updateComment = async (comment) => {
-    const response = await axios.put(`${baseUrl}/comment/${comment.id}`, comment, {headers: JWTHeader()})
+    const response = await axios.put(`${baseUrl}/comment/${comment.commentId}`, comment, {headers: JWTHeader()})
     return response.data
 }
 

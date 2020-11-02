@@ -16,7 +16,7 @@ const getUser = async (userId) => {
 }
 
 const createUser = async (user) => {
-    const response = await axios.post(`${baseUrl}/all/user`, user, {headers: JWTHeader()})
+    const response = await axios.post(`${baseUrl}/all/user`, user )
     return response.data
 }
 

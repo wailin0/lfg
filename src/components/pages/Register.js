@@ -6,6 +6,8 @@ import {Form, InputGroup} from 'react-bootstrap'
 import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
 import Rest from "../Rest";
+import {useDispatch} from "react-redux";
+import {registerUser} from "../../reducers/UserReducer";
 
 const Register = () => {
     const [validation, setValidation] = useState({
@@ -14,7 +16,6 @@ const Register = () => {
     })
     const [showPassword, setShowPassword] = useState(false)
     const [user, setUser] = useState({
-        id: null,
         username: '',
         email : '',
         password : '',
@@ -31,20 +32,18 @@ const Register = () => {
 
     }
     const history = useHistory()
+    const dispatch = useDispatch()
 
-    const registerUser = (e) => {
+    const saveUser = async  (e) => {
         e.preventDefault()
         const userData = {
             username: user.username,
             email : user.email,
             password : user.password
         }
-        axios.post(`${Rest}/all/user`,userData )
-            .then(response => {
-                history.push("/login")
-            }).catch(error => {
-            console.log(error)
-        })
+        await dispatch(registerUser(userData))
+        history.push("/login")
+
     }
 
     useEffect(() => {
@@ -57,7 +56,7 @@ const Register = () => {
                         setValidation({...validation, username: response.data})
                     }
                 })
-        },2000)
+        },1000)
     },[user.username])
 
     useEffect(() => {
@@ -71,7 +70,7 @@ const Register = () => {
                     setValidation({...validation, email: false})
                 }
             })
-        },2000)
+        },1000)
     },[user.email])
 
 
@@ -80,7 +79,7 @@ const Register = () => {
         <>
                     <div className="container">
                         <div className="signup-content">
-                            <Form onSubmit={registerUser}>
+                            <Form onSubmit={saveUser}>
                                 <h4 className="text-center">Create account</h4>
                                 <Form.Group>
                                     <Form.Control type="text" name="username" placeholder="Your Name" value={user.username} onChange={handleInputChange}  />

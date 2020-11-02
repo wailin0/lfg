@@ -11,14 +11,13 @@ const Account = () => {
             <SettingItem goToMenu="main" leftIcon={<FaLongArrowAltLeft/>}>
                 <h5>Account</h5>
             </SettingItem>
-            <SettingItem goToMenu="username" rightIcon={<FaLongArrowAltRight/>}>Change username <br/> user</SettingItem>
-            <SettingItem goToMenu="email" rightIcon={<FaLongArrowAltRight/>}>Change email
+            <SettingItem leftIcon='' goToMenu="username" rightIcon={<FaLongArrowAltRight/>}>Change username <br/> user</SettingItem>
+            <SettingItem leftIcon='@' goToMenu="email" rightIcon={<FaLongArrowAltRight/>}>Change email
                 address <br/>e@e.e</SettingItem>
-            <SettingItem goToMenu="password" rightIcon={<FaLongArrowAltRight/>}>Change password</SettingItem>
+            <SettingItem leftIcon='*' goToMenu="password" rightIcon={<FaLongArrowAltRight/>}>Change password</SettingItem>
             ACCOUNT MANAGEMENT
             <SettingItem>Disable</SettingItem>
             <SettingItem>Delete</SettingItem>
-
         </div>
     )
 }

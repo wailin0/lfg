@@ -16,7 +16,7 @@ const PostEditModal = (props) => {
     const editPost = async event => {
         event.preventDefault()
         const updatedPost = {
-            id: props.showPostEditModal.post.id,
+            postId: props.showPostEditModal.post.postId,
             title: props.title,
             body: props.body
         }

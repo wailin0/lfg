@@ -15,9 +15,10 @@ const CommentDeleteModal = (props) => {
     const deleteComment = commentId => {
         axios.delete(`${Rest}/comment/${commentId}`, {headers: JWTHeader()})
             .then(() => {
-                const deletedState = props.comments.filter(comment => comment.id !== commentId)
+                const deletedState = props.comments.filter(comment => comment.commentId !== commentId)
                 props.setComments(deletedState)
                 props.closeCommentDeleteModal()
+                props.setCommentCount(props.commentCount-1)
             })
         // dispatch(deleteAComment(commentId))
         // closeCommentDeleteModal()

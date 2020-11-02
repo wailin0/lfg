@@ -51,9 +51,33 @@ const Setting = () => {
                 </CSSTransition>
 
                 <CSSTransition
+                    in={activeMenu === 'account'}
+                    unmountOnExit>
+                    <Account/>
+                </CSSTransition>
+                <CSSTransition
+                    in={activeMenu === 'username'}
+                    unmountOnExit>
+                    <ChangeUsername/>
+                </CSSTransition>
+                <CSSTransition
+                    in={activeMenu === 'email'}
+                    unmountOnExit>
+                    <ChangeEmail/>
+                </CSSTransition>
+                <CSSTransition
+                    in={activeMenu === 'password'}
+                    unmountOnExit>
+                    <ChangePassword/>
+                </CSSTransition>
+
+
+
+
+
+                <CSSTransition
                     in={activeMenu === 'main'}
-                    unmountOnExit
-                >
+                    unmountOnExit>
                     <div className="menu">
                         App Setting
                         <SettingItem
@@ -109,34 +133,6 @@ const Setting = () => {
                     </div>
                 </CSSTransition>
 
-
-                <CSSTransition
-                    in={activeMenu === 'account'}
-                    unmountOnExit
-                >
-                    <Account/>
-                </CSSTransition>
-
-                <CSSTransition
-                    in={activeMenu === 'username'}
-                    unmountOnExit
-                >
-                   <ChangeUsername />
-                </CSSTransition>
-
-                <CSSTransition
-                    in={activeMenu === 'email'}
-                    unmountOnExit
-                >
-                    <ChangeEmail/>
-                </CSSTransition>
-
-                <CSSTransition
-                    in={activeMenu === 'password'}
-                    unmountOnExit
-                >
-                    <ChangePassword/>
-                </CSSTransition>
 
                 <CSSTransition
                     in={activeMenu === 'premium'}

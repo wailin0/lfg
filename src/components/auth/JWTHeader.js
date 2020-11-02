@@ -1,8 +1,8 @@
 export default function JWTHeader() {
-    const user = JSON.parse(localStorage.getItem('user'));
+    const token = JSON.parse(localStorage.getItem('LFGUser'));
 
-    if (user && user.token) {
-        return { Authorization: 'Bearer ' + user.token };
+    if (token) {
+        return { Authorization: 'Bearer ' + token };
     } else {
         return {};
     }
