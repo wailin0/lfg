@@ -25,37 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="added advance transition setting menu">
-      <change afterPath="$PROJECT_DIR$/src/components/Notification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/NotiReducer.js" afterDir="false" />
+    <list default="true" id="dd51b8dd-a3bd-4d92-b065-26f4bd05fcd5" name="Default Changelist" comment="remove modal animation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostReact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/JWTHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/JWTHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/CommunityModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunityRegModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/CommunitySideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/CommunitySideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/modals/CommentDeleteModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/modals/CommentDeleteModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/modals/CommentEditModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/modals/CommentEditModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/modals/PostEditModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/modals/PostEditModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/page/GroupPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/page/GroupPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/community/page/GroupPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/community/page/GroupPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/settings/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/Setting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/settings/user/Account/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/user/Account/Account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/AuthReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/community/CommentReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/community/CommentReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/community/PostReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/community/PostReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/community/UserReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/UserReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/community/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/community/comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/community/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/community/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/Chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Chat.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -339,7 +311,11 @@
       <workItem from="1604067054421" duration="16177000" />
       <workItem from="1604089834791" duration="9628000" />
       <workItem from="1604158196310" duration="51000" />
-      <workItem from="1604340103628" duration="7346000" />
+      <workItem from="1604340103628" duration="8051000" />
+      <workItem from="1604589512385" duration="2496000" />
+      <workItem from="1604594294034" duration="140000" />
+      <workItem from="1604594575702" duration="761000" />
+      <workItem from="1604595438742" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="sample header">
       <created>1594514594174</created>
@@ -600,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604015028285</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="remove modal animation">
+      <created>1604349649251</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1604349649251</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -632,7 +615,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="like dislike logic working now" />
     <MESSAGE value="comment and user ui update" />
     <MESSAGE value="setting ui updated with transition groups" />
     <MESSAGE value="register form validation with ajax request" />
@@ -657,7 +639,8 @@
     <MESSAGE value="changed post and group state to redux store" />
     <MESSAGE value="comment crud ui finished" />
     <MESSAGE value="added advance transition setting menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="added advance transition setting menu" />
+    <MESSAGE value="remove modal animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove modal animation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="162" y="203" key="#135.js" timestamp="1599867571193">
@@ -676,22 +659,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="349" y="249" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602372502659" />
-    <state width="1169" height="339" key="GridCell.Tab.0.bottom" timestamp="1604345109428">
+    <state width="1169" height="335" key="GridCell.Tab.0.bottom" timestamp="1604595337014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1169" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604345109428" />
-    <state width="1169" height="339" key="GridCell.Tab.0.center" timestamp="1604345109428">
+    <state width="1169" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604595337014" />
+    <state width="1169" height="335" key="GridCell.Tab.0.center" timestamp="1604595337014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1169" height="339" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604345109428" />
-    <state width="1169" height="339" key="GridCell.Tab.0.left" timestamp="1604345109428">
+    <state width="1169" height="335" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604595337014" />
+    <state width="1169" height="335" key="GridCell.Tab.0.left" timestamp="1604595337014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1169" height="339" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604345109428" />
-    <state width="1169" height="339" key="GridCell.Tab.0.right" timestamp="1604345109428">
+    <state width="1169" height="335" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604595337014" />
+    <state width="1169" height="335" key="GridCell.Tab.0.right" timestamp="1604595337014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1169" height="339" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604345109428" />
+    <state width="1169" height="335" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604595337014" />
     <state width="989" height="349" key="GridCell.Tab.1.bottom" timestamp="1599866288781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

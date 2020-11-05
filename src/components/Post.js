@@ -50,7 +50,6 @@ const Post = (props) => {
     }, [dispatch])
 
 
-    console.log(posts)
 
 
     const user = useSelector(state => state.user)
