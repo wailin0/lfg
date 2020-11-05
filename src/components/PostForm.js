@@ -11,16 +11,19 @@ import {createAPost} from "../reducers/community/PostReducer";
 const PostForm = React.memo(props => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const dispatch = useDispatch()
 
     const submitPost = async event => {
         event.preventDefault()
+        setLoading(true)
         const newPost = {
             title: title,
             body: body
         }
         await dispatch(createAPost(props.groupId, newPost))
+        setLoading(false)
         props.onHide()
     }
 
@@ -41,7 +44,7 @@ const PostForm = React.memo(props => {
                 <Button variant="outline-secondary" size="sm">Help</Button>{' '}
                 <Button variant="outline-dark" size="sm">+</Button>
                 <Modal.Footer>
-                    <Button variant="primary" type="submit" disabled={!(title && body)}>{props.loading ?
+                    <Button variant="primary" type="submit" disabled={!(title && body)}>{loading ?
                         <span><Spinner animation="border" variant="light" size="sm"/>Posting</span> :
                         <span>Post</span>}</Button>
                     <Button onClick={props.onHide} variant="secondary">Cancel</Button>

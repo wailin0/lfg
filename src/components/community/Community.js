@@ -9,7 +9,6 @@ import Context from "../Context";
 
 const Community = () => {
     const [selectTab, setSelectTab] = useState('post');
-    const [loading, setLoading] = useState(false)
     const [modalShow, setModalShow] = useState(false);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
 
@@ -46,11 +45,9 @@ const Community = () => {
                             selectTab={selectTab}
                             show={modalShow}
                             onHide={() => setModalShow(false)}
-                            loading={loading}
                             setShowDeleteModal={setShowDeleteModal}
                         />
                         <Post
-                            loading={loading}
                             showDeleteModal={showDeleteModal}
                             setShowDeleteModal={setShowDeleteModal}
                         />

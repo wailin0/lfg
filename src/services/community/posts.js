@@ -19,6 +19,11 @@ const createNewPost = async (groupId, post) => {
     return response.data
 }
 
+const createNewMediaPost = async (groupId, mediaPost) => {
+    const response = await axios.post(`${baseUrl}/group/${groupId}/media`, mediaPost, {headers: JWTHeader()})
+    return response.data
+}
+
 const updatePost = async (post) => {
     const response = await axios.put(`${baseUrl}/post/${post.postId}`, post, {headers: JWTHeader()})
     return response.data
@@ -33,6 +38,7 @@ export default {
     getAllPost,
     getPostFromGroup,
     createNewPost,
+    createNewMediaPost,
     updatePost,
     deletePost
 }

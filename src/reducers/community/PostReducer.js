@@ -9,6 +9,8 @@ const PostReducer = (state = [], action) => {
             return action.data
         case 'CREATE_POST':
             return [...state, action.data]
+        case 'CREATE_MEDIA_POST':
+            return [...state, action.data]
         case 'UPDATE_POST':
             const updatedPost = action.data
             return state.map(post => post.postId === updatedPost.postId ? updatedPost : post)
@@ -45,6 +47,16 @@ export const createAPost = (groupId, post) => {
         const data = await postService.createNewPost(groupId, post)
         dispatch({
             type: 'CREATE_POST',
+            data
+        })
+    }
+}
+
+export const createAMediaPost = (groupId, mediaPost) => {
+    return async dispatch => {
+        const data = await postService.createNewMediaPost(groupId, mediaPost)
+        dispatch({
+            type: 'CREATE_MEDIA_POST',
             data
         })
     }

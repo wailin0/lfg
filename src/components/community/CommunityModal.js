@@ -40,7 +40,6 @@ const CommunityModal = (props) => {
                         <Tab eventKey="post" title="Blog">
                             <br/>
                             <PostForm onHide={props.onHide}
-                                      loading={props.loading}
                                       groupId={groupId}
                             />
 
@@ -48,7 +47,9 @@ const CommunityModal = (props) => {
                         <Tab eventKey="media" title="Media">
                             <br/>
 
-                            <MediaForm onHide={props.onHide}/>
+                            <MediaForm onHide={props.onHide}
+                                       groupId={groupId}
+                            />
 
                         </Tab>
                         <Tab eventKey="poll" title="Poll">

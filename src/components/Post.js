@@ -7,6 +7,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Spinner from "react-bootstrap/Spinner";
 import Context from "./Context";
+import Validator from 'validator'
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import PostDeleteModal from "./community/modals/PostDeleteModal";
@@ -17,6 +18,7 @@ const Post = (props) => {
     const posts = useSelector(state => state.posts)
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const [showPostDeleteModal, setShowPostDeleteModal] = useState({
         show: false,
@@ -46,18 +48,20 @@ const Post = (props) => {
 
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(getPosts())
+        setLoading(true)
+        dispatch(getPosts()).then(() => {
+            setLoading(false)
+        })
     }, [dispatch])
-
-
 
 
     const user = useSelector(state => state.user)
 
     return (
         <>
-            {props.loading ?
-                <span id="loading"><Spinner animation="grow" variant="danger"/> Loading feeds... <br/>please wait for backend server to start</span> :
+            {loading ?
+                <span id="loading"><Spinner animation="grow"
+                                            variant="danger"/> Loading posts... <br/>please wait</span> :
                 posts.map((eachPost) => (
                     <div key={eachPost.postId} className="post">
                         <div className="card">
@@ -109,10 +113,14 @@ const Post = (props) => {
                             <div className="card-body">
                                 <h5 className="card-title"> {eachPost.title} </h5>
                                 <hr/>
-                                <p className="card-text">
-                                    {eachPost.body}
+                                {Validator.isURL(eachPost.body) ?
+                                    <img src={eachPost.body} alt="" className="img-fluid"/>
+                                    :
+                                    <p className="card-text">
+                                        {eachPost.body}
 
-                                </p>
+                                    </p>
+                                }
                                 <PostTag/>
                             </div>
 

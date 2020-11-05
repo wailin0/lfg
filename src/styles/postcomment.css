@@ -40,6 +40,9 @@
     padding-bottom: 5px;
 }
 
+.comment-loading-icon {
+    align-self: center;
+}
 
 
 .react-comment {
