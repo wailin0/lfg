@@ -1,10 +1,3 @@
-### Test Page
-https://wailin0.github.io/lfg/
-#### made for mobile first approach
-##### purely made with JSX and ES6 using context api and functional component
-
-## used libraries
-react-bootstrap, axios, react-router, transition-group, react-icon, sockjs-client, stompjs
 
 
 ## Available Scripts
